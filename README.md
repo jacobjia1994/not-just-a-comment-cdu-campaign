@@ -5,7 +5,8 @@ This is a static public education resource for CDU students, focusing on everyda
 The site is structured as a small multi-page public education microsite:
 
 - `index.html`: interactive serious micro-game with five bystander choices
-- `moments.html`: five everyday racism scenarios
+- `problem.html`: broader anti-Indigenous racism patterns and wellbeing impacts
+- `moments.html`: twelve everyday racism scenarios
 - `act.html`: bystander action toolkit
 - `watch.html`: embedded official campaign videos
 - `support.html`: support and reporting pathways

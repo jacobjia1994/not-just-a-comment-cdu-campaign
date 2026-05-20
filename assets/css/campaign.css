@@ -867,6 +867,32 @@ a.card:focus-visible {
 	padding-left: 1.2rem;
 }
 
+.impact-stack {
+	display: grid;
+	gap: 0.85rem;
+}
+
+.impact-stack article {
+	background: rgba(255, 250, 241, 0.08);
+	border: 1px solid rgba(255, 250, 241, 0.16);
+	border-left: 5px solid var(--gold);
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+.impact-stack h3 {
+	color: #fffaf1;
+	font-size: 1.15rem;
+	margin-bottom: 0.35rem;
+}
+
+.impact-stack p {
+	color: rgba(255, 250, 241, 0.82);
+	font-size: 0.96rem;
+	line-height: 1.5;
+	margin: 0;
+}
+
 .page-hero {
 	background:
 		linear-gradient(105deg, rgba(16, 34, 36, 0.96), rgba(25, 50, 53, 0.8)),
