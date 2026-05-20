@@ -35,12 +35,42 @@
 					<h1>You heard it. You froze.</h1>
 					<p class="lead">A joke. A group-chat meme. A "special treatment" comment. You knew something was wrong, but the next sentence did not come. Practise one now.</p>
 					<div class="hero-actions">
-						<a class="buttonish" href="#response-game">Choose what to say</a>
+						<a class="buttonish" href="#pain-entry">Find your situation</a>
 						<a class="buttonish alt" href="support.html">Need support?</a>
 					</div>
 				</div>
 				<p class="image-credit">Image: GDW.45, <a href="https://commons.wikimedia.org/wiki/File:Wet_Season_Storm_at_Sunset_from_Dripstone_Cliffs_-_Casuarina_Beach.jpg">Casuarina Beach</a>, CC BY-SA 3.0.</p>
 			</header>
+
+			<section id="pain-entry" class="pain-entry-section" aria-label="Choose your situation">
+				<div class="pain-entry-layout">
+					<div class="pain-entry-copy">
+						<p class="eyebrow">Start with what happened</p>
+						<h2>Which one feels closest?</h2>
+						<p>Do not start with a lecture. Start with the moment that made your stomach drop, made you stay quiet, or made you wonder whether speaking would make things worse.</p>
+						<div id="pain-options" class="pain-options" aria-label="Pain point options"></div>
+					</div>
+					<article class="pain-result" aria-live="polite">
+						<p id="pain-kicker" class="feedback-label">Start here</p>
+						<h3 id="pain-title"></h3>
+						<p id="pain-copy"></p>
+						<div class="response-strip">
+							<div>
+								<span>Say this first</span>
+								<p id="pain-line"></p>
+							</div>
+							<div>
+								<span>Then do this</span>
+								<p id="pain-next"></p>
+							</div>
+						</div>
+						<div class="challenge-actions">
+							<a id="pain-primary-link" class="buttonish dark" href="#response-game">Practise this</a>
+							<a id="pain-secondary-link" class="buttonish ghost" href="act.html">Build another line</a>
+						</div>
+					</article>
+				</div>
+			</section>
 
 			<section id="response-game" class="interactive-stage" aria-label="Bystander response game">
 				<div class="stage-shell">
@@ -183,6 +213,56 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script>
+			const painPoints = [
+				{
+					label: 'I heard a joke and froze',
+					title: 'The room laughed. You went quiet.',
+					copy: 'This is the bystander moment most people recognise: the comment was quick, everyone moved on, and the person targeted was left carrying it.',
+					line: 'Can we not make people the punchline?',
+					next: 'Keep it short. Then check in privately with anyone affected.',
+					primary: 'Practise this',
+					href: '#response-game',
+					round: 0
+				},
+				{
+					label: 'A group chat meme felt wrong',
+					title: 'The chat made silence look like agreement.',
+					copy: 'Online racism can feel harder to interrupt because everyone can see who speaks and who stays quiet.',
+					line: 'I do not want racist memes in this chat. Please delete it.',
+					next: 'Name the boundary in the chat. Screenshot only if it is safe and useful.',
+					primary: 'Open chat scenario',
+					href: 'moments.html'
+				},
+				{
+					label: 'Someone was put on the spot',
+					title: 'One student was asked to carry the room.',
+					copy: 'Curiosity can still become cultural labour when one person is asked to represent, teach or defend diverse peoples and histories.',
+					line: 'Let us not put one person on the spot. We can use First Nations-led resources.',
+					next: 'Move the learning burden back to the group.',
+					primary: 'Practise this',
+					href: '#response-game',
+					round: 3
+				},
+				{
+					label: 'Placement language felt off',
+					title: 'A practice judgement sounded like a stereotype.',
+					copy: 'In placement or professional discussion, casual assumptions can become decisions about families, risk, engagement or trust.',
+					line: 'Can we check whether we are making a cultural assumption here?',
+					next: 'Take it to supervision before the label becomes practice.',
+					primary: 'Build practice response',
+					href: 'act.html'
+				},
+				{
+					label: 'I was targeted and do not know what to do',
+					title: 'You should not have to carry this alone.',
+					copy: 'Support does not have to mean making a formal complaint straight away. You can choose what happens next.',
+					line: 'I want support, but I do not want this shared without my consent.',
+					next: 'Find a trusted person or service. Keep control over reporting where possible.',
+					primary: 'Support options',
+					href: 'support.html'
+				}
+			];
+
 			const gameMoments = [
 				{
 					scene: 'Tutorial room',
@@ -340,6 +420,13 @@
 			const nextButton = document.getElementById('next-moment');
 			const restartButton = document.getElementById('restart-challenge');
 			const copyButton = document.getElementById('copy-line');
+			const painOptions = document.getElementById('pain-options');
+			const painKicker = document.getElementById('pain-kicker');
+			const painTitle = document.getElementById('pain-title');
+			const painCopy = document.getElementById('pain-copy');
+			const painLine = document.getElementById('pain-line');
+			const painNext = document.getElementById('pain-next');
+			const painPrimaryLink = document.getElementById('pain-primary-link');
 			const roundPanel = document.getElementById('round-panel');
 			const resultPanel = document.getElementById('result-panel');
 			const resultTitle = document.getElementById('result-title');
@@ -388,6 +475,21 @@
 					optionsEl.appendChild(button);
 				});
 				nextButton.textContent = index === gameMoments.length - 1 ? 'See result' : 'Next round';
+			}
+
+			function renderPain(index) {
+				const pain = painPoints[index];
+				painKicker.textContent = `Situation ${index + 1} of ${painPoints.length}`;
+				painTitle.textContent = pain.title;
+				painCopy.textContent = pain.copy;
+				painLine.textContent = pain.line;
+				painNext.textContent = pain.next;
+				painPrimaryLink.textContent = pain.primary;
+				painPrimaryLink.setAttribute('href', pain.href);
+				painPrimaryLink.dataset.round = Number.isInteger(pain.round) ? String(pain.round) : '';
+				document.querySelectorAll('.pain-options button').forEach((button, buttonIndex) => {
+					button.classList.toggle('active', buttonIndex === index);
+				});
 			}
 
 			function chooseOption(option, keeper) {
@@ -472,6 +574,23 @@
 				await copyText(savedLines.map((line, index) => `${index + 1}. ${line}`).join('\n'), copyAllButton, 'Copied');
 			});
 
+			painPoints.forEach((pain, index) => {
+				const button = document.createElement('button');
+				button.type = 'button';
+				button.textContent = pain.label;
+				button.addEventListener('click', () => renderPain(index));
+				painOptions.appendChild(button);
+			});
+
+			painPrimaryLink.addEventListener('click', (event) => {
+				const round = Number.parseInt(painPrimaryLink.dataset.round, 10);
+				if (Number.isInteger(round)) {
+					event.preventDefault();
+					renderRound(round);
+					document.getElementById('response-game').scrollIntoView({ behavior: 'smooth' });
+				}
+			});
+
 			async function copyText(text, button, successLabel) {
 				try {
 					await navigator.clipboard.writeText(text);
@@ -486,6 +605,7 @@
 			}
 
 			updateStats();
+			renderPain(0);
 			renderRound(0);
 		</script>
 	</body>

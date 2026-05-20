@@ -4,7 +4,7 @@ This is a static public education resource for CDU students, focusing on everyda
 
 The site is structured as a small multi-page public education microsite:
 
-- `index.html`: interactive serious micro-game with five bystander choices
+- `index.html`: pain-point selector plus serious micro-game with five bystander choices
 - `problem.html`: click-to-reveal pattern explorer
 - `moments.html`: interactive twelve-scenario moment selector
 - `act.html`: bystander response builder and expandable phrase bank
