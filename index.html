@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="assets/css/campaign.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload campaign-page">
+	<body class="is-preload campaign-page interactive-home">
 		<nav class="site-nav" aria-label="Main navigation">
 			<a class="brand" href="index.html">Not Just a Comment</a>
 			<div class="nav-links">
@@ -28,101 +28,103 @@
 		</nav>
 
 		<main>
-			<header class="hero-home">
-				<div class="hero-inner">
+			<header class="interactive-hero">
+				<div class="interactive-hero-inner">
 					<p class="eyebrow">Everyday anti-Indigenous racism and wellbeing</p>
-					<h1>Not Just a Comment</h1>
-					<p class="lead">Everyday anti-Indigenous racism can affect belonging, safety and social and emotional wellbeing.</p>
-					<p class="hero-line">In tutorials, group work, online spaces and placement conversations, silence can teach the room that racism is acceptable.</p>
+					<h1>Heard it? Say the next sentence.</h1>
+					<p class="lead">Practise five quick responses to comments that can make Aboriginal and Torres Strait Islander students feel watched, questioned or unsafe in learning spaces.</p>
 					<div class="hero-actions">
-						<a class="buttonish" href="moments.html">Explore the moments</a>
-						<a class="buttonish alt" href="act.html">Practise a response</a>
+						<a class="buttonish" href="#response-challenge">Start the 60-second challenge</a>
+						<a class="buttonish alt" href="support.html">Need support now?</a>
 					</div>
 				</div>
 				<p class="image-credit">Image: GDW.45, <a href="https://commons.wikimedia.org/wiki/File:Wet_Season_Storm_at_Sunset_from_Dripstone_Cliffs_-_Casuarina_Beach.jpg">Casuarina Beach</a>, CC BY-SA 3.0.</p>
 			</header>
 
-			<section class="section alt">
-				<div class="section-header center">
-					<p class="eyebrow">When the room goes quiet</p>
-					<h2>Small comments can carry a heavy load.</h2>
-					<p class="lead">If you witness, repeat or minimise everyday anti-Indigenous racism, you can help change what the room accepts. Notice the harm, interrupt the pattern, check in and use support pathways when needed.</p>
-				</div>
-				<div class="card-grid four">
-					<article class="card">
-						<span class="number">01</span>
-						<h3>Recognise</h3>
-						<p>Notice jokes, myths, colour-blind comments and cultural labour that can make racism seem ordinary.</p>
-					</article>
-					<article class="card">
-						<span class="number">02</span>
-						<h3>Understand</h3>
-						<p>Connect these moments to stigma, shame, belonging and social and emotional wellbeing.</p>
-					</article>
-					<article class="card">
-						<span class="number">03</span>
-						<h3>Respond</h3>
-						<p>Use short bystander lines that reduce harm without putting the person targeted on display.</p>
-					</article>
-					<article class="card">
-						<span class="number">04</span>
-						<h3>Follow through</h3>
-						<p>Check in privately, document safely, seek advice and respect the affected person's choice about reporting.</p>
-					</article>
-				</div>
-			</section>
-
-			<section class="feature-band section">
-				<div class="feature-layout">
-					<div>
-						<p class="eyebrow">Social and emotional wellbeing</p>
-						<h2>Racism is a wellbeing issue.</h2>
-						<p>Aboriginal and Torres Strait Islander social and emotional wellbeing includes body, mind, family, kinship, community, culture, Country, spirituality and history. Racism can harm wellbeing when it makes a person feel watched, questioned, stereotyped, isolated or unsafe in a learning space.</p>
+			<section id="response-challenge" class="interactive-stage" aria-label="Interactive response challenge">
+				<div class="stage-shell">
+					<div class="stage-intro">
+						<p class="eyebrow">60-second response practice</p>
+						<h2>Pick one line you could actually say.</h2>
+						<p>There is no perfect speech under pressure. The goal is to pause the pattern, reduce harm and avoid making the person targeted carry the moment.</p>
 					</div>
-					<p class="big-quote">The room needs to change before the person harmed is asked to cope.</p>
+
+					<div class="challenge-card" aria-live="polite">
+						<div class="challenge-topline">
+							<span id="challenge-count">Moment 1 of 5</span>
+							<div class="progress-track" aria-hidden="true">
+								<div id="challenge-progress" class="progress-fill"></div>
+							</div>
+						</div>
+
+						<div class="comment-panel">
+							<p class="comment-kicker">Someone says</p>
+							<p id="challenge-comment" class="comment-text"></p>
+						</div>
+
+						<div class="challenge-prompt">
+							<h3 id="challenge-question">What could you say?</h3>
+							<div id="challenge-options" class="choice-grid"></div>
+						</div>
+
+						<div id="feedback-panel" class="feedback-panel" hidden>
+							<p id="feedback-label" class="feedback-label"></p>
+							<h3 id="feedback-title"></h3>
+							<p id="feedback-copy"></p>
+							<div class="copy-line">
+								<span id="line-to-keep"></span>
+								<button id="copy-line" type="button">Copy</button>
+							</div>
+							<div class="challenge-actions">
+								<button id="next-moment" type="button">Next moment</button>
+								<button id="restart-challenge" type="button" class="ghost-button">Start over</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			<section class="section">
+			<section class="poster-strip section alt">
 				<div class="section-header">
-					<p class="eyebrow">In CDU learning spaces</p>
-					<h2>These moments can happen wherever students learn together.</h2>
-					<p class="lead">Tutorials, group work, online discussions, campus life and placement conversations can all normalise racism or interrupt it. The difference often starts with one person refusing to move on as if nothing happened.</p>
+					<p class="eyebrow">Five everyday moments</p>
+					<h2>Short enough to remember. Useful enough to use.</h2>
 				</div>
-				<div class="card-grid three">
-					<article class="card">
-						<h3>Notice place</h3>
-						<p>Learning in Darwin means taking Country, history and local relationships seriously, not treating culture as decoration.</p>
+				<div class="poster-grid">
+					<article>
+						<p>"It was only a joke."</p>
+						<h3>If identity is the punchline, pause it.</h3>
 					</article>
-					<article class="card">
-						<h3>Reduce the burden</h3>
-						<p>Aboriginal and Torres Strait Islander students should not have to educate the room before the room takes racism seriously.</p>
+					<article>
+						<p>"They get special treatment."</p>
+						<h3>Equity is not a favour.</h3>
 					</article>
-					<article class="card">
-						<h3>Keep learning</h3>
-						<p>Use First Nations-led resources, ask better questions and take responsibility for what happens after a harmful comment.</p>
+					<article>
+						<p>"I do not see race."</p>
+						<h3>Racism does.</h3>
+					</article>
+					<article>
+						<p>"Can you explain the Aboriginal view?"</p>
+						<h3>One student is not your reading list.</h3>
+					</article>
+					<article>
+						<p>"No one reported it."</p>
+						<h3>Silence is not proof.</h3>
 					</article>
 				</div>
 			</section>
 
-			<section class="section mist">
-				<div class="section-header center">
-					<p class="eyebrow">Choose a path</p>
-					<h2>Start with one moment.</h2>
-				</div>
-				<div class="card-grid three">
-					<a class="card" href="moments.html">
-						<h3>Five everyday moments</h3>
-						<p>Read the campus scenarios and the harm they can carry.</p>
-					</a>
-					<a class="card" href="act.html">
-						<h3>What to say and do</h3>
-						<p>Practise direct, indirect and after-the-moment responses.</p>
-					</a>
-					<a class="card" href="watch.html">
-						<h3>Watch and discuss</h3>
-						<p>Watch official anti-racism videos and discuss what changes in the room.</p>
-					</a>
+			<section class="section action-band">
+				<div class="action-layout">
+					<div>
+						<p class="eyebrow">After the click</p>
+						<h2>Do one useful thing after the moment.</h2>
+						<p>Check in privately. Do not ask the person harmed to reassure you. Do not force a complaint. If you need options, use the support page.</p>
+					</div>
+					<div class="inline-actions">
+						<a class="buttonish dark" href="act.html">See more lines</a>
+						<a class="buttonish ghost" href="support.html">Support options</a>
+						<a class="buttonish ghost" href="evidence.html">Why it matters</a>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -139,5 +141,188 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			const moments = [
+				{
+					comment: '"It was only a joke."',
+					keeper: 'Can we not make people the punchline?',
+					options: [
+						{
+							text: 'Can we not make people the punchline?',
+							best: true,
+							title: 'Use this line.',
+							copy: 'It names the harm without asking the person targeted to explain why it hurt.'
+						},
+						{
+							text: 'Ignore it so the room does not get awkward.',
+							title: 'Silence protects the pattern.',
+							copy: 'The room may learn that the joke is acceptable and that discomfort sits with the person harmed.'
+						},
+						{
+							text: 'Ask the Aboriginal student what they think.',
+							title: 'Do not shift the burden.',
+							copy: 'That can put the person targeted on display and make them manage the room.'
+						}
+					]
+				},
+				{
+					comment: '"They get special treatment."',
+					keeper: 'Support programs are about equity, not unfair advantage.',
+					options: [
+						{
+							text: 'Support programs are about equity, not unfair advantage.',
+							best: true,
+							title: 'Use this line.',
+							copy: 'It challenges the myth without making one student defend their place at university.'
+						},
+						{
+							text: 'Maybe, but we should not talk about it.',
+							title: 'Avoidance leaves the myth intact.',
+							copy: 'A quiet redirect can help, but the unfairness claim still needs to be named.'
+						},
+						{
+							text: 'Ask who in the class receives support.',
+							title: 'That can expose people.',
+							copy: 'Keep the focus on equity and systems, not on individual students.'
+						}
+					]
+				},
+				{
+					comment: '"I do not see race."',
+					keeper: 'Fairness includes noticing when racism affects people differently.',
+					options: [
+						{
+							text: 'Fairness includes noticing when racism affects people differently.',
+							best: true,
+							title: 'Use this line.',
+							copy: 'It reframes fairness without turning the moment into a fight over intention.'
+						},
+						{
+							text: 'That sounds positive, so let it go.',
+							title: 'Good intentions can still hide harm.',
+							copy: 'Colour-blind language can make racism harder to name.'
+						},
+						{
+							text: 'Tell them they are racist.',
+							title: 'That may shut the room down.',
+							copy: 'Naming the pattern often works better than starting with a personal accusation.'
+						}
+					]
+				},
+				{
+					comment: '"Can you explain the Aboriginal view?"',
+					keeper: 'Let us not put one person on the spot. We can use First Nations-led resources and do the reading.',
+					options: [
+						{
+							text: 'Let us not put one person on the spot. We can use First Nations-led resources and do the reading.',
+							best: true,
+							title: 'Use this line.',
+							copy: 'It protects the student from being treated as a cultural help desk.'
+						},
+						{
+							text: 'Wait for the student to decide whether to answer.',
+							title: 'Pressure can still sit there.',
+							copy: 'Silence after the question can still make one student carry the topic.'
+						},
+						{
+							text: 'Say it is their responsibility to educate the group.',
+							title: 'That repeats the burden.',
+							copy: 'Participation should not depend on unpaid education work.'
+						}
+					]
+				},
+				{
+					comment: '"No one reported it, so it must be fine."',
+					keeper: 'People do not always report racism, even when it causes harm.',
+					options: [
+						{
+							text: 'People do not always report racism, even when it causes harm.',
+							best: true,
+							title: 'Use this line.',
+							copy: 'It makes room for fear, exhaustion, distrust and uncertainty around reporting.'
+						},
+						{
+							text: 'Tell the person harmed they must report it.',
+							title: 'Do not remove control.',
+							copy: 'Offer options and support. A forced report can become another burden.'
+						},
+						{
+							text: 'Assume the problem is solved if there is no complaint.',
+							title: 'No report is not proof.',
+							copy: 'Low reporting can mean the process feels unsafe or unlikely to help.'
+						}
+					]
+				}
+			];
+
+			let currentMoment = 0;
+			const countEl = document.getElementById('challenge-count');
+			const progressEl = document.getElementById('challenge-progress');
+			const commentEl = document.getElementById('challenge-comment');
+			const optionsEl = document.getElementById('challenge-options');
+			const feedbackPanel = document.getElementById('feedback-panel');
+			const feedbackLabel = document.getElementById('feedback-label');
+			const feedbackTitle = document.getElementById('feedback-title');
+			const feedbackCopy = document.getElementById('feedback-copy');
+			const lineToKeep = document.getElementById('line-to-keep');
+			const nextButton = document.getElementById('next-moment');
+			const restartButton = document.getElementById('restart-challenge');
+			const copyButton = document.getElementById('copy-line');
+
+			function renderMoment(index) {
+				const moment = moments[index];
+				currentMoment = index;
+				countEl.textContent = `Moment ${index + 1} of ${moments.length}`;
+				progressEl.style.width = `${((index + 1) / moments.length) * 100}%`;
+				commentEl.textContent = moment.comment;
+				feedbackPanel.hidden = true;
+				optionsEl.innerHTML = '';
+				moment.options.forEach((option) => {
+					const button = document.createElement('button');
+					button.type = 'button';
+					button.className = 'choice-button';
+					button.textContent = option.text;
+					button.addEventListener('click', () => showFeedback(option, moment.keeper));
+					optionsEl.appendChild(button);
+				});
+				nextButton.textContent = index === moments.length - 1 ? 'Finish' : 'Next moment';
+			}
+
+			function showFeedback(option, keeper) {
+				document.querySelectorAll('.choice-button').forEach((button) => {
+					button.disabled = true;
+					if (button.textContent === option.text) button.classList.add(option.best ? 'is-best' : 'is-risky');
+				});
+				feedbackLabel.textContent = option.best ? 'Strong response' : 'Try a safer line';
+				feedbackTitle.textContent = option.title;
+				feedbackCopy.textContent = option.copy;
+				lineToKeep.textContent = keeper;
+				feedbackPanel.hidden = false;
+			}
+
+			nextButton.addEventListener('click', () => {
+				if (currentMoment === moments.length - 1) {
+					renderMoment(0);
+					document.getElementById('response-challenge').scrollIntoView({ behavior: 'smooth' });
+					return;
+				}
+				renderMoment(currentMoment + 1);
+			});
+
+			restartButton.addEventListener('click', () => renderMoment(0));
+
+			copyButton.addEventListener('click', async () => {
+				try {
+					await navigator.clipboard.writeText(lineToKeep.textContent);
+					copyButton.textContent = 'Copied';
+					setTimeout(() => { copyButton.textContent = 'Copy'; }, 1200);
+				} catch {
+					copyButton.textContent = 'Copy failed';
+					setTimeout(() => { copyButton.textContent = 'Copy'; }, 1200);
+				}
+			});
+
+			renderMoment(0);
+		</script>
 	</body>
 </html>

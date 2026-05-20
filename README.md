@@ -2,9 +2,9 @@
 
 This is a static public education resource for CDU students, focusing on everyday anti-Indigenous racism, stigma, shame and barriers to social and emotional wellbeing.
 
-The site is structured as a small multi-page campaign microsite:
+The site is structured as a small multi-page public education microsite:
 
-- `index.html`: campaign landing page
+- `index.html`: interactive 60-second response challenge
 - `moments.html`: five everyday racism scenarios
 - `act.html`: bystander action toolkit
 - `watch.html`: embedded official campaign videos
