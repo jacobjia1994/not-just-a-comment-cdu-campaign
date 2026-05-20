@@ -4,7 +4,7 @@ This is a static public education resource for CDU students, focusing on everyda
 
 The site is structured as a small multi-page public education microsite:
 
-- `index.html`: interactive 60-second response challenge
+- `index.html`: interactive serious micro-game with five bystander choices
 - `moments.html`: five everyday racism scenarios
 - `act.html`: bystander action toolkit
 - `watch.html`: embedded official campaign videos

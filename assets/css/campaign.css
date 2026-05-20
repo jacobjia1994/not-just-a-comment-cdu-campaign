@@ -301,6 +301,11 @@ a {
 	line-height: 1.55;
 }
 
+.stage-intro strong {
+	color: #fffaf1;
+	font-weight: 900;
+}
+
 .challenge-card {
 	background: #fffaf1;
 	border: 1px solid rgba(255, 250, 241, 0.2);
@@ -309,6 +314,16 @@ a {
 	color: var(--ink);
 	min-height: 39rem;
 	padding: clamp(1rem, 2.2vw, 1.8rem);
+}
+
+.game-card {
+	min-height: 44rem;
+}
+
+.game-hud {
+	display: grid;
+	gap: 1rem;
+	margin-bottom: 1rem;
 }
 
 .challenge-topline {
@@ -342,6 +357,60 @@ a {
 	width: 20%;
 }
 
+.stat-board {
+	display: grid;
+	gap: 0.65rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat-card {
+	background: rgba(16, 34, 36, 0.06);
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	padding: 0.75rem;
+}
+
+.stat-label {
+	color: var(--clay);
+	font-size: 0.72rem;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.stat-value {
+	font-size: 1.8rem;
+	font-weight: 900;
+	line-height: 1.1;
+	margin: 0.2rem 0 0.45rem;
+}
+
+.meter-track {
+	background: rgba(16, 34, 36, 0.12);
+	border-radius: 999px;
+	height: 0.52rem;
+	overflow: hidden;
+}
+
+.meter-fill {
+	border-radius: inherit;
+	height: 100%;
+	transition: width 260ms ease;
+	width: 0%;
+}
+
+.belonging-fill {
+	background: var(--eucalypt);
+}
+
+.safety-fill {
+	background: var(--sea);
+}
+
+.burden-fill {
+	background: var(--ochre);
+}
+
 .comment-panel {
 	background: var(--deep);
 	border-radius: 8px;
@@ -366,6 +435,20 @@ a {
 	font-weight: 900;
 	line-height: 0.98;
 	margin: 0;
+}
+
+.scene-panel {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.scene-stakes {
+	color: rgba(255, 250, 241, 0.82);
+	font-size: 1rem;
+	line-height: 1.45;
+	margin: 1rem 0 0;
+	max-width: 36rem;
 }
 
 .challenge-prompt h3 {
@@ -447,6 +530,42 @@ a {
 	margin-bottom: 0.75rem;
 }
 
+.impact-grid {
+	display: grid;
+	gap: 0.55rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	margin: 0.8rem 0 0.9rem;
+}
+
+.impact-pill {
+	background: #fffaf1;
+	border: 1px solid var(--line);
+	border-left: 4px solid var(--eucalypt);
+	border-radius: 8px;
+	padding: 0.65rem;
+}
+
+.impact-pill.risk {
+	border-left-color: var(--ochre);
+}
+
+.impact-pill span {
+	color: var(--clay);
+	display: block;
+	font-size: 0.68rem;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.impact-pill strong {
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 900;
+	line-height: 1.1;
+	margin-top: 0.1rem;
+}
+
 .copy-line {
 	align-items: stretch;
 	background: #fffaf1;
@@ -492,6 +611,53 @@ a {
 	background: transparent;
 	border-color: var(--line);
 	color: var(--deep);
+}
+
+.result-panel {
+	background: rgba(70, 108, 97, 0.1);
+	border: 1px solid rgba(70, 108, 97, 0.24);
+	border-radius: 8px;
+	padding: 1.2rem;
+}
+
+.result-panel h3 {
+	font-size: clamp(2rem, 4vw, 3.4rem);
+	font-weight: 900;
+	line-height: 1;
+	margin-bottom: 0.8rem;
+}
+
+.result-panel p {
+	font-size: 1rem;
+	line-height: 1.55;
+}
+
+.result-lines {
+	background: #fffaf1;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	margin: 1rem 0;
+	padding: 1rem;
+}
+
+.result-lines h4 {
+	color: var(--clay);
+	font-size: 0.78rem;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	margin-bottom: 0.7rem;
+	text-transform: uppercase;
+}
+
+.result-lines ol {
+	margin: 0 0 0 1.15rem;
+	padding: 0;
+}
+
+.result-lines li {
+	font-weight: 800;
+	line-height: 1.4;
+	margin: 0.5rem 0;
 }
 
 .poster-grid {
@@ -1069,6 +1235,11 @@ a.card:focus-visible {
 	.phrase-bank {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
+
+	.stat-board,
+	.impact-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
 }
 
 @media screen and (max-width: 820px) {
@@ -1105,6 +1276,7 @@ a.card:focus-visible {
 	.feature-layout,
 	.stage-shell,
 	.challenge-topline,
+	.stat-board,
 	.moment-panel,
 	.moment-body,
 	.toolkit-grid,
@@ -1112,6 +1284,7 @@ a.card:focus-visible {
 	.support-grid,
 	.phrase-bank,
 	.evidence-row,
+	.impact-grid,
 	.poster-grid,
 	.action-layout,
 	.copy-line {
@@ -1119,6 +1292,10 @@ a.card:focus-visible {
 	}
 
 	.challenge-card {
+		min-height: 0;
+	}
+
+	.game-card {
 		min-height: 0;
 	}
 
