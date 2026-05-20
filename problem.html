@@ -4,7 +4,7 @@
 		<title>The Problem | Not Just a Comment</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="How anti-Indigenous racism shows up in university life and affects safety, belonging and social and emotional wellbeing." />
+		<meta name="description" content="An interactive map of anti-Indigenous racism patterns in university life." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/campaign.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -25,140 +25,60 @@
 		<main>
 			<header class="page-hero">
 				<div class="hero-inner">
-					<p class="eyebrow">It is not one comment</p>
-					<h1>Anti-Indigenous racism works through patterns.</h1>
-					<p class="lead">One joke, one myth or one silence may look small. Repeated across classrooms, group chats, placements and services, it can tell Aboriginal and Torres Strait Islander students where they are expected to fit, explain, endure or stay quiet.</p>
+					<p class="eyebrow">Tap the pattern</p>
+					<h1>Anti-Indigenous racism is not one kind of comment.</h1>
+					<p class="lead">Choose a pattern. See what it does to safety, belonging and burden. Then keep one line that changes the room.</p>
 				</div>
 			</header>
 
 			<section class="section alt">
-				<div class="section-header">
-					<p class="eyebrow">What it can look like</p>
-					<h2>Racism does not always announce itself as hate.</h2>
-					<p class="lead">It can sound casual, reasonable, curious or even polite. That is why students need to recognise the pattern, not just the most obvious slurs.</p>
-				</div>
-				<div class="card-grid three">
-					<article class="card">
-						<span class="number">01</span>
-						<h3>Jokes and casual talk</h3>
-						<p>Racist humour, stereotypes, nicknames and "just joking" comments make identity available for ridicule while asking the person targeted not to react.</p>
-					</article>
-					<article class="card">
-						<span class="number">02</span>
-						<h3>Deficit assumptions</h3>
-						<p>Comments about alcohol, parenting, attendance, intelligence or "not valuing education" can turn structural inequality into a judgement about Aboriginal and Torres Strait Islander people.</p>
-					</article>
-					<article class="card">
-						<span class="number">03</span>
-						<h3>Fairness myths</h3>
-						<p>"Special treatment" talk frames equity support as unfair advantage and ignores histories of exclusion, ongoing discrimination and unequal starting points.</p>
-					</article>
-					<article class="card">
-						<span class="number">04</span>
-						<h3>Colour-blind denial</h3>
-						<p>"I do not see race" can sound inclusive, but it can also make racism unsayable and ask people to pretend unequal treatment is not happening.</p>
-					</article>
-					<article class="card">
-						<span class="number">05</span>
-						<h3>Cultural load</h3>
-						<p>One student may be expected to explain culture, represent all First Nations people, correct everyone, educate the group and stay calm while doing it.</p>
-					</article>
-					<article class="card">
-						<span class="number">06</span>
-						<h3>Questioning identity</h3>
-						<p>"You do not look Aboriginal" or "how much Aboriginal are you?" turns identity into something others feel entitled to inspect or approve.</p>
-					</article>
-					<article class="card">
-						<span class="number">07</span>
-						<h3>History made optional</h3>
-						<p>Colonisation, land, policy violence and racism are treated as old or irrelevant, even when they shape health, education, child protection, justice and trust today.</p>
-					</article>
-					<article class="card">
-						<span class="number">08</span>
-						<h3>Online racism</h3>
-						<p>Memes, group-chat jokes, comment threads and "debate" posts can spread racism quickly while making the person affected choose between speaking up and staying safe.</p>
-					</article>
-					<article class="card">
-						<span class="number">09</span>
-						<h3>Institutional minimising</h3>
-						<p>When low reporting is treated as proof that racism is rare, the focus shifts away from fear, distrust, exhaustion and whether complaints feel safe enough to use.</p>
-					</article>
+				<div class="interactive-panel">
+					<div class="panel-intro">
+						<p class="eyebrow">Pattern explorer</p>
+						<h2>What did you notice?</h2>
+						<p>Start with the thing you heard or saw. The page will show the hidden pattern and a safer response.</p>
+					</div>
+					<div class="pattern-lab">
+						<div id="pattern-menu" class="pattern-menu" aria-label="Anti-Indigenous racism patterns"></div>
+						<article class="pattern-output" aria-live="polite">
+							<p id="pattern-tag" class="feedback-label">Pattern 1 of 9</p>
+							<h3 id="pattern-title"></h3>
+							<p id="pattern-short" class="pattern-short"></p>
+							<div class="response-strip">
+								<div>
+									<span>Hidden harm</span>
+									<p id="pattern-harm"></p>
+								</div>
+								<div>
+									<span>Line to use</span>
+									<p id="pattern-line"></p>
+								</div>
+								<div>
+									<span>What changes</span>
+									<p id="pattern-shift"></p>
+								</div>
+							</div>
+							<div class="mini-meter-grid" aria-label="Wellbeing impacts">
+								<div><strong id="pattern-safety">Safety</strong><span></span></div>
+								<div><strong id="pattern-belonging">Belonging</strong><span></span></div>
+								<div><strong id="pattern-burden">Burden</strong><span></span></div>
+							</div>
+						</article>
+					</div>
 				</div>
 			</section>
 
 			<section class="section dark">
 				<div class="feature-layout">
 					<div>
-						<p class="eyebrow">Why it harms wellbeing</p>
-						<h2>Racism changes the room.</h2>
-						<p class="lead">It can make students monitor themselves, withdraw, avoid services, doubt whether support is safe, or carry the extra work of protecting other people's comfort.</p>
+						<p class="eyebrow">The common thread</p>
+						<h2>The target often carries the cost.</h2>
+						<p class="lead">The pattern becomes harmful when the person targeted has to absorb it, explain it, report it, educate others or stay silent to keep the room comfortable.</p>
 					</div>
-					<div class="impact-stack">
-						<article>
-							<h3>Safety</h3>
-							<p>"Will I be targeted if I speak? Will staff take this seriously? Will reporting make things worse?"</p>
-						</article>
-						<article>
-							<h3>Belonging</h3>
-							<p>"Am I a full participant here, or someone whose place is questioned, joked about or conditional?"</p>
-						</article>
-						<article>
-							<h3>Burden</h3>
-							<p>"Do I have to educate the room, absorb the comment, manage the conflict and stay calm?"</p>
-						</article>
-						<article>
-							<h3>Trust</h3>
-							<p>"If people minimise this comment, will they also minimise harm in placements, services or professional practice?"</p>
-						</article>
-					</div>
-				</div>
-			</section>
-
-			<section class="section">
-				<div class="section-header">
-					<p class="eyebrow">What changes the pattern</p>
-					<h2>The aim is not a perfect speech. The aim is less harm.</h2>
-					<p class="lead">A useful response makes the pattern visible, reduces the burden on the person targeted and gives the room a different norm to follow.</p>
-				</div>
-				<div class="card-grid three">
-					<article class="card">
-						<h3>Name what happened</h3>
-						<p>"That sounded like a stereotype." "That comment puts one person on the spot." "No report does not mean no harm."</p>
-					</article>
-					<article class="card">
-						<h3>Move the burden</h3>
-						<p>Do not ask the Aboriginal or Torres Strait Islander student to explain, defend, translate or reassure. Use First Nations-led resources and do the reading.</p>
-					</article>
-					<article class="card">
-						<h3>Protect choice</h3>
-						<p>Check in privately. Offer support and options. Do not force a report, retell the person's story or turn your response into another performance they must manage.</p>
-					</article>
-					<article class="card">
-						<h3>Change the peer norm</h3>
-						<p>If the group learns that racist jokes pass without response, the pattern strengthens. If one person interrupts it calmly, others get permission to act too.</p>
-					</article>
-					<article class="card">
-						<h3>Bring in staff when needed</h3>
-						<p>Some situations are not safe for one student to handle alone. A tutor, unit coordinator, supervisor or student support service may need to be involved.</p>
-					</article>
-					<article class="card">
-						<h3>Keep learning after the moment</h3>
-						<p>Anti-racism is not finished after one sentence. It includes how people read, cite, listen, supervise, design services and share responsibility.</p>
-					</article>
-				</div>
-			</section>
-
-			<section class="section mist">
-				<div class="action-layout">
-					<div>
-						<p class="eyebrow">Next step</p>
-						<h2>Move from recognition to practice.</h2>
-						<p>Use the moment library to see more campus situations, then use the bystander toolkit to choose words and follow-through.</p>
-					</div>
-					<div class="inline-actions">
-						<a class="buttonish dark" href="moments.html">See the moments</a>
-						<a class="buttonish ghost" href="act.html">Choose a response</a>
-						<a class="buttonish ghost" href="evidence.html">Read the evidence</a>
+					<div class="choice-stack">
+						<a href="moments.html">Try a campus moment</a>
+						<a href="act.html">Build a bystander response</a>
+						<a href="support.html">Find support options</a>
 					</div>
 				</div>
 			</section>
@@ -169,5 +89,121 @@
 		</footer>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			const patterns = [
+				{
+					title: 'Jokes and casual talk',
+					button: 'A joke',
+					short: 'Racist humour asks the room to laugh and asks the person targeted not to react.',
+					harm: 'Identity becomes a punchline. Silence can teach the room that the joke is acceptable.',
+					line: 'Can we not make people the punchline?',
+					shift: 'The room hears that humour is not an excuse for racism.',
+					levels: ['lowered', 'lowered', 'increased']
+				},
+				{
+					title: 'Deficit assumptions',
+					button: 'A stereotype',
+					short: 'A judgement about behaviour is attached to Aboriginal and Torres Strait Islander people as a group.',
+					harm: 'Structural inequality gets turned into blame, suspicion or professional judgement.',
+					line: 'That sounds like a stereotype. Can we check what evidence we actually have?',
+					shift: 'The group slows down before an assumption becomes a decision.',
+					levels: ['lowered', 'lowered', 'increased']
+				},
+				{
+					title: 'Fairness myths',
+					button: 'Special treatment',
+					short: 'Equity support is framed as unfair advantage.',
+					harm: 'Students may be shamed for using support or made to defend their place at university.',
+					line: 'Support programs are about equity, not unfair advantage.',
+					shift: 'The focus moves from resentment to unequal conditions.',
+					levels: ['lowered', 'lowered', 'increased']
+				},
+				{
+					title: 'Colour-blind denial',
+					button: 'I do not see race',
+					short: 'Race is treated as something polite people should ignore.',
+					harm: 'Racism becomes harder to name, even when people experience it directly.',
+					line: 'Fairness includes noticing when racism affects people differently.',
+					shift: 'The room can talk about impact, not only intention.',
+					levels: ['lowered', 'lowered', 'increased']
+				},
+				{
+					title: 'Cultural load',
+					button: 'Explain the view',
+					short: 'One person is asked to represent diverse First Nations peoples and histories.',
+					harm: 'The person becomes a cultural help desk instead of a student or colleague.',
+					line: 'Let us not put one person on the spot. We can use First Nations-led resources.',
+					shift: 'The learning burden moves back to the group.',
+					levels: ['lowered', 'lowered', 'increased']
+				},
+				{
+					title: 'Questioning identity',
+					button: 'You do not look...',
+					short: 'Someone treats identity as something outsiders can inspect or approve.',
+					harm: 'Identity policing can shame people and reproduce colonial ideas about authenticity.',
+					line: 'Identity is not something we judge by appearance.',
+					shift: 'The person is not forced to prove who they are.',
+					levels: ['lowered', 'lowered', 'increased']
+				},
+				{
+					title: 'History made optional',
+					button: 'Why still talk?',
+					short: 'Colonisation and policy history are treated as old or irrelevant.',
+					harm: 'Current distrust, health inequity and service harm become harder to understand.',
+					line: 'History still shapes safety, health and access to services.',
+					shift: 'The room reconnects present practice with context.',
+					levels: ['lowered', 'lowered', 'increased']
+				},
+				{
+					title: 'Online racism',
+					button: 'A meme',
+					short: 'A racist meme or comment spreads through a chat as entertainment.',
+					harm: 'Online spaces become unsafe learning spaces, and silence can look like agreement.',
+					line: 'I do not want racist memes in this chat. Please delete it.',
+					shift: 'The chat gets a visible boundary.',
+					levels: ['lowered', 'lowered', 'increased']
+				},
+				{
+					title: 'Institutional minimising',
+					button: 'No report',
+					short: 'Low reporting is treated as proof that racism is not happening.',
+					harm: 'Fear, distrust, exhaustion and unsafe complaint processes disappear from view.',
+					line: 'People do not always report racism, even when it causes harm.',
+					shift: 'The conversation returns to safety and trust, not just complaint numbers.',
+					levels: ['lowered', 'lowered', 'increased']
+				}
+			];
+
+			const patternMenu = document.getElementById('pattern-menu');
+			const patternTag = document.getElementById('pattern-tag');
+			const patternTitle = document.getElementById('pattern-title');
+			const patternShort = document.getElementById('pattern-short');
+			const patternHarm = document.getElementById('pattern-harm');
+			const patternLine = document.getElementById('pattern-line');
+			const patternShift = document.getElementById('pattern-shift');
+
+			function renderPattern(index) {
+				const pattern = patterns[index];
+				patternTag.textContent = `Pattern ${index + 1} of ${patterns.length}`;
+				patternTitle.textContent = pattern.title;
+				patternShort.textContent = pattern.short;
+				patternHarm.textContent = pattern.harm;
+				patternLine.textContent = pattern.line;
+				patternShift.textContent = pattern.shift;
+				document.querySelectorAll('.pattern-menu button').forEach((button, buttonIndex) => {
+					button.classList.toggle('active', buttonIndex === index);
+				});
+			}
+
+			patterns.forEach((pattern, index) => {
+				const button = document.createElement('button');
+				button.type = 'button';
+				button.textContent = pattern.button;
+				button.addEventListener('click', () => renderPattern(index));
+				patternMenu.appendChild(button);
+			});
+
+			renderPattern(0);
+		</script>
 	</body>
 </html>

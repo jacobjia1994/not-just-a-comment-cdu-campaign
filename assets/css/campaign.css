@@ -660,6 +660,312 @@ a {
 	margin: 0.5rem 0;
 }
 
+.interactive-panel {
+	background: var(--paper);
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	box-shadow: var(--soft-shadow);
+	padding: clamp(1.1rem, 2.5vw, 1.8rem);
+}
+
+.panel-intro {
+	margin-bottom: 1.4rem;
+	max-width: 46rem;
+}
+
+.panel-intro h2 {
+	font-size: clamp(2rem, 4vw, 3.8rem);
+}
+
+.pattern-lab,
+.scenario-lab,
+.builder-shell {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 0.9fr 1.1fr;
+}
+
+.pattern-menu,
+.moment-menu,
+.button-palette {
+	display: grid;
+	gap: 0.65rem;
+}
+
+.pattern-menu {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pattern-menu button,
+.moment-menu button,
+.button-palette button,
+.scenario-tabs button {
+	background: #fffaf1;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	color: var(--ink) !important;
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.88rem;
+	font-weight: 900;
+	line-height: 1.2;
+	min-height: 3.2rem;
+	padding: 0.75rem;
+	text-align: left;
+}
+
+.pattern-menu button.active,
+.moment-menu button.active,
+.button-palette button.active,
+.scenario-tabs button.active {
+	background: var(--deep);
+	border-color: var(--deep);
+	color: #fffaf1 !important;
+}
+
+.pattern-output,
+.scenario-board,
+.builder-output {
+	background: #fffaf1;
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	box-shadow: var(--soft-shadow);
+	padding: clamp(1rem, 2.2vw, 1.5rem);
+}
+
+.pattern-output h3,
+.scenario-board h3,
+.builder-output h3 {
+	font-size: clamp(2rem, 4vw, 3.4rem);
+	font-weight: 900;
+	line-height: 1;
+	margin-bottom: 0.8rem;
+}
+
+.pattern-short,
+.scenario-top p:not(.feedback-label) {
+	color: rgba(23, 34, 34, 0.74);
+	font-size: 1.08rem;
+	line-height: 1.5;
+}
+
+.response-strip {
+	display: grid;
+	gap: 0.75rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	margin: 1rem 0;
+}
+
+.response-strip div {
+	background: rgba(70, 108, 97, 0.1);
+	border-left: 4px solid var(--eucalypt);
+	border-radius: 8px;
+	padding: 0.8rem;
+}
+
+.response-strip span {
+	color: var(--clay);
+	display: block;
+	font-size: 0.72rem;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	margin-bottom: 0.35rem;
+	text-transform: uppercase;
+}
+
+.response-strip p {
+	font-size: 0.95rem;
+	line-height: 1.45;
+	margin: 0;
+}
+
+.mini-meter-grid {
+	display: grid;
+	gap: 0.65rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mini-meter-grid div {
+	background: var(--deep);
+	border-radius: 8px;
+	color: #fffaf1;
+	min-height: 4rem;
+	padding: 0.8rem;
+}
+
+.mini-meter-grid strong {
+	display: block;
+	font-size: 0.9rem;
+}
+
+.mini-meter-grid span {
+	background: linear-gradient(90deg, var(--ochre), var(--gold));
+	border-radius: 999px;
+	display: block;
+	height: 0.45rem;
+	margin-top: 0.7rem;
+	width: 76%;
+}
+
+.choice-stack {
+	display: grid;
+	gap: 0.8rem;
+}
+
+.choice-stack a {
+	background: rgba(255, 250, 241, 0.1);
+	border: 1px solid rgba(255, 250, 241, 0.18);
+	border-radius: 9px;
+	color: #fffaf1;
+	font-size: 1.1rem;
+	font-weight: 900;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+.moment-menu {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.scenario-tabs {
+	display: grid;
+	gap: 0.5rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	margin: 1rem 0;
+}
+
+.scenario-detail {
+	background: rgba(70, 108, 97, 0.1);
+	border-left: 5px solid var(--eucalypt);
+	border-radius: 10px;
+	min-height: 9rem;
+	padding: 1rem;
+}
+
+.scenario-detail h4 {
+	color: var(--clay);
+	font-size: 0.85rem;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	margin-bottom: 0.55rem;
+	text-transform: uppercase;
+}
+
+.scenario-detail p {
+	font-size: 1.05rem;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.scenario-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.65rem;
+	margin-top: 1rem;
+}
+
+.scenario-actions button,
+.builder-output button {
+	background: var(--deep);
+	border: 1px solid var(--deep);
+	border-radius: 7px;
+	color: #fffaf1 !important;
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.82rem;
+	font-weight: 900;
+	min-height: 2.8rem;
+	padding: 0 0.9rem;
+	text-transform: uppercase;
+}
+
+.scenario-actions .ghost-button {
+	background: transparent;
+	border-color: var(--line);
+	color: var(--deep) !important;
+}
+
+.builder-controls h2 {
+	font-size: clamp(1.8rem, 3.2vw, 3rem);
+	margin-bottom: 0.8rem;
+}
+
+.second-step {
+	margin-top: 1.5rem;
+}
+
+.button-palette.compact {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.accordion-grid {
+	display: grid;
+	gap: 0.8rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.accordion-grid details {
+	background: #fffaf1;
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	padding: 0.95rem;
+}
+
+.accordion-grid summary {
+	color: var(--clay);
+	cursor: pointer;
+	font-weight: 900;
+	line-height: 1.3;
+}
+
+.accordion-grid p {
+	border-left: 4px solid var(--ochre);
+	font-size: 0.94rem;
+	font-weight: 800;
+	line-height: 1.35;
+	margin: 0.75rem 0 0;
+	padding-left: 0.75rem;
+}
+
+.flip-grid {
+	display: grid;
+	gap: 0.9rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.flip-card {
+	background: var(--deep);
+	border: 0;
+	border-radius: 10px;
+	color: #fffaf1;
+	cursor: default;
+	display: grid;
+	gap: 0.55rem;
+	min-height: 11rem;
+	padding: 1rem;
+	text-align: left;
+}
+
+.flip-card span {
+	color: var(--gold);
+	font-size: 0.72rem;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.flip-card strong {
+	color: #fffaf1;
+	font-size: 1.5rem;
+	line-height: 1.05;
+}
+
+.flip-card em {
+	color: rgba(255, 250, 241, 0.78);
+	font-style: normal;
+	line-height: 1.4;
+}
+
 .poster-grid {
 	display: grid;
 	gap: 1rem;
@@ -1248,7 +1554,9 @@ a.card:focus-visible {
 
 @media screen and (max-width: 1180px) {
 	.card-grid.four,
-	.toolkit-grid {
+	.toolkit-grid,
+	.accordion-grid,
+	.flip-grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
@@ -1263,7 +1571,9 @@ a.card:focus-visible {
 	}
 
 	.stat-board,
-	.impact-grid {
+	.impact-grid,
+	.response-strip,
+	.mini-meter-grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 }
@@ -1301,6 +1611,9 @@ a.card:focus-visible {
 	.card-grid.four,
 	.feature-layout,
 	.stage-shell,
+	.pattern-lab,
+	.scenario-lab,
+	.builder-shell,
 	.challenge-topline,
 	.stat-board,
 	.moment-panel,
@@ -1311,10 +1624,29 @@ a.card:focus-visible {
 	.phrase-bank,
 	.evidence-row,
 	.impact-grid,
+	.response-strip,
+	.mini-meter-grid,
 	.poster-grid,
 	.action-layout,
 	.copy-line {
 		grid-template-columns: 1fr;
+	}
+
+	.pattern-menu,
+	.moment-menu,
+	.scenario-tabs,
+	.button-palette.compact {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.accordion-grid,
+	.flip-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.pattern-output,
+	.scenario-board {
+		order: -1;
 	}
 
 	.challenge-card {

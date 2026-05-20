@@ -4,6 +4,7 @@
 		<title>What To Do | Not Just a Comment</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="An interactive bystander response builder for anti-Indigenous racism in university settings." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/campaign.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -24,149 +25,132 @@
 		<main>
 			<header class="page-hero">
 				<div class="hero-inner">
-					<p class="eyebrow">Bystander toolkit</p>
+					<p class="eyebrow">Build a response</p>
 					<h1>You do not need the perfect sentence.</h1>
-					<p class="lead">You need one safe first step, a way to support the person affected, and enough follow-through to show the room that racism will not be normalised.</p>
+					<p class="lead">Choose the kind of moment and the level of safety. The page gives you one line and one follow-up step.</p>
 				</div>
 			</header>
 
-			<section class="section">
-				<div class="toolkit-grid">
-					<article class="toolkit-step">
-						<span>1</span>
-						<h3>Notice</h3>
-						<p>Listen for jokes, myths, colour-blind comments, stereotypes and questions that make one student carry cultural education.</p>
-					</article>
-					<article class="toolkit-step">
-						<span>2</span>
-						<h3>Check safety</h3>
-						<p>Choose a response that does not increase risk for the person targeted. You can act in the moment, redirect the room, seek help or follow up later.</p>
-					</article>
-					<article class="toolkit-step">
-						<span>3</span>
-						<h3>Name the pattern</h3>
-						<p>Name the joke, stereotype, assumption, burden or silence. Avoid turning the moment into a debate about whether someone is a "bad person".</p>
-					</article>
-					<article class="toolkit-step">
-						<span>4</span>
-						<h3>Redirect the room</h3>
-						<p>Return the group to the task, suggest a First Nations-led resource, or ask staff for support if the setting feels unsafe.</p>
-					</article>
-					<article class="toolkit-step">
-						<span>5</span>
-						<h3>Check in privately</h3>
-						<p>Ask the person affected what they need. Do not ask them to reassure you, teach you or approve your response.</p>
-					</article>
-					<article class="toolkit-step">
-						<span>6</span>
-						<h3>Follow through</h3>
-						<p>Write down what happened if it is safe. Seek advice. Respect the affected person's choice about reporting.</p>
+			<section class="section alt">
+				<div class="builder-shell">
+					<div class="builder-controls">
+						<p class="eyebrow">Step 1</p>
+						<h2>What happened?</h2>
+						<div id="response-goals" class="button-palette" aria-label="Response goals"></div>
+						<p class="eyebrow second-step">Step 2</p>
+						<h2>How safe is it to speak now?</h2>
+						<div id="response-risk" class="button-palette compact" aria-label="Safety level">
+							<button type="button" data-risk="direct" class="active">Safe enough now</button>
+							<button type="button" data-risk="redirect">Keep it low-key</button>
+							<button type="button" data-risk="delay">Follow up later</button>
+						</div>
+					</div>
+					<article class="builder-output" aria-live="polite">
+						<p id="builder-label" class="feedback-label">Response</p>
+						<h3 id="builder-line"></h3>
+						<div class="response-strip">
+							<div>
+								<span>Use when</span>
+								<p id="builder-when"></p>
+							</div>
+							<div>
+								<span>Follow through</span>
+								<p id="builder-follow"></p>
+							</div>
+							<div>
+								<span>Avoid</span>
+								<p id="builder-avoid"></p>
+							</div>
+						</div>
+						<button id="copy-response" type="button">Copy response</button>
 					</article>
 				</div>
 			</section>
 
-			<section class="section alt">
+			<section class="section">
 				<div class="section-header">
 					<p class="eyebrow">Phrase bank</p>
-					<h2>Short lines are easier to use under pressure.</h2>
+					<h2>Open only the lines you need.</h2>
+					<p class="lead">These are short because people rarely use long speeches under pressure.</p>
 				</div>
-				<div class="phrase-bank">
-					<div class="phrase-group">
-						<h3>Pause the moment</h3>
+				<div class="accordion-grid">
+					<details>
+						<summary>Pause the moment</summary>
 						<p>"Can we pause for a second?"</p>
 						<p>"I do not think that joke lands well."</p>
 						<p>"That sounded like a stereotype."</p>
-					</div>
-					<div class="phrase-group">
-						<h3>Shift the frame</h3>
+					</details>
+					<details>
+						<summary>Shift the frame</summary>
 						<p>"Support programs are about equity."</p>
 						<p>"Fairness includes noticing racism."</p>
 						<p>"No report does not mean no harm."</p>
-					</div>
-					<div class="phrase-group">
-						<h3>Reduce the burden</h3>
-						<p>"Let's not put one person on the spot."</p>
+					</details>
+					<details>
+						<summary>Reduce the burden</summary>
+						<p>"Let us not put one person on the spot."</p>
 						<p>"We can do the reading instead of asking one student to explain."</p>
 						<p>"I can help find a First Nations-led resource."</p>
-					</div>
-					<div class="phrase-group">
-						<h3>Check in</h3>
+					</details>
+					<details>
+						<summary>Check in</summary>
 						<p>"I noticed what happened. Are you okay?"</p>
 						<p>"Would you like me to stay with you?"</p>
 						<p>"Do you want help finding support, or would you prefer space?"</p>
-					</div>
-					<div class="phrase-group">
-						<h3>Identity policing</h3>
+					</details>
+					<details>
+						<summary>Identity policing</summary>
 						<p>"Identity is not something we judge by appearance."</p>
 						<p>"That is not an appropriate question to ask someone."</p>
-						<p>"Let's not make someone prove who they are."</p>
-					</div>
-					<div class="phrase-group">
-						<h3>History denial</h3>
+						<p>"Let us not make someone prove who they are."</p>
+					</details>
+					<details>
+						<summary>History denial</summary>
 						<p>"History still shapes current systems and trust."</p>
 						<p>"This is not just in the past."</p>
 						<p>"We need the context before making claims about fairness."</p>
-					</div>
-					<div class="phrase-group">
-						<h3>Online spaces</h3>
+					</details>
+					<details>
+						<summary>Online spaces</summary>
 						<p>"I do not want racist memes in this chat."</p>
 						<p>"Please delete that. It is not okay here."</p>
 						<p>"This chat is still part of our learning space."</p>
-					</div>
-					<div class="phrase-group">
-						<h3>Placement and practice</h3>
+					</details>
+					<details>
+						<summary>Placement and practice</summary>
 						<p>"Can we check whether we are making a cultural assumption?"</p>
-						<p>"Let's take this to supervision before labelling the family."</p>
+						<p>"Let us take this to supervision before labelling the family."</p>
 						<p>"What would culturally safe practice require here?"</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="section">
-				<div class="section-header">
-					<p class="eyebrow">Choose the safest form of action</p>
-					<h2>Speaking up is not always one dramatic confrontation.</h2>
-					<p class="lead">A useful response depends on the setting, power, risk and what the person affected wants. You can act in more than one way.</p>
-				</div>
-				<div class="card-grid four">
-					<article class="card">
-						<h3>Direct</h3>
-						<p>Name the comment calmly when it is safe: "That sounded like a stereotype." Keep it short and move the room away from the harm.</p>
-					</article>
-					<article class="card">
-						<h3>Redirect</h3>
-						<p>Shift the group back to the task, suggest a First Nations-led resource, or stop the joke from becoming the centre of the room.</p>
-					</article>
-					<article class="card">
-						<h3>Delegate</h3>
-						<p>Ask a tutor, supervisor, student leader or support service for help when power, safety or repeated behaviour makes one student response insufficient.</p>
-					</article>
-					<article class="card">
-						<h3>Delay and support</h3>
-						<p>If the moment passes or speaking up feels unsafe, check in privately, document what happened if appropriate, and offer options without pressure.</p>
-					</article>
+					</details>
 				</div>
 			</section>
 
 			<section class="section mist">
 				<div class="section-header">
-					<p class="eyebrow">After the moment</p>
-					<h2>Do not turn your response into another burden.</h2>
-					<p class="lead">The aim is not to perform being a good bystander. The aim is to reduce harm, support the person affected and change the pattern that made the moment possible.</p>
+					<p class="eyebrow">Action types</p>
+					<h2>Choose the safest form of action.</h2>
 				</div>
-				<div class="card-grid three">
-					<article class="card">
-						<h3>Do not ask for reassurance</h3>
-						<p>Avoid making the person affected comfort you or rate your response.</p>
-					</article>
-					<article class="card">
-						<h3>Do not force a report</h3>
-						<p>Offer options and support. Reporting should not remove control from the person harmed.</p>
-					</article>
-					<article class="card">
-						<h3>Do keep learning</h3>
-						<p>Use First Nations-led resources. Do not rely on one student to explain racism, culture or history.</p>
-					</article>
+				<div class="flip-grid">
+					<button type="button" class="flip-card">
+						<span>Direct</span>
+						<strong>Name it now</strong>
+						<em>Use when it is safe enough to speak in the moment.</em>
+					</button>
+					<button type="button" class="flip-card">
+						<span>Redirect</span>
+						<strong>Move the room</strong>
+						<em>Use when a calm boundary and return to task is safer.</em>
+					</button>
+					<button type="button" class="flip-card">
+						<span>Delegate</span>
+						<strong>Bring in support</strong>
+						<em>Use when power, risk or repeated behaviour needs staff help.</em>
+					</button>
+					<button type="button" class="flip-card">
+						<span>Delay</span>
+						<strong>Check in later</strong>
+						<em>Use when public action may increase risk.</em>
+					</button>
 				</div>
 			</section>
 		</main>
@@ -176,5 +160,145 @@
 		</footer>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			const responseOptions = [
+				{
+					id: 'joke',
+					label: 'A joke or stereotype',
+					when: 'A comment turns identity into a punchline or repeats a stereotype.',
+					avoid: 'Do not ask the person targeted to explain why it hurt.',
+					lines: {
+						direct: 'Can we not make people the punchline?',
+						redirect: 'That sounded like a stereotype. Let us get back to the task.',
+						delay: 'I noticed that comment earlier. Are you okay, and do you want support?'
+					},
+					follow: {
+						direct: 'Keep it short. Then check in privately.',
+						redirect: 'Move the group away from the joke and make the boundary visible.',
+						delay: 'Offer options without forcing a complaint.'
+					}
+				},
+				{
+					id: 'equity',
+					label: 'Special treatment talk',
+					when: 'Equity support is framed as unfair advantage.',
+					avoid: 'Do not make one student defend support programs or their place at university.',
+					lines: {
+						direct: 'Support programs are about equity, not unfair advantage.',
+						redirect: 'We need the context before calling support unfair.',
+						delay: 'That comment about support programs stayed with me. It is worth challenging.'
+					},
+					follow: {
+						direct: 'Keep the focus on systems and unequal conditions.',
+						redirect: 'Return to the work without letting the myth sit unchallenged.',
+						delay: 'Share a First Nations-led or university equity resource later.'
+					}
+				},
+				{
+					id: 'burden',
+					label: 'One student is put on the spot',
+					when: 'Someone is asked to represent, explain or educate the room.',
+					avoid: 'Do not turn curiosity into unpaid cultural labour.',
+					lines: {
+						direct: 'Let us not put one person on the spot. We can do the reading.',
+						redirect: 'Can we use a First Nations-led resource for this?',
+						delay: 'I noticed you were put on the spot. Did that feel okay, or would support help?'
+					},
+					follow: {
+						direct: 'Suggest a resource and move responsibility back to the group.',
+						redirect: 'Take the pressure off the individual student.',
+						delay: 'Respect their answer. Do not ask them to reassure you.'
+					}
+				},
+				{
+					id: 'identity',
+					label: 'Identity is questioned',
+					when: 'Someone comments on appearance, ancestry, authenticity or whether a person is Aboriginal enough.',
+					avoid: 'Do not let identity become a public inspection.',
+					lines: {
+						direct: 'Identity is not something we judge by appearance.',
+						redirect: 'That question is not appropriate. Let us move on.',
+						delay: 'I am sorry that question was asked. Do you want me to help address it?'
+					},
+					follow: {
+						direct: 'Close the test. Do not invite more questions.',
+						redirect: 'Protect the person from having to prove who they are.',
+						delay: 'Offer support while leaving control with the person affected.'
+					}
+				},
+				{
+					id: 'practice',
+					label: 'Placement or practice assumption',
+					when: 'A client, family or community is described through deficit or cultural assumptions.',
+					avoid: 'Do not let a stereotype become professional judgement.',
+					lines: {
+						direct: 'Can we check whether we are making a cultural assumption here?',
+						redirect: 'This sounds like something to take to supervision before we label the family.',
+						delay: 'I want to revisit that debrief. I think we may have missed the cultural safety issue.'
+					},
+					follow: {
+						direct: 'Ask what evidence is present and what context is missing.',
+						redirect: 'Move the issue into supervision or a safer professional space.',
+						delay: 'Document the concern and seek advice if needed.'
+					}
+				}
+			];
+
+			let activeGoal = 0;
+			let activeRisk = 'direct';
+			const goals = document.getElementById('response-goals');
+			const riskButtons = document.querySelectorAll('#response-risk button');
+			const builderLabel = document.getElementById('builder-label');
+			const builderLine = document.getElementById('builder-line');
+			const builderWhen = document.getElementById('builder-when');
+			const builderFollow = document.getElementById('builder-follow');
+			const builderAvoid = document.getElementById('builder-avoid');
+
+			function renderResponse() {
+				const response = responseOptions[activeGoal];
+				builderLabel.textContent = response.label;
+				builderLine.textContent = response.lines[activeRisk];
+				builderWhen.textContent = response.when;
+				builderFollow.textContent = response.follow[activeRisk];
+				builderAvoid.textContent = response.avoid;
+				document.querySelectorAll('#response-goals button').forEach((button, index) => {
+					button.classList.toggle('active', index === activeGoal);
+				});
+				riskButtons.forEach((button) => {
+					button.classList.toggle('active', button.dataset.risk === activeRisk);
+				});
+			}
+
+			responseOptions.forEach((response, index) => {
+				const button = document.createElement('button');
+				button.type = 'button';
+				button.textContent = response.label;
+				button.addEventListener('click', () => {
+					activeGoal = index;
+					renderResponse();
+				});
+				goals.appendChild(button);
+			});
+
+			riskButtons.forEach((button) => {
+				button.addEventListener('click', () => {
+					activeRisk = button.dataset.risk;
+					renderResponse();
+				});
+			});
+
+			document.getElementById('copy-response').addEventListener('click', async () => {
+				try {
+					await navigator.clipboard.writeText(builderLine.textContent);
+					document.getElementById('copy-response').textContent = 'Copied';
+					setTimeout(() => { document.getElementById('copy-response').textContent = 'Copy response'; }, 1200);
+				} catch {
+					document.getElementById('copy-response').textContent = 'Copy failed';
+					setTimeout(() => { document.getElementById('copy-response').textContent = 'Copy response'; }, 1200);
+				}
+			});
+
+			renderResponse();
+		</script>
 	</body>
 </html>
