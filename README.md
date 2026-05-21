@@ -11,4 +11,4 @@ The site is structured as a short public awareness and behaviour-change campaign
 
 Legacy paths `problem.html`, `moments.html` and `watch.html` redirect to the main campaign page.
 
-The website is based on the Story template by HTML5 UP and keeps the required template attribution in the footer. It does not imitate Aboriginal art or use decorative Indigenous motifs; any use of First Nations artwork should involve permission, payment, cultural review and attribution.
+The current website uses a custom lightweight responsive layout rather than the earlier HTML5 UP template layer. It does not imitate Aboriginal art or use decorative Indigenous motifs; any use of First Nations artwork should involve permission, payment, cultural review and attribution.

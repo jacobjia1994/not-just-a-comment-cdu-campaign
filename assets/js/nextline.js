@@ -421,7 +421,7 @@ function updateReveal(element, item) {
 }
 
 async function copyTextToClipboard(text) {
-	if (navigator.clipboard && window.isSecureContext) {
+	if (typeof navigator !== 'undefined' && navigator.clipboard && window.isSecureContext) {
 		await navigator.clipboard.writeText(text);
 		return;
 	}
