@@ -6,109 +6,137 @@
 -->
 <html lang="en">
 	<head>
-		<title>The Next Line | CDU Student Practice</title>
+		<title>Don’t Let It Pass at CDU</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="An interactive CDU student practice tool for responding to everyday anti-Indigenous racism." />
+		<meta name="description" content="An interactive CDU student campaign about everyday anti-Indigenous racism, peer action and First Nations wellbeing." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/campaign.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload campaign-page nextline-home">
+	<body class="is-preload campaign-page home-page">
 		<nav class="site-nav" aria-label="Main navigation">
-			<a class="brand" href="index.html">The Next Line</a>
+			<a class="brand" href="index.html">Don’t Let It Pass</a>
 			<div class="nav-links">
-				<a class="active" href="index.html">Play</a>
-				<a href="act.html">Lines</a>
+				<a class="active" href="index.html">Start</a>
+				<a href="#chain">What passes</a>
+				<a href="#moments">Is this racism?</a>
+				<a href="act.html">Next move</a>
+				<a href="#learn">Learn</a>
 				<a href="support.html">Support</a>
 				<a href="evidence.html">Evidence</a>
 			</div>
 		</nav>
 
 		<main>
-			<header class="nextline-hero">
-				<div class="nextline-hero-inner">
-					<p class="eyebrow">CDU student practice</p>
-					<h1>Someone said it. Everyone paused.</h1>
-					<p class="lead">A joke in class. A meme in the group chat. A comment about "special treatment". The moment is small until everyone lets it pass.</p>
-					<div class="hero-question">
-						<span>What is your next line?</span>
-					</div>
+			<header class="campaign-hero">
+				<div class="hero-inner">
+					<p class="eyebrow">CDU student campaign</p>
+					<h1>Don’t let it pass.</h1>
+					<p class="lead">A joke. A “special treatment” comment. A question that puts one First Nations student on the spot.</p>
+					<p class="hero-copy">Everyday anti-Indigenous racism affects safety, belonging and wellbeing at university. CDU students can notice it, name it and stop passing the burden on.</p>
 					<div class="hero-actions">
-						<a class="buttonish" href="#practice">Start with a moment</a>
-						<a class="buttonish alt" href="support.html">I need support</a>
+						<a class="buttonish" href="#start-moment">Start with a moment</a>
+						<a class="buttonish alt" href="act.html">Practise what to do</a>
 					</div>
 				</div>
 				<p class="image-credit">Image: GDW.45, <a href="https://commons.wikimedia.org/wiki/File:Wet_Season_Storm_at_Sunset_from_Dripstone_Cliffs_-_Casuarina_Beach.jpg">Casuarina Beach</a>, CC BY-SA 3.0.</p>
 			</header>
 
-			<section id="practice" class="practice-section" aria-label="Interactive anti-racism practice">
-				<div class="practice-layout">
-					<div class="practice-intro">
-						<p class="eyebrow">Choose the pressure point</p>
-						<h2>Pick the moment that feels closest.</h2>
-						<p>You do not need a perfect speech. Choose a campus moment, try a response and keep one line you could actually say next time.</p>
-						<div id="scenario-list" class="scenario-list" aria-label="Campus moments"></div>
+			<section id="start-moment" class="section moment-entry" aria-label="Start with a moment">
+				<div class="moment-layout">
+					<div class="section-copy">
+						<p class="eyebrow">Start with the room</p>
+						<h2>Someone says it. Everyone else teaches the room what is allowed.</h2>
+						<p>Choose what happens next. There is no score. The point is to see how a small moment can move harm, silence and responsibility around a group.</p>
 					</div>
-
-					<article class="practice-card" aria-live="polite">
-						<div class="practice-topline">
-							<span id="scenario-count">Moment 1 of 8</span>
-							<div class="practice-meter" aria-hidden="true"><div id="scenario-progress"></div></div>
+					<article class="choice-panel">
+						<p class="scene-label">Tutorial room</p>
+						<h3>“They get special treatment anyway.”</h3>
+						<p>The room goes quiet. What happens next?</p>
+						<div id="entry-choices" class="choice-grid entry-choice-grid">
+							<button type="button" data-feedback="laugh">Laugh and move on</button>
+							<button type="button" data-feedback="silent">Say nothing</button>
+							<button type="button" data-feedback="ask">Ask what they mean</button>
+							<button type="button" data-feedback="name">Name it briefly</button>
+							<button type="button" data-feedback="check">Check in afterwards</button>
 						</div>
-
-						<div class="scene-box">
-							<p id="scene-place" class="comment-kicker">Tutorial room</p>
-							<h3 id="scene-comment"></h3>
-							<p id="scene-context"></p>
-						</div>
-
-						<div class="choice-area">
-							<h4>Your move</h4>
-							<div id="response-options" class="choice-grid"></div>
-						</div>
-
-						<div id="response-feedback" class="response-feedback" hidden>
-							<p id="feedback-kicker" class="feedback-label">Try it</p>
-							<h4 id="feedback-title"></h4>
-							<p id="feedback-copy"></p>
-							<div id="impact-row" class="impact-row"></div>
-							<div class="keep-line">
-								<span>Keep this line</span>
-								<strong id="keeper-line"></strong>
-							</div>
-							<div class="challenge-actions">
-								<button id="save-line" type="button">Save line</button>
-								<button id="next-scenario" type="button" class="ghost-button">Next moment</button>
-							</div>
+						<div id="entry-feedback" class="reveal-box" aria-live="polite">
+							<p class="feedback-label">Choose one response</p>
+							<h4>What gets learned?</h4>
+							<p>Click a choice to reveal what the room may learn from it.</p>
 						</div>
 					</article>
 				</div>
 			</section>
 
-			<section id="card" class="card-section">
-				<div class="card-layout">
-					<div>
-						<p class="eyebrow">Take something with you</p>
-						<h2>Your next-line card</h2>
-						<p>These are not slogans. They are short sentences for the awkward five seconds before the room moves on.</p>
+			<section id="chain" class="section chain-section" aria-label="What gets passed on">
+				<div class="section-header">
+					<p class="eyebrow">What gets passed on</p>
+					<h2>It is not just one comment when the same burden keeps moving.</h2>
+					<p>Everyday racism can create shame, identity stress and cultural load. It can also change how safe someone feels in class, online, on placement or on campus.</p>
+				</div>
+				<div id="chain-list" class="chain-list">
+					<button type="button" data-chain="0"><span>1</span>A comment is made</button>
+					<button type="button" data-chain="1"><span>2</span>The room lets it pass</button>
+					<button type="button" data-chain="2"><span>3</span>The burden moves</button>
+					<button type="button" data-chain="3"><span>4</span>Safety changes</button>
+					<button type="button" data-chain="4"><span>5</span>Participation changes</button>
+					<button type="button" data-chain="5"><span>6</span>Wellbeing is affected</button>
+				</div>
+				<article id="chain-reveal" class="big-reveal" aria-live="polite">
+					<p class="feedback-label">Tap the chain</p>
+					<h3>Small moments can carry a heavy load.</h3>
+					<p>The campaign is not about fixing First Nations students. It is about changing the behaviour around them.</p>
+				</article>
+			</section>
+
+			<section id="moments" class="section moments-section" aria-label="Everyday racism moments">
+				<div class="section-header">
+					<p class="eyebrow">Is this racism?</p>
+					<h2>Racism is not always loud.</h2>
+					<p>Click a moment. Each one is common enough to be excused, and harmful enough to matter.</p>
+				</div>
+				<div id="moment-cards" class="moment-cards"></div>
+			</section>
+
+			<section id="learn" class="section learn-section" aria-label="Learn without loading others">
+				<div class="learn-layout">
+					<div class="section-copy">
+						<p class="eyebrow">Learn without loading others</p>
+						<h2>Curiosity is not the problem. Passing the work on is.</h2>
+						<p>Wanting to learn is good. But do not make a First Nations classmate become the teacher, evidence source or spokesperson for everyone.</p>
 					</div>
-					<article class="line-card">
-						<h3>Next time, I can say:</h3>
-						<ol id="saved-lines">
-							<li>Choose a moment above and save a line.</li>
-						</ol>
-						<div class="card-rules">
-							<span>Keep it short.</span>
-							<span>Shift the burden away from the person harmed.</span>
-							<span>Check in privately after.</span>
+					<article class="choice-panel light-panel">
+						<p class="scene-label">Before you ask</p>
+						<h3>You want to understand a topic from class. What is the better first step?</h3>
+						<div id="learn-choices" class="choice-grid">
+							<button type="button" data-learn="public">Start with public First Nations-led resources</button>
+							<button type="button" data-learn="front">Ask the First Nations student in front of everyone</button>
+							<button type="button" data-learn="private">Message privately and ask them to explain</button>
 						</div>
-						<div class="challenge-actions">
-							<button id="copy-lines" type="button">Copy my lines</button>
-							<a class="buttonish ghost" href="act.html">See all lines</a>
+						<div id="learn-feedback" class="reveal-box" aria-live="polite">
+							<p class="feedback-label">Choose a first step</p>
+							<h4>Respect includes not taking access.</h4>
+							<p>Click an option to reveal why consent, relationship and public resources matter.</p>
 						</div>
 					</article>
 				</div>
+				<div class="resource-principles">
+					<article><span>01</span><p>Check whether a public resource already answers it.</p></article>
+					<article><span>02</span><p>Ask whether one person is being expected to speak for many peoples.</p></article>
+					<article><span>03</span><p>Notice whether the question is actually carrying a stereotype.</p></article>
+					<article><span>04</span><p>Accept that nobody owes personal cultural knowledge.</p></article>
+				</div>
+			</section>
+
+			<section class="section final-cta">
+				<div>
+					<p class="eyebrow">One next move</p>
+					<h2>You do not need the perfect speech.</h2>
+					<p>You need one realistic action that reduces harm, shifts the burden and shows the room that racism is not being passed on.</p>
+				</div>
+				<a class="buttonish" href="act.html">Practise one next move</a>
 			</section>
 		</main>
 

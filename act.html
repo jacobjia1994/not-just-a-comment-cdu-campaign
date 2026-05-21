@@ -6,105 +6,150 @@
 -->
 <html lang="en">
 	<head>
-		<title>Lines | The Next Line</title>
+		<title>Choose Your Next Move | Don’t Let It Pass at CDU</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Short lines CDU students can use when everyday anti-Indigenous racism shows up." />
+		<meta name="description" content="Short, realistic next moves CDU students can use when everyday anti-Indigenous racism happens." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/campaign.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload campaign-page">
 		<nav class="site-nav" aria-label="Main navigation">
-			<a class="brand" href="index.html">The Next Line</a>
+			<a class="brand" href="index.html">Don’t Let It Pass</a>
 			<div class="nav-links">
-				<a href="index.html">Play</a>
-				<a class="active" href="act.html">Lines</a>
+				<a href="index.html">Start</a>
+				<a href="index.html#chain">What passes</a>
+				<a href="index.html#moments">Is this racism?</a>
+				<a class="active" href="act.html">Next move</a>
+				<a href="index.html#learn">Learn</a>
 				<a href="support.html">Support</a>
 				<a href="evidence.html">Evidence</a>
 			</div>
 		</nav>
 
 		<main>
-			<header class="page-hero compact-hero">
+			<header class="page-hero">
 				<div class="page-hero-inner">
-					<p class="eyebrow">Keep one sentence ready</p>
-					<h1>Lines you can actually use.</h1>
-					<p class="lead">Short, plain responses for tutorials, group chats, campus conversations and placement discussions.</p>
+					<p class="eyebrow">Choose your next move</p>
+					<h1>You do not need the perfect speech.</h1>
+					<p class="lead">When racism happens, people often freeze. Choose a safer, realistic action for the moment you are in.</p>
 				</div>
 			</header>
 
-			<section class="section lines-section">
-				<div class="section-header">
-					<p class="eyebrow">Say less, shift more</p>
-					<h2>Choose the line that matches the risk.</h2>
-				</div>
-				<div class="line-bank">
-					<article>
-						<h3>Interrupt the moment</h3>
-						<button type="button">Can we pause that?</button>
-						<button type="button">Can we not make identity the punchline?</button>
-						<button type="button">That does not sit right with me.</button>
-						<button type="button">I do not want racist comments in this conversation.</button>
-					</article>
-					<article>
-						<h3>Challenge the myth</h3>
-						<button type="button">Equity is not special treatment.</button>
-						<button type="button">Where did you hear that?</button>
-						<button type="button">Can we check the evidence before repeating that?</button>
-						<button type="button">Treating everyone the same does not fix unequal barriers.</button>
-					</article>
-					<article>
-						<h3>Shift the burden</h3>
-						<button type="button">Let us not ask one person to speak for everyone.</button>
-						<button type="button">We can use First Nations-led resources.</button>
-						<button type="button">It is not their job to teach the room.</button>
-						<button type="button">Let us do the reading instead of putting someone on the spot.</button>
-					</article>
-					<article>
-						<h3>Check in after</h3>
-						<button type="button">I saw what happened. Are you okay?</button>
-						<button type="button">Do you want me to stay with you?</button>
-						<button type="button">Do you want support, or do you just want this noted?</button>
-						<button type="button">I will not share this without your consent unless there is an immediate safety risk.</button>
-					</article>
-					<article>
-						<h3>Placement and practice</h3>
-						<button type="button">Can we check whether we are making a cultural assumption here?</button>
-						<button type="button">What barriers might be affecting engagement?</button>
-						<button type="button">How can we discuss risk without using stereotypes?</button>
-						<button type="button">Can we take this to supervision before it becomes a practice judgement?</button>
-					</article>
-					<article>
-						<h3>When direct action feels unsafe</h3>
-						<button type="button">I am going to step away from this conversation.</button>
-						<button type="button">I am going to ask someone else to help respond.</button>
-						<button type="button">I can write down what happened if you want a record.</button>
-						<button type="button">We can look at support options together.</button>
+			<section class="section practice-section" aria-label="Practice a next move">
+				<div class="practice-layout">
+					<div class="practice-intro">
+						<p class="eyebrow">Practise the five seconds</p>
+						<h2>Pick the CDU moment that feels closest.</h2>
+						<p>Try a response and keep one line you could actually use. The aim is to reduce harm, not to win an argument.</p>
+						<div id="scenario-list" class="scenario-list" aria-label="Campus moments"></div>
+					</div>
+
+					<article class="practice-card" aria-live="polite">
+						<div class="practice-topline">
+							<span id="scenario-count">Moment 1 of 8</span>
+							<div class="practice-meter" aria-hidden="true"><div id="scenario-progress"></div></div>
+						</div>
+
+						<div class="scene-box">
+							<p id="scene-place" class="comment-kicker">Tutorial room</p>
+							<h3 id="scene-comment"></h3>
+							<p id="scene-context"></p>
+						</div>
+
+						<div class="choice-area">
+							<h4>Your move</h4>
+							<div id="response-options" class="choice-grid"></div>
+						</div>
+
+						<div id="response-feedback" class="response-feedback" hidden>
+							<p id="feedback-kicker" class="feedback-label">Try it</p>
+							<h4 id="feedback-title"></h4>
+							<p id="feedback-copy"></p>
+							<div id="impact-row" class="impact-row"></div>
+							<div class="keep-line">
+								<span>Keep this line</span>
+								<strong id="keeper-line"></strong>
+							</div>
+							<div class="challenge-actions">
+								<button id="save-line" type="button">Save line</button>
+								<button id="next-scenario" type="button" class="ghost-button">Next moment</button>
+							</div>
+						</div>
 					</article>
 				</div>
 			</section>
 
-			<section class="section note-band">
-				<div class="note-layout">
+			<section id="card" class="section card-section">
+				<div class="card-layout">
 					<div>
-						<p class="eyebrow">Use with care</p>
-						<h2>The aim is not to win the room.</h2>
+						<p class="eyebrow">Take something with you</p>
+						<h2>My next move</h2>
+						<p>These are not slogans. They are short sentences for the awkward five seconds before the room moves on.</p>
 					</div>
-					<div class="principle-grid">
-						<article>
-							<span>1</span>
-							<p>Reduce harm in the moment.</p>
-						</article>
-						<article>
-							<span>2</span>
-							<p>Do not make the person targeted explain or reassure.</p>
-						</article>
-						<article>
-							<span>3</span>
-							<p>Offer support without forcing a complaint.</p>
-						</article>
-					</div>
+					<article class="line-card">
+						<h3>Next time, I can say:</h3>
+						<ol id="saved-lines">
+							<li>Choose a moment above and save a line.</li>
+						</ol>
+						<div class="card-rules">
+							<span>Keep it short.</span>
+							<span>Shift the burden away from the person harmed.</span>
+							<span>Check in privately after.</span>
+						</div>
+						<div class="challenge-actions">
+							<button id="copy-lines" type="button">Copy my lines</button>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="section modes-section" aria-label="Five action modes">
+				<div class="section-header">
+					<p class="eyebrow">Five usable moves</p>
+					<h2>Choose the action that fits the risk.</h2>
+				</div>
+				<div class="line-bank">
+					<article>
+						<h3>Shift it</h3>
+						<p>Use when direct confrontation may escalate or when you need to interrupt quickly.</p>
+						<button type="button">Let’s pause that.</button>
+						<button type="button">I do not think this belongs in our course chat.</button>
+						<button type="button">Let’s bring this back to the task.</button>
+						<button type="button">I’m going to step in here.</button>
+					</article>
+					<article>
+						<h3>Ask for help</h3>
+						<p>Use when someone with responsibility should know, or when you should not manage it alone.</p>
+						<button type="button">Can we ask the tutor to address this?</button>
+						<button type="button">I think the group admin needs to remove that.</button>
+						<button type="button">This needs to go through the proper support pathway.</button>
+						<button type="button">I do not think we should leave this to the person targeted.</button>
+					</article>
+					<article>
+						<h3>Record if needed</h3>
+						<p>Use when details may support a complaint. Do not share recordings publicly.</p>
+						<button type="button">I’m going to write down what happened while it is clear.</button>
+						<button type="button">If you want to report this later, I can help you remember the details.</button>
+						<button type="button">I saw it too.</button>
+					</article>
+					<article>
+						<h3>Check in later</h3>
+						<p>Use when the moment has passed or speaking publicly may not be safe.</p>
+						<button type="button">I saw what happened. Are you okay?</button>
+						<button type="button">That comment was not okay.</button>
+						<button type="button">Do you want support, space or help finding someone to talk to?</button>
+						<button type="button">You should not have had to carry that.</button>
+					</article>
+					<article>
+						<h3>Name it briefly</h3>
+						<p>Use when it is safe to be direct and the behaviour needs to be made clear.</p>
+						<button type="button">That is racist.</button>
+						<button type="button">That sounds like a stereotype.</button>
+						<button type="button">Let’s not talk about First Nations people like that.</button>
+						<button type="button">That puts one person on the spot to speak for everyone.</button>
+					</article>
 				</div>
 			</section>
 		</main>
@@ -121,21 +166,6 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script>
-			document.querySelectorAll('.line-bank button').forEach((button) => {
-				button.addEventListener('click', async () => {
-					try {
-						await navigator.clipboard.writeText(button.textContent);
-						const original = button.textContent;
-						button.textContent = 'Copied';
-						setTimeout(() => { button.textContent = original; }, 900);
-					} catch {
-						const original = button.textContent;
-						button.textContent = 'Copy failed';
-						setTimeout(() => { button.textContent = original; }, 900);
-					}
-				});
-			});
-		</script>
+		<script src="assets/js/nextline.js"></script>
 	</body>
 </html>
