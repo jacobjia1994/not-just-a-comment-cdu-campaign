@@ -9,7 +9,7 @@ const homeScenarios = [
 				strength: 'risk',
 				room: 'Nobody may mean to agree. But from the outside, silence can look like permission.',
 				burden: 'A First Nations student may be left deciding whether to absorb it, challenge it or let it sit.',
-				line: 'Equity support exists because the starting conditions have not been equal.'
+				line: 'That is not special treatment. It is support for barriers that are already there.'
 			},
 			{
 				label: 'Ask what they mean',
@@ -23,14 +23,14 @@ const homeScenarios = [
 				strength: 'strong',
 				room: 'The myth is named without turning it into a long argument.',
 				burden: 'They do not have to be the one who turns pain into a lesson for everyone else.',
-				line: 'Equity support exists because the starting conditions have not been equal.'
+				line: 'That is not special treatment. It is support for barriers that are already there.'
 			},
 			{
 				label: 'Ask the tutor to pause',
 				strength: 'strong',
 				room: 'The tutor is invited to hold the learning space, not leave it to students to manage.',
 				burden: 'Responsibility moves to someone with a role in the room.',
-				line: 'Can we pause and ask the tutor to address this properly?'
+				line: 'Can we pause there? I think that needs to be addressed.'
 			}
 		]
 	},
@@ -44,14 +44,14 @@ const homeScenarios = [
 				strength: 'risk',
 				room: 'The chat may keep moving, but the meme is still sitting there for everyone to see.',
 				burden: 'Anyone targeted has to decide whether to speak up, leave or carry it quietly.',
-				line: 'I do not want racist memes in this chat. Please delete it.'
+				line: 'Can we not have racist memes in this chat? Please delete it.'
 			},
 			{
 				label: 'Reply in the chat',
 				strength: 'strong',
 				room: 'The group sees a boundary in the same place the meme appeared.',
 				burden: 'The harm is not left for one person to explain.',
-				line: 'I do not want racist memes in this chat. Please delete it.'
+				line: 'Can we not have racist memes in this chat? Please delete it.'
 			},
 			{
 				label: 'Message them privately',
@@ -65,7 +65,7 @@ const homeScenarios = [
 				strength: 'strong',
 				room: 'The chat gets a visible limit, not just private discomfort.',
 				burden: 'The person harmed does not have to manage the group alone.',
-				line: 'Can the group admin remove this? I do not think racist memes belong here.'
+				line: 'Can an admin remove this? It should not stay in the chat.'
 			}
 		]
 	},
@@ -79,21 +79,21 @@ const homeScenarios = [
 				strength: 'risk',
 				room: 'Nobody may mean to pressure them. But the spotlight stays on one person.',
 				burden: 'One student is left to represent many peoples and experiences.',
-				line: 'Let’s not put one person on the spot to speak for everyone.'
+				line: 'Let’s not put that on one person.'
 			},
 			{
 				label: 'Name the pressure',
 				strength: 'strong',
 				room: 'The room hears that the question asks too much of one person.',
 				burden: 'The person asked does not have to refuse, explain or educate the class alone.',
-				line: 'Let’s not put one person on the spot to speak for everyone.'
+				line: 'Let’s not put that on one person.'
 			},
 			{
 				label: 'Suggest public resources',
 				strength: 'strong',
 				room: 'Learning is redirected to places made for public learning.',
 				burden: 'The class does not take free teaching from one student.',
-				line: 'Can we use First Nations-led public resources instead of putting this on one person?'
+				line: 'Let’s start with public First Nations-led resources instead of asking one classmate.'
 			},
 			{
 				label: 'Check in after class',
@@ -114,14 +114,14 @@ const homeScenarios = [
 				strength: 'risk',
 				room: 'Nobody may want a conflict before class. But the question can start to sound acceptable.',
 				burden: 'The person asked may feel they have to prove who they are.',
-				line: 'It is not our place to test someone’s identity.'
+				line: 'We do not need to question someone’s identity like that.'
 			},
 			{
 				label: 'Name the boundary',
 				strength: 'strong',
 				room: 'The boundary is short, and the question stops being treated as harmless curiosity.',
 				burden: 'The person targeted does not have to justify their identity in front of others.',
-				line: 'It is not our place to test someone’s identity.'
+				line: 'We do not need to question someone’s identity like that.'
 			},
 			{
 				label: 'Change the subject',
@@ -135,7 +135,7 @@ const homeScenarios = [
 				strength: 'strong',
 				room: 'The public moment may have passed, but the person knows someone noticed.',
 				burden: 'They do not have to carry the discomfort alone.',
-				line: 'That question was not okay. Are you alright?'
+				line: 'That was an uncomfortable question. Are you okay?'
 			}
 		]
 	},
@@ -149,21 +149,21 @@ const homeScenarios = [
 				strength: 'risk',
 				room: 'The label can start doing the thinking before anyone has checked the barriers.',
 				burden: 'The family can become “the problem” before trust, access or cultural context is considered.',
-				line: 'What barriers might be affecting engagement?'
+				line: 'What might be making engagement harder here?'
 			},
 			{
 				label: 'Ask about barriers',
 				strength: 'strong',
 				room: 'The conversation moves from blame toward a fuller assessment.',
 				burden: 'The family is not reduced to a label.',
-				line: 'What barriers might be affecting engagement?'
+				line: 'What might be making engagement harder here?'
 			},
 			{
 				label: 'Check for cultural assumption',
 				strength: 'strong',
 				room: 'The practice risk is named without turning the conversation into a personal attack.',
 				burden: 'Responsibility stays with the service system, not just the family.',
-				line: 'Can we check whether we are making a cultural assumption here?'
+				line: 'Can we slow down and check whether we are making an assumption?'
 			},
 			{
 				label: 'Take it to supervision',
@@ -184,7 +184,7 @@ const homeScenarios = [
 				strength: 'risk',
 				room: 'It may feel easier in the moment. It can also make the eye-roll feel shared.',
 				burden: 'People who value the acknowledgement may feel the room is not with them.',
-				line: 'This is not just a script. It is about whose Country we are on.'
+				line: 'It is not just a script. It is about whose Country we are on.'
 			},
 			{
 				label: 'Ask what it acknowledges',
@@ -198,14 +198,14 @@ const homeScenarios = [
 				strength: 'strong',
 				room: 'The purpose is named without a long lecture.',
 				burden: 'The room hears that respect is not optional background noise.',
-				line: 'This is not just a script. It is about whose Country we are on.'
+				line: 'It is not just a script. It is about whose Country we are on.'
 			},
 			{
 				label: 'Ask the organiser to explain',
 				strength: 'strong',
 				room: 'The organiser can set a clearer norm for the event.',
 				burden: 'The explanation does not have to come from a First Nations attendee.',
-				line: 'Can we ask the organiser to explain why this matters?'
+				line: 'Could the organiser explain why we do it? That might help.'
 			}
 		]
 	}
@@ -257,7 +257,7 @@ const everydayMoments = [
 		sounds: 'Equity support, scholarships or identified services are framed as unfair advantage.',
 		does: 'It turns repair for historical and ongoing exclusion into resentment. It can make First Nations students feel watched, doubted or undeserving.',
 		move: 'Ask what barrier the support is responding to. Equity is not a shortcut; it is a response to unequal conditions.',
-		line: 'Equity support exists because the starting conditions have not been equal.'
+		line: 'That is not special treatment. It is support for barriers that are already there.'
 	},
 	{
 		title: '“I don’t see race.”',
@@ -271,14 +271,14 @@ const everydayMoments = [
 		sounds: 'A person’s identity is questioned because they do not fit someone else’s expectation.',
 		does: 'It makes identity something to be proven to others. That can be humiliating, exhausting and unsafe.',
 		move: 'Accept how people identify. Do not make appearance, surname or family history a test.',
-		line: 'It is not our place to test someone’s identity.'
+		line: 'We do not need to question someone’s identity like that.'
 	},
 	{
 		title: '“Can you explain the Aboriginal view?”',
 		sounds: 'One First Nations student is asked to speak for all Aboriginal and Torres Strait Islander peoples.',
 		does: 'It turns a student into a cultural help desk. It also treats diverse peoples, Nations and experiences as one view.',
 		move: 'Use public First Nations-led resources first. Ask only with consent, relationship and care.',
-		line: 'Let’s not put one person on the spot to speak for everyone.'
+		line: 'Let’s not put that on one person.'
 	},
 	{
 		title: '“No one reported it, so it must be fine.”',
@@ -355,7 +355,7 @@ const scenarios = [
 		place: 'Group assignment chat',
 		comment: '“They get special treatment anyway.”',
 		context: 'Equity support is framed as unfair advantage. The myth can shame students for using support or being present.',
-		keeper: 'Equity support exists because the starting conditions have not been equal.',
+		keeper: 'That is not special treatment. It is support for barriers that are already there.',
 		options: [
 			{
 				text: 'That is racist.',
@@ -364,7 +364,7 @@ const scenarios = [
 				impact: { belonging: 2, safety: -2, burden: 4 }
 			},
 			{
-				text: 'Equity support exists because the starting conditions have not been equal.',
+				text: 'That is not special treatment. It is support for barriers that are already there.',
 				best: true,
 				title: 'You shifted the frame.',
 				copy: 'This challenges the dominant myth without making a First Nations student defend support programs.',
@@ -411,7 +411,7 @@ const scenarios = [
 		place: 'Class discussion',
 		comment: '“Can you explain the Aboriginal view?”',
 		context: 'One person is asked to represent diverse peoples, histories and communities.',
-		keeper: 'Let’s not put one person on the spot to speak for everyone.',
+		keeper: 'Let’s not put that on one person.',
 		options: [
 			{
 				text: 'Wait for them to answer.',
@@ -420,7 +420,7 @@ const scenarios = [
 				impact: { belonging: -5, safety: -5, burden: 9 }
 			},
 			{
-				text: 'Let’s not put one person on the spot to speak for everyone.',
+				text: 'Let’s not put that on one person.',
 				best: true,
 				title: 'You moved the learning burden back to the group.',
 				copy: 'This protects the student from being treated as the room’s cultural help desk.',
@@ -439,7 +439,7 @@ const scenarios = [
 		place: 'Before class',
 		comment: '“Are you really Aboriginal?”',
 		context: 'The question can sound casual. It can also make someone feel examined, doubted or exposed.',
-		keeper: 'It is not our place to test someone’s identity.',
+		keeper: 'We do not need to question someone’s identity like that.',
 		options: [
 			{
 				text: 'Say nothing because it feels awkward.',
@@ -448,7 +448,7 @@ const scenarios = [
 				impact: { belonging: -8, safety: -8, burden: 12 }
 			},
 			{
-				text: 'It is not our place to test someone’s identity.',
+				text: 'We do not need to question someone’s identity like that.',
 				best: true,
 				title: 'You set a clear boundary.',
 				copy: 'This interrupts the demand for proof without asking for personal disclosure.',
@@ -467,7 +467,7 @@ const scenarios = [
 		place: 'Student group chat',
 		comment: 'A racist meme appears. Several people react with laughing emojis.',
 		context: 'Online silence can look like agreement because everyone can see who speaks and who lets it pass.',
-		keeper: 'I do not want racist memes in this chat. Please delete it.',
+		keeper: 'Can we not have racist memes in this chat? Please delete it.',
 		options: [
 			{
 				text: 'Leave the chat.',
@@ -476,7 +476,7 @@ const scenarios = [
 				impact: { belonging: -3, safety: 2, burden: 5 }
 			},
 			{
-				text: 'I do not want racist memes in this chat. Please delete it.',
+				text: 'Can we not have racist memes in this chat? Please delete it.',
 				best: true,
 				title: 'You made the group boundary visible.',
 				copy: 'This names the behaviour and asks for a concrete action.',
@@ -495,7 +495,7 @@ const scenarios = [
 		place: 'Placement discussion',
 		comment: '“This family is non-compliant.”',
 		context: 'A label is used before checking cultural, historical, service or trust barriers.',
-		keeper: 'Can we check whether we are making a cultural assumption here?',
+		keeper: 'Can we slow down and check whether we are making an assumption?',
 		options: [
 			{
 				text: 'Accept the wording.',
@@ -504,7 +504,7 @@ const scenarios = [
 				impact: { belonging: -6, safety: -7, burden: 8 }
 			},
 			{
-				text: 'Can we check whether we are making a cultural assumption here?',
+				text: 'Can we slow down and check whether we are making an assumption?',
 				best: true,
 				title: 'You slowed the judgement.',
 				copy: 'This is professional, non-accusatory and relevant to culturally safe practice.',
@@ -523,7 +523,7 @@ const scenarios = [
 		place: 'Campus event',
 		comment: '“Why do we have to do this every time?”',
 		context: 'The eye-roll can turn respect into a performance people are invited to resent.',
-		keeper: 'This is not just a script. It is about whose Country we are on.',
+		keeper: 'It is not just a script. It is about whose Country we are on.',
 		options: [
 			{
 				text: 'Laugh politely.',
@@ -532,7 +532,7 @@ const scenarios = [
 				impact: { belonging: -7, safety: -6, burden: 7 }
 			},
 			{
-				text: 'This is not just a script. It is about whose Country we are on.',
+				text: 'It is not just a script. It is about whose Country we are on.',
 				best: true,
 				title: 'You brought the moment back to place.',
 				copy: 'This connects the comment to history and respect without turning it into a lecture.',
@@ -616,7 +616,7 @@ function initHomeMomentFlow() {
 
 	function renderSavedHomeLines() {
 		if (!homeSavedLines.length) {
-			savedLinesList.innerHTML = '<li>Choose a moment and keep one line for later.</li>';
+			savedLinesList.innerHTML = '<li>I froze last time. Next time, I want one line ready.</li>';
 			return;
 		}
 		savedLinesList.innerHTML = homeSavedLines.slice(0, 3).map((line) => `<li>${line}</li>`).join('');
@@ -657,12 +657,12 @@ function initHomeMomentFlow() {
 		}
 		if (label.startsWith('ask') || label.includes('ask about') || label.includes('suggest public resources')) return 'A question can slow the moment down.';
 		if (label.includes('name') || label.includes('reply in the chat') || label.includes('check for cultural assumption')) return 'A short line can set a boundary.';
-		if (label.includes('check in') || label.includes('message them privately')) return 'It still matters after the moment.';
+		if (label.includes('check in') || label.includes('message them privately')) return 'It still matters afterwards.';
 		if (label.includes('say nothing') || label.includes('ignore') || label.includes('wait for') || label.includes('accept the label') || label.includes('laugh politely')) {
-			return 'This is what silence can do.';
+			return 'This is how silence can land.';
 		}
 		if (label.includes('change the subject')) return 'This can lower the heat, but the burden may stay.';
-		return option.strength === 'strong' ? 'This helps.' : 'This can leave the burden there.';
+		return 'Look at what this changes in the room.';
 	}
 
 	function renderResult() {
@@ -720,7 +720,7 @@ function initHomeMomentFlow() {
 	async function copyHomeLines() {
 		const text = homeSavedLines.length
 			? homeSavedLines.map((line, index) => `${index + 1}. ${line}`).join('\n')
-			: 'Choose a moment and keep one line for later.';
+			: 'I froze last time. Next time, I want one line ready.';
 		try {
 			await copyTextToClipboard(text);
 			const original = copyButton.textContent;
