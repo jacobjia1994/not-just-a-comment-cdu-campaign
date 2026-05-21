@@ -459,6 +459,7 @@ button:disabled {
 .moment-card,
 .reveal-box,
 .resource-principles article,
+.freeze-reason-grid article,
 .freeze-grid article,
 .care-note {
 	background: var(--surface);
@@ -480,6 +481,7 @@ button:disabled {
 .line-bank article,
 .big-reveal,
 .resource-principles article,
+.freeze-reason-grid article,
 .freeze-grid article,
 .care-note {
 	padding: 22px;
@@ -700,6 +702,7 @@ button:disabled {
 }
 
 .chain-section,
+.freeze-reasons-section,
 .freeze-section,
 .learn-section,
 .modes-section,
@@ -909,7 +912,9 @@ button:disabled {
 
 .impact-pill strong {
 	display: block;
-	font-size: 22px;
+	font-size: 14px;
+	line-height: 1.25;
+	margin-top: 4px;
 }
 
 .card-rules {
@@ -925,6 +930,21 @@ button:disabled {
 	display: grid;
 	gap: 16px;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.freeze-reason-grid {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.freeze-reason-grid h3 {
+	font-size: 19px;
+}
+
+.freeze-reason-grid p {
+	color: var(--muted);
+	margin-bottom: 0;
 }
 
 .line-bank article {
@@ -1082,6 +1102,7 @@ button:disabled {
 	.line-bank,
 	.support-directory,
 	.benchmark-grid,
+	.freeze-reason-grid,
 	.freeze-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
@@ -1123,8 +1144,12 @@ button:disabled {
 	}
 
 	.nav-links a {
-		font-size: 13px;
-		padding: 8px 9px;
+		font-size: 12px;
+		padding: 8px 7px;
+	}
+
+	.nav-links {
+		gap: 4px;
 	}
 
 	.hero-inner {
@@ -1142,8 +1167,18 @@ button:disabled {
 		font-size: 18px;
 	}
 
+	.hero h1 {
+		font-size: 34px;
+		max-width: 340px;
+	}
+
+	.hero .lead {
+		max-width: 320px;
+	}
+
 	.hero-copy {
 		font-size: 16px;
+		max-width: 330px;
 	}
 
 	.image-credit {
@@ -1168,6 +1203,7 @@ button:disabled {
 	.support-directory,
 	.evidence-grid,
 	.benchmark-grid,
+	.freeze-reason-grid,
 	.freeze-grid,
 	.impact-row {
 		grid-template-columns: 1fr;

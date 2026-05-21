@@ -7,28 +7,28 @@ const homeScenarios = [
 			{
 				label: 'Say nothing',
 				strength: 'risk',
-				room: 'Silence can sound like agreement.',
-				burden: 'A First Nations student may be left to absorb it or challenge it alone.',
+				room: 'Nobody may mean to agree. But from the outside, silence can look like permission.',
+				burden: 'A First Nations student may be left deciding whether to absorb it, challenge it or let it sit.',
 				line: 'Equity support exists because the starting conditions have not been equal.'
 			},
 			{
-				label: 'Ask: “What do you mean by special treatment?”',
+				label: 'Ask what they mean',
 				strength: 'strong',
-				room: 'The group has to slow down and explain the assumption.',
+				room: 'The room gets a pause. The comment is no longer just floating there.',
 				burden: 'You take some pressure off the person being talked about.',
 				line: 'What do you mean by “special treatment”?'
 			},
 			{
-				label: 'Say: “Equity support exists because the starting conditions have not been equal.”',
+				label: 'Name the myth',
 				strength: 'strong',
-				room: 'The myth is answered directly without turning it into a fight.',
-				burden: 'The person targeted does not have to defend support programs.',
+				room: 'The myth is named without turning it into a long argument.',
+				burden: 'They do not have to be the one who turns pain into a lesson for everyone else.',
 				line: 'Equity support exists because the starting conditions have not been equal.'
 			},
 			{
-				label: 'Ask the tutor to pause the conversation',
+				label: 'Ask the tutor to pause',
 				strength: 'strong',
-				room: 'The comment becomes something the learning space must address.',
+				room: 'The tutor is invited to hold the learning space, not leave it to students to manage.',
 				burden: 'Responsibility moves to someone with a role in the room.',
 				line: 'Can we pause and ask the tutor to address this properly?'
 			}
@@ -42,28 +42,28 @@ const homeScenarios = [
 			{
 				label: 'Ignore it',
 				strength: 'risk',
-				room: 'The chat may learn that racist posts can sit there.',
-				burden: 'Anyone targeted has to decide whether to speak up or leave it.',
+				room: 'The chat may keep moving, but the meme is still sitting there for everyone to see.',
+				burden: 'Anyone targeted has to decide whether to speak up, leave or carry it quietly.',
 				line: 'I do not want racist memes in this chat. Please delete it.'
 			},
 			{
-				label: 'Reply: “I do not want racist memes in this chat. Please delete it.”',
+				label: 'Reply in the chat',
 				strength: 'strong',
-				room: 'Everyone sees a clear boundary.',
+				room: 'The group sees a boundary in the same place the meme appeared.',
 				burden: 'The harm is not left for one person to explain.',
 				line: 'I do not want racist memes in this chat. Please delete it.'
 			},
 			{
-				label: 'Message the sender privately',
+				label: 'Message them privately',
 				strength: 'risk',
-				room: 'The public chat may still look like nothing happened.',
+				room: 'The sender may hear from you, but the chat still sees the meme sitting there.',
 				burden: 'Private follow-up can help, but the group norm may stay unchanged.',
 				line: 'That meme is racist. Please delete it from the chat.'
 			},
 			{
-				label: 'Ask the group admin to remove it',
+				label: 'Ask the admin to remove it',
 				strength: 'strong',
-				room: 'The chat gets a visible limit.',
+				room: 'The chat gets a visible limit, not just private discomfort.',
 				burden: 'The person harmed does not have to manage the group alone.',
 				line: 'Can the group admin remove this? I do not think racist memes belong here.'
 			}
@@ -77,21 +77,21 @@ const homeScenarios = [
 			{
 				label: 'Wait for them to answer',
 				strength: 'risk',
-				room: 'The room may learn that one person can be put on the spot.',
+				room: 'Nobody may mean to pressure them. But the spotlight stays on one person.',
 				burden: 'One student is left to represent many peoples and experiences.',
 				line: 'Let’s not put one person on the spot to speak for everyone.'
 			},
 			{
-				label: 'Say: “Let’s not put one person on the spot to speak for everyone.”',
+				label: 'Name the pressure',
 				strength: 'strong',
-				room: 'The pressure is named without making it a lecture.',
-				burden: 'The person asked does not have to refuse or educate the class.',
+				room: 'The room hears that the question asks too much of one person.',
+				burden: 'The person asked does not have to refuse, explain or educate the class alone.',
 				line: 'Let’s not put one person on the spot to speak for everyone.'
 			},
 			{
-				label: 'Ask the class to use First Nations-led public resources',
+				label: 'Suggest public resources',
 				strength: 'strong',
-				room: 'Learning is redirected to appropriate sources.',
+				room: 'Learning is redirected to places made for public learning.',
 				burden: 'The class does not take free teaching from one student.',
 				line: 'Can we use First Nations-led public resources instead of putting this on one person?'
 			},
@@ -112,28 +112,28 @@ const homeScenarios = [
 			{
 				label: 'Say nothing',
 				strength: 'risk',
-				room: 'The question can sound acceptable.',
+				room: 'Nobody may want a conflict before class. But the question can start to sound acceptable.',
 				burden: 'The person asked may feel they have to prove who they are.',
 				line: 'It is not our place to test someone’s identity.'
 			},
 			{
-				label: 'Say: “It is not our place to test someone’s identity.”',
+				label: 'Name the boundary',
 				strength: 'strong',
-				room: 'The boundary is short and clear.',
-				burden: 'The person targeted does not have to justify their identity.',
+				room: 'The boundary is short, and the question stops being treated as harmless curiosity.',
+				burden: 'The person targeted does not have to justify their identity in front of others.',
 				line: 'It is not our place to test someone’s identity.'
 			},
 			{
 				label: 'Change the subject',
 				strength: 'risk',
-				room: 'The pressure may be interrupted, but the harm is not named.',
+				room: 'The pressure may drop for a moment, but nobody hears what was wrong.',
 				burden: 'The person may still be left wondering whether anyone understood.',
 				line: 'Let’s not ask people to prove their identity.'
 			},
 			{
 				label: 'Check in privately',
 				strength: 'strong',
-				room: 'The public moment may pass, but support still reaches the person.',
+				room: 'The public moment may have passed, but the person knows someone noticed.',
 				burden: 'They do not have to carry the discomfort alone.',
 				line: 'That question was not okay. Are you alright?'
 			}
@@ -147,28 +147,28 @@ const homeScenarios = [
 			{
 				label: 'Accept the label',
 				strength: 'risk',
-				room: 'The label may become the frame for practice.',
-				burden: 'The family can be treated as the problem before barriers are checked.',
+				room: 'The label can start doing the thinking before anyone has checked the barriers.',
+				burden: 'The family can become “the problem” before trust, access or cultural context is considered.',
 				line: 'What barriers might be affecting engagement?'
 			},
 			{
-				label: 'Ask: “What barriers might be affecting engagement?”',
+				label: 'Ask about barriers',
 				strength: 'strong',
-				room: 'The conversation moves from blame to assessment.',
+				room: 'The conversation moves from blame toward a fuller assessment.',
 				burden: 'The family is not reduced to a label.',
 				line: 'What barriers might be affecting engagement?'
 			},
 			{
-				label: 'Say: “Can we check whether we are making a cultural assumption here?”',
+				label: 'Check for cultural assumption',
 				strength: 'strong',
-				room: 'The practice risk is named without attacking the worker.',
+				room: 'The practice risk is named without turning the conversation into a personal attack.',
 				burden: 'Responsibility stays with the service system, not just the family.',
 				line: 'Can we check whether we are making a cultural assumption here?'
 			},
 			{
 				label: 'Take it to supervision',
 				strength: 'strong',
-				room: 'The issue is treated as practice judgement, not gossip.',
+				room: 'The issue is treated as practice judgement, not hallway discomfort.',
 				burden: 'You are not leaving the concern unmanaged.',
 				line: 'Can we take this to supervision before it becomes a practice judgement?'
 			}
@@ -182,26 +182,26 @@ const homeScenarios = [
 			{
 				label: 'Laugh politely',
 				strength: 'risk',
-				room: 'Polite laughter can make disrespect easier next time.',
+				room: 'It may feel easier in the moment. It can also make the eye-roll feel shared.',
 				burden: 'People who value the acknowledgement may feel the room is not with them.',
 				line: 'This is not just a script. It is about whose Country we are on.'
 			},
 			{
-				label: 'Ask: “What do you think it is meant to acknowledge?”',
+				label: 'Ask what it acknowledges',
 				strength: 'strong',
 				room: 'The comment has to slow down and face its assumption.',
 				burden: 'You do not leave the discomfort with First Nations people in the room.',
 				line: 'What do you think it is meant to acknowledge?'
 			},
 			{
-				label: 'Say: “This is not just a script. It is about whose Country we are on.”',
+				label: 'Name the purpose',
 				strength: 'strong',
 				room: 'The purpose is named without a long lecture.',
 				burden: 'The room hears that respect is not optional background noise.',
 				line: 'This is not just a script. It is about whose Country we are on.'
 			},
 			{
-				label: 'Ask the organiser to explain the purpose',
+				label: 'Ask the organiser to explain',
 				strength: 'strong',
 				room: 'The organiser can set a clearer norm for the event.',
 				burden: 'The explanation does not have to come from a First Nations attendee.',
@@ -652,12 +652,12 @@ function initHomeMomentFlow() {
 
 	function getHomeFeedback(option) {
 		const label = option.label.toLowerCase();
-		if (label.includes('ask the tutor') || label.includes('ask the group admin') || label.includes('ask the organiser') || label.includes('take it to supervision')) {
+		if (label.includes('ask the tutor') || label.includes('ask the admin') || label.includes('ask the organiser') || label.includes('take it to supervision')) {
 			return 'You do not have to handle it alone.';
 		}
-		if (label.startsWith('ask:')) return 'A question can slow the moment down.';
-		if (label.startsWith('say:') || label.includes('reply:')) return 'A short line can set a boundary.';
-		if (label.includes('check in') || label.includes('message the sender')) return 'It still matters after the moment.';
+		if (label.startsWith('ask') || label.includes('ask about') || label.includes('suggest public resources')) return 'A question can slow the moment down.';
+		if (label.includes('name') || label.includes('reply in the chat') || label.includes('check for cultural assumption')) return 'A short line can set a boundary.';
+		if (label.includes('check in') || label.includes('message them privately')) return 'It still matters after the moment.';
 		if (label.includes('say nothing') || label.includes('ignore') || label.includes('wait for') || label.includes('accept the label') || label.includes('laugh politely')) {
 			return 'This is what silence can do.';
 		}
@@ -870,15 +870,14 @@ function initPractice() {
 
 	function createImpactPills(impact) {
 		const labels = [
-			['belonging', 'Belonging'],
-			['safety', 'Safety'],
-			['burden', 'Burden']
+			['belonging', 'Belonging', 'room feels a little steadier', 'room can feel less safe'],
+			['safety', 'Safety', 'someone has more room to breathe', 'someone may brace for the next comment'],
+			['burden', 'Burden', 'not left on one person', 'left with the person harmed']
 		];
-		return labels.map(([key, label]) => {
+		return labels.map(([key, label, goodText, riskText]) => {
 			const value = impact[key];
-			const sign = value > 0 ? '+' : '';
 			const isGood = key === 'burden' ? value <= 0 : value >= 0;
-			return `<div class="impact-pill ${isGood ? 'good' : 'risk'}"><span>${label}</span><strong>${sign}${value}</strong></div>`;
+			return `<div class="impact-pill ${isGood ? 'good' : 'risk'}"><span>${label}</span><strong>${isGood ? goodText : riskText}</strong></div>`;
 		}).join('');
 	}
 
@@ -889,7 +888,7 @@ function initPractice() {
 				button.classList.add(option.best ? 'is-best' : 'is-risky');
 			}
 		});
-		feedbackKicker.textContent = option.best ? 'Strong move' : 'Notice the risk';
+		feedbackKicker.textContent = option.best ? 'This might help' : 'Notice what it leaves behind';
 		feedbackTitle.textContent = option.title;
 		feedbackCopy.textContent = option.copy;
 		keeperLine.textContent = keeper;
