@@ -701,7 +701,7 @@ button:disabled {
 	margin-top: 14px;
 }
 
-.story-card {
+.scenario-note-card {
 	background: var(--surface);
 	border: 1px solid var(--line);
 	border-left: 5px solid var(--clay);
@@ -711,13 +711,13 @@ button:disabled {
 	padding: 28px;
 }
 
-.story-card p {
+.scenario-note-card p {
 	color: var(--ink);
 	font-size: 19px;
 	line-height: 1.55;
 }
 
-.story-card p:last-child {
+.scenario-note-card p:last-child {
 	color: var(--muted);
 	margin-bottom: 0;
 }
@@ -1246,11 +1246,11 @@ button:disabled {
 		font-size: 19px;
 	}
 
-	.story-card {
+	.scenario-note-card {
 		padding: 22px;
 	}
 
-	.story-card p {
+	.scenario-note-card p {
 		font-size: 17px;
 	}
 

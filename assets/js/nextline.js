@@ -44,14 +44,14 @@ const homeScenarios = [
 				strength: 'risk',
 				room: 'The chat may keep moving, but the meme is still sitting there for everyone to see.',
 				burden: 'Anyone targeted has to decide whether to speak up, leave or carry it quietly.',
-				line: 'Can we not have racist memes in this chat? Please delete it.'
+				line: 'Can we not have racist memes in this chat?'
 			},
 			{
 				label: 'Reply in the chat',
 				strength: 'strong',
 				room: 'The group sees a boundary in the same place the meme appeared.',
 				burden: 'The harm is not left for one person to explain.',
-				line: 'Can we not have racist memes in this chat? Please delete it.'
+				line: 'Can we not have racist memes in this chat?'
 			},
 			{
 				label: 'Message them privately',
@@ -163,7 +163,7 @@ const homeScenarios = [
 				strength: 'strong',
 				room: 'The practice risk is named without turning the conversation into a personal attack.',
 				burden: 'Responsibility stays with the service system, not just the family.',
-				line: 'Can we slow down and check whether we are making an assumption?'
+				line: 'Can we slow down and check the assumption here?'
 			},
 			{
 				label: 'Take it to supervision',
@@ -467,7 +467,7 @@ const scenarios = [
 		place: 'Student group chat',
 		comment: 'A racist meme appears. Several people react with laughing emojis.',
 		context: 'Online silence can look like agreement because everyone can see who speaks and who lets it pass.',
-		keeper: 'Can we not have racist memes in this chat? Please delete it.',
+		keeper: 'Can we not have racist memes in this chat?',
 		options: [
 			{
 				text: 'Leave the chat.',
@@ -476,7 +476,7 @@ const scenarios = [
 				impact: { belonging: -3, safety: 2, burden: 5 }
 			},
 			{
-				text: 'Can we not have racist memes in this chat? Please delete it.',
+				text: 'Can we not have racist memes in this chat?',
 				best: true,
 				title: 'You made the group boundary visible.',
 				copy: 'This names the behaviour and asks for a concrete action.',
@@ -495,7 +495,7 @@ const scenarios = [
 		place: 'Placement discussion',
 		comment: '“This family is non-compliant.”',
 		context: 'A label is used before checking cultural, historical, service or trust barriers.',
-		keeper: 'Can we slow down and check whether we are making an assumption?',
+		keeper: 'Can we slow down and check the assumption here?',
 		options: [
 			{
 				text: 'Accept the wording.',
@@ -504,7 +504,7 @@ const scenarios = [
 				impact: { belonging: -6, safety: -7, burden: 8 }
 			},
 			{
-				text: 'Can we slow down and check whether we are making an assumption?',
+				text: 'Can we slow down and check the assumption here?',
 				best: true,
 				title: 'You slowed the judgement.',
 				copy: 'This is professional, non-accusatory and relevant to culturally safe practice.',
@@ -616,7 +616,7 @@ function initHomeMomentFlow() {
 
 	function renderSavedHomeLines() {
 		if (!homeSavedLines.length) {
-			savedLinesList.innerHTML = '<li>I froze last time. Next time, I want one line ready.</li>';
+			savedLinesList.innerHTML = '<li>If I freeze, I want one line ready.</li>';
 			return;
 		}
 		savedLinesList.innerHTML = homeSavedLines.slice(0, 3).map((line) => `<li>${line}</li>`).join('');
@@ -653,13 +653,13 @@ function initHomeMomentFlow() {
 	function getHomeFeedback(option) {
 		const label = option.label.toLowerCase();
 		if (label.includes('ask the tutor') || label.includes('ask the admin') || label.includes('ask the organiser') || label.includes('take it to supervision')) {
-			return 'You do not have to handle it alone.';
+			return 'You are not leaving it for one student to carry.';
 		}
-		if (label.startsWith('ask') || label.includes('ask about') || label.includes('suggest public resources')) return 'A question can slow the moment down.';
-		if (label.includes('name') || label.includes('reply in the chat') || label.includes('check for cultural assumption')) return 'A short line can set a boundary.';
-		if (label.includes('check in') || label.includes('message them privately')) return 'It still matters afterwards.';
+		if (label.startsWith('ask') || label.includes('ask about') || label.includes('suggest public resources')) return 'The room gets a pause. The comment is no longer just floating there.';
+		if (label.includes('name') || label.includes('reply in the chat') || label.includes('check for cultural assumption')) return 'One short line can show the room where the limit is.';
+		if (label.includes('check in') || label.includes('message them privately')) return 'The moment has passed, but support still matters.';
 		if (label.includes('say nothing') || label.includes('ignore') || label.includes('wait for') || label.includes('accept the label') || label.includes('laugh politely')) {
-			return 'This is how silence can land.';
+			return 'Nobody may mean to agree. But silence can look like permission.';
 		}
 		if (label.includes('change the subject')) return 'This can lower the heat, but the burden may stay.';
 		return 'Look at what this changes in the room.';
@@ -720,7 +720,7 @@ function initHomeMomentFlow() {
 	async function copyHomeLines() {
 		const text = homeSavedLines.length
 			? homeSavedLines.map((line, index) => `${index + 1}. ${line}`).join('\n')
-			: 'I froze last time. Next time, I want one line ready.';
+			: 'If I freeze, I want one line ready.';
 		try {
 			await copyTextToClipboard(text);
 			const original = copyButton.textContent;
