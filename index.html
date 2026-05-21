@@ -19,9 +19,9 @@
 			<a class="brand" href="index.html">Don’t Let It Pass</a>
 			<div class="nav-links">
 				<a class="active" href="index.html">Start</a>
-				<a href="#chain">What passes</a>
-				<a href="#moments">Is this racism?</a>
-				<a href="act.html">Next move</a>
+				<a href="#moments">Moments</a>
+				<a href="#my-line">My line</a>
+				<a href="act.html">Practice</a>
 				<a href="#learn">Learn</a>
 				<a href="support.html">Support</a>
 				<a href="evidence.html">Evidence</a>
@@ -32,40 +32,77 @@
 			<header class="campaign-hero">
 				<div class="hero-inner">
 					<p class="eyebrow">CDU student campaign</p>
-					<h1>Don’t let it pass.</h1>
-					<p class="lead">A joke. A “special treatment” comment. A question that puts one First Nations student on the spot.</p>
-					<p class="hero-copy">Everyday anti-Indigenous racism affects safety, belonging and wellbeing at university. CDU students can notice it, name it and stop passing the burden on.</p>
+					<p class="campaign-name">Don’t Let It Pass at CDU</p>
+					<h1>Someone says it. The room goes quiet.</h1>
+					<p class="lead">A joke. A “special treatment” comment. A racist meme in the group chat.</p>
+					<p class="hero-copy">You do not need the perfect speech. You need one line that stops the room moving on like nothing happened.</p>
 					<div class="hero-actions">
-						<a class="buttonish" href="#start-moment">Start with a moment</a>
-						<a class="buttonish alt" href="act.html">Practise what to do</a>
+						<a class="buttonish" href="#moments">Choose a moment</a>
+						<a class="buttonish alt" href="act.html">Give me one line to say</a>
 					</div>
 				</div>
 				<p class="image-credit">Image: GDW.45, <a href="https://commons.wikimedia.org/wiki/File:Wet_Season_Storm_at_Sunset_from_Dripstone_Cliffs_-_Casuarina_Beach.jpg">Casuarina Beach</a>, CC BY-SA 3.0.</p>
 			</header>
 
-			<section id="start-moment" class="section moment-entry" aria-label="Start with a moment">
-				<div class="moment-layout">
+			<section id="moments" class="section moment-entry" aria-label="Choose a campus moment">
+				<div class="moment-workflow">
 					<div class="section-copy">
-						<p class="eyebrow">Start with the room</p>
-						<h2>Someone says it. Everyone else teaches the room what is allowed.</h2>
-						<p>Choose what happens next. There is no score. The point is to see how a small moment can move harm, silence and responsibility around a group.</p>
+						<p class="eyebrow">Choose the moment</p>
+						<h2>Pick the one you have seen, heard or can imagine happening.</h2>
+						<p>No score. No confession. Just choose the moment, try a move, and keep one sentence for later.</p>
 					</div>
-					<article class="choice-panel">
-						<p class="scene-label">Tutorial room</p>
-						<h3>“They get special treatment anyway.”</h3>
-						<p>The room goes quiet. What happens next?</p>
-						<div id="entry-choices" class="choice-grid entry-choice-grid">
-							<button type="button" data-feedback="laugh">Laugh and move on</button>
-							<button type="button" data-feedback="silent">Say nothing</button>
-							<button type="button" data-feedback="ask">Ask what they mean</button>
-							<button type="button" data-feedback="name">Name it briefly</button>
-							<button type="button" data-feedback="check">Check in afterwards</button>
+					<div id="scenario-cards" class="scenario-cards" aria-label="Campus scenarios"></div>
+				</div>
+
+				<div class="response-workflow">
+					<article class="choice-panel selected-moment-panel" aria-live="polite">
+						<p id="home-moment-place" class="scene-label">Choose a moment first</p>
+						<h3 id="home-moment-title">What happened?</h3>
+						<p id="home-moment-context">Pick a card above. Then choose what you would do in the next few seconds.</p>
+					</article>
+
+					<article class="choice-panel action-panel">
+						<p class="scene-label">Step 1</p>
+						<h3>What would you do?</h3>
+						<div id="home-action-choices" class="action-chip-grid">
+							<button type="button" data-action="silent" aria-pressed="false" disabled>Say nothing</button>
+							<button type="button" data-action="question" aria-pressed="false" disabled>Ask a short question</button>
+							<button type="button" data-action="name" aria-pressed="false" disabled>Name it briefly</button>
+							<button type="button" data-action="check" aria-pressed="false" disabled>Check in later</button>
+							<button type="button" data-action="help" aria-pressed="false" disabled>Ask someone to help</button>
 						</div>
-						<div id="entry-feedback" class="reveal-box" aria-live="polite">
-							<p class="feedback-label">Choose one response</p>
-							<h4>What gets learned?</h4>
-							<p>Click a choice to reveal what the room may learn from it.</p>
+					</article>
+
+					<article id="home-result" class="result-panel" aria-live="polite">
+						<p class="feedback-label">Step 2</p>
+						<h3>Choose a moment and a move.</h3>
+						<div class="result-lines">
+							<div><span>What the room may learn</span><p>Waiting for your choice.</p></div>
+							<div><span>Who carries the burden</span><p>Waiting for your choice.</p></div>
+							<div><span>A better line to try</span><p>Waiting for your choice.</p></div>
 						</div>
+						<button id="save-home-line" type="button" class="save-line-button" disabled>Save this line</button>
+					</article>
+				</div>
+			</section>
+
+			<section id="my-line" class="section saved-line-section" aria-label="My next line card">
+				<div class="saved-line-layout">
+					<div>
+						<p class="eyebrow">Screenshot this</p>
+						<h2>My next line</h2>
+						<p>Next time, I can say:</p>
+					</div>
+					<article class="share-card">
+						<h3>Next time, I can say:</h3>
+						<ol id="home-saved-lines">
+							<li>Choose a moment and keep one line for later.</li>
+						</ol>
+						<div class="share-card-actions">
+							<button id="copy-home-lines" type="button">Copy my lines</button>
+							<button id="restart-home-flow" type="button" class="ghost-button">Start again</button>
+						</div>
+						<p class="screenshot-note">No data is collected. This card only lives in your browser.</p>
 					</article>
 				</div>
 			</section>
@@ -73,8 +110,8 @@
 			<section id="chain" class="section chain-section" aria-label="What gets passed on">
 				<div class="section-header">
 					<p class="eyebrow">What gets passed on</p>
-					<h2>It is not just one comment when the same burden keeps moving.</h2>
-					<p>Everyday racism can create shame, identity stress and cultural load. It can also change how safe someone feels in class, online, on placement or on campus.</p>
+					<h2>Silence teaches the room too.</h2>
+					<p>When nobody responds, the person targeted may be left to absorb it, explain it, or decide whether the space is safe anymore.</p>
 				</div>
 				<div id="chain-list" class="chain-list">
 					<button type="button" data-chain="0"><span>1</span>A comment is made</button>
@@ -86,16 +123,16 @@
 				</div>
 				<article id="chain-reveal" class="big-reveal" aria-live="polite">
 					<p class="feedback-label">Tap the chain</p>
-					<h3>Small moments can carry a heavy load.</h3>
-					<p>The campaign is not about fixing First Nations students. It is about changing the behaviour around them.</p>
+					<h3>Small moments do not stay small when they keep happening.</h3>
+					<p>First Nations students should not have to carry the comment, explain the harm, and teach the room.</p>
 				</article>
 			</section>
 
-			<section id="moments" class="section moments-section" aria-label="Everyday racism moments">
+			<section id="quick-check" class="section moments-section" aria-label="Quick check moments">
 				<div class="section-header">
-					<p class="eyebrow">Is this racism?</p>
-					<h2>Racism is not always loud.</h2>
-					<p>Click a moment. Each one is common enough to be excused, and harmful enough to matter.</p>
+					<p class="eyebrow">Quick check</p>
+					<h2>Some lines sound casual. They still land.</h2>
+					<p>Open a card if you want the short version of why it matters.</p>
 				</div>
 				<div id="moment-cards" class="moment-cards"></div>
 			</section>
@@ -104,8 +141,8 @@
 				<div class="learn-layout">
 					<div class="section-copy">
 						<p class="eyebrow">Learn without loading others</p>
-						<h2>Curiosity is not the problem. Passing the work on is.</h2>
-						<p>Wanting to learn is good. But do not make a First Nations classmate become the teacher, evidence source or spokesperson for everyone.</p>
+						<h2>Do not turn one classmate into the teacher.</h2>
+						<p>It is okay to learn. It is not okay to make one person do all the teaching.</p>
 					</div>
 					<article class="choice-panel light-panel">
 						<p class="scene-label">Before you ask</p>
@@ -124,19 +161,19 @@
 				</div>
 				<div class="resource-principles">
 					<article><span>01</span><p>Check whether a public resource already answers it.</p></article>
-					<article><span>02</span><p>Ask whether one person is being expected to speak for many peoples.</p></article>
-					<article><span>03</span><p>Notice whether the question is actually carrying a stereotype.</p></article>
-					<article><span>04</span><p>Accept that nobody owes personal cultural knowledge.</p></article>
+					<article><span>02</span><p>Ask with consent, not pressure.</p></article>
+					<article><span>03</span><p>Do not ask one person to speak for everyone.</p></article>
+					<article><span>04</span><p>Accept “no” without making it awkward.</p></article>
 				</div>
 			</section>
 
 			<section class="section final-cta">
 				<div>
 					<p class="eyebrow">One next move</p>
-					<h2>You do not need the perfect speech.</h2>
-					<p>You need one realistic action that reduces harm, shifts the burden and shows the room that racism is not being passed on.</p>
+					<h2>Keep one line ready.</h2>
+					<p>Most people freeze because they are trying to find the perfect response. Start with one short sentence you could actually say.</p>
 				</div>
-				<a class="buttonish" href="act.html">Practise one next move</a>
+				<a class="buttonish" href="act.html">Practise a moment</a>
 			</section>
 		</main>
 

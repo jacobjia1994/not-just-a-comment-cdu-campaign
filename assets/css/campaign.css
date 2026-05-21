@@ -154,6 +154,15 @@ a {
 	text-transform: uppercase;
 }
 
+.campaign-name {
+	color: rgba(255, 250, 241, 0.86);
+	font-size: 0.9rem;
+	font-style: normal;
+	font-weight: 900;
+	margin: -0.25rem 0 0.95rem;
+	text-transform: none;
+}
+
 .campaign-hero h1,
 .page-hero h1 {
 	color: var(--paper);
@@ -194,7 +203,9 @@ a {
 
 .buttonish,
 .challenge-actions button,
-.ghost-button {
+.ghost-button,
+.save-line-button,
+.share-card-actions button {
 	align-items: center;
 	background: var(--paper);
 	border: 1px solid transparent;
@@ -293,6 +304,9 @@ a {
 }
 
 .moment-layout,
+.moment-workflow,
+.response-workflow,
+.saved-line-layout,
 .learn-layout,
 .practice-layout,
 .card-layout {
@@ -314,7 +328,9 @@ a {
 .benchmark-grid article,
 .line-bank article,
 .reference-list,
-.big-reveal {
+.big-reveal,
+.result-panel,
+.share-card {
 	background: var(--paper);
 	border: 1px solid var(--line);
 	border-radius: 8px;
@@ -336,6 +352,254 @@ a {
 	font-weight: 900;
 	line-height: 1;
 	margin: 0 0 0.9rem;
+}
+
+.scenario-cards {
+	display: grid;
+	gap: 0.85rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.scenario-card {
+	background: var(--paper);
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	box-shadow: 0 12px 34px rgba(16, 36, 36, 0.08);
+	color: var(--ink) !important;
+	cursor: pointer;
+	display: grid;
+	gap: 0.55rem;
+	min-height: 11.5rem;
+	padding: 1rem;
+	text-align: left;
+	transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+	width: 100%;
+}
+
+.scenario-card span {
+	color: var(--clay);
+	font-size: 0.74rem;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.scenario-card strong {
+	font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+	font-weight: 900;
+	line-height: 1.08;
+}
+
+.scenario-card small {
+	color: rgba(23, 32, 31, 0.68);
+	font-size: 0.88rem;
+	line-height: 1.35;
+}
+
+.scenario-card:hover,
+.scenario-card:focus-visible,
+.scenario-card.active {
+	border-color: var(--deep);
+	box-shadow: 0 18px 44px rgba(16, 36, 36, 0.16);
+	transform: translateY(-2px);
+}
+
+.scenario-card.active {
+	background: var(--deep);
+	color: var(--paper) !important;
+}
+
+.scenario-card.active span,
+.scenario-card.active strong,
+.scenario-card.active small {
+	color: var(--paper);
+}
+
+.response-workflow {
+	grid-template-columns: 0.72fr 0.88fr 1.15fr;
+	margin-top: 1.2rem;
+}
+
+.selected-moment-panel,
+.action-panel,
+.result-panel,
+.share-card {
+	box-shadow: none;
+	padding: clamp(1rem, 2.2vw, 1.35rem);
+}
+
+.action-chip-grid {
+	display: grid;
+	gap: 0.58rem;
+	margin-top: 1rem;
+}
+
+.action-chip-grid button {
+	background: #ffffff;
+	border: 1px solid var(--line);
+	border-left: 5px solid var(--eucalypt);
+	border-radius: 8px;
+	color: var(--ink) !important;
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.92rem;
+	font-weight: 850;
+	letter-spacing: 0;
+	line-height: 1.25;
+	min-height: 3.05rem;
+	padding: 0.75rem;
+	text-align: left;
+	text-transform: none;
+	white-space: normal;
+	width: 100%;
+}
+
+.action-chip-grid button:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.action-chip-grid button.active {
+	background: rgba(79, 117, 100, 0.16);
+	border-color: var(--eucalypt);
+}
+
+.result-panel {
+	background: var(--deep);
+	color: var(--paper);
+}
+
+.result-panel h3 {
+	color: var(--paper);
+	font-size: clamp(1.35rem, 3vw, 2.25rem);
+	font-weight: 900;
+	line-height: 1.05;
+	margin: 0 0 1rem;
+}
+
+.result-lines {
+	display: grid;
+	gap: 0.65rem;
+}
+
+.result-lines div {
+	background: rgba(255, 250, 241, 0.1);
+	border: 1px solid rgba(255, 250, 241, 0.16);
+	border-radius: 8px;
+	padding: 0.75rem;
+}
+
+.result-lines span {
+	color: var(--gold);
+	display: block;
+	font-size: 0.72rem;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	margin-bottom: 0.35rem;
+	text-transform: uppercase;
+}
+
+.result-lines p {
+	color: rgba(255, 250, 241, 0.9);
+	font-size: 0.98rem;
+	line-height: 1.45;
+	margin: 0;
+}
+
+.save-line-button {
+	margin-top: 1rem;
+}
+
+.save-line-button:disabled {
+	cursor: not-allowed;
+	opacity: 0.55;
+}
+
+.saved-line-section {
+	background:
+		linear-gradient(135deg, rgba(16, 36, 36, 0.94), rgba(47, 105, 116, 0.8)),
+		url("../../images/casuarina-storm.jpg") center / cover;
+	color: var(--paper);
+}
+
+.saved-line-layout {
+	align-items: center;
+	grid-template-columns: 0.7fr 1.3fr;
+}
+
+.saved-line-layout h2,
+.saved-line-layout .eyebrow {
+	color: var(--paper);
+}
+
+.saved-line-layout p {
+	color: rgba(255, 250, 241, 0.86);
+}
+
+.share-card {
+	color: var(--ink);
+	position: relative;
+}
+
+.share-card::before {
+	background: linear-gradient(90deg, var(--ochre), var(--gold), var(--eucalypt));
+	border-radius: 8px 8px 0 0;
+	content: "";
+	height: 0.55rem;
+	left: -1px;
+	position: absolute;
+	right: -1px;
+	top: -1px;
+}
+
+.share-card h3 {
+	font-size: clamp(1.55rem, 3vw, 2.35rem);
+	font-weight: 900;
+	margin: 0.65rem 0 1rem;
+}
+
+.share-card ol {
+	margin: 0 0 1rem 1.2rem;
+}
+
+.share-card li {
+	font-size: clamp(1.05rem, 2vw, 1.3rem);
+	font-weight: 850;
+	line-height: 1.35;
+	margin: 0.45rem 0;
+}
+
+.share-card-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.65rem;
+	margin-top: 1rem;
+}
+
+.share-card-actions .ghost-button {
+	border-color: var(--line);
+}
+
+.screenshot-note {
+	color: rgba(23, 32, 31, 0.62) !important;
+	font-size: 0.82rem !important;
+	margin: 0.9rem 0 0;
+}
+
+.manual-copy-box {
+	background: var(--mist);
+	border: 1px solid var(--line);
+	border-radius: 7px;
+	color: var(--ink);
+	display: block;
+	font: inherit;
+	font-size: 0.95rem;
+	line-height: 1.35;
+	margin-top: 0.75rem;
+	min-height: 5.5rem;
+	padding: 0.75rem;
+	resize: vertical;
+	width: 100%;
 }
 
 .scene-label,
@@ -392,7 +656,9 @@ a {
 .moment-card > button:hover,
 .moment-card > button:focus-visible,
 .chain-list button:hover,
-.chain-list button:focus-visible {
+.chain-list button:focus-visible,
+.action-chip-grid button:hover:not(:disabled),
+.action-chip-grid button:focus-visible:not(:disabled) {
 	border-color: var(--sea);
 	box-shadow: 0 12px 28px rgba(16, 36, 36, 0.14);
 	transform: translateY(-1px);
@@ -1004,6 +1270,8 @@ a {
 
 @media screen and (max-width: 1120px) {
 	.entry-choice-grid,
+	.scenario-cards,
+	.response-workflow,
 	.line-bank {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
@@ -1028,6 +1296,13 @@ a {
 
 	.nav-links {
 		justify-content: flex-start;
+		overflow-x: auto;
+		padding-bottom: 0.15rem;
+		width: 100%;
+	}
+
+	.nav-links a {
+		flex: 0 0 auto;
 	}
 
 	.campaign-hero,
@@ -1041,6 +1316,9 @@ a {
 	}
 
 	.moment-layout,
+	.moment-workflow,
+	.response-workflow,
+	.saved-line-layout,
 	.learn-layout,
 	.practice-layout,
 	.card-layout {
@@ -1069,11 +1347,15 @@ a {
 
 	.campaign-hero h1,
 	.page-hero h1 {
-		font-size: clamp(2.55rem, 14vw, 4rem);
+		font-size: clamp(2.35rem, 12vw, 4rem);
 	}
 
 	.lead {
 		font-size: 1.05rem;
+	}
+
+	.hero-inner {
+		padding: 3.4rem 0 3.6rem;
 	}
 
 	.section,
@@ -1083,8 +1365,11 @@ a {
 	}
 
 	.entry-choice-grid,
+	.scenario-cards,
+	.response-workflow,
 	.chain-list,
 	.moment-cards,
+	.saved-line-layout,
 	.resource-principles,
 	.line-bank,
 	.support-choice-grid,
@@ -1111,9 +1396,15 @@ a {
 
 	.choice-grid button,
 	.scenario-list button,
+	.scenario-card,
+	.action-chip-grid button,
 	.line-bank button,
 	.chain-list button {
 		font-size: 0.92rem;
+	}
+
+	.scenario-card {
+		min-height: 0;
 	}
 
 	.image-credit {

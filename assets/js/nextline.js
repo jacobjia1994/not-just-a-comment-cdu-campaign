@@ -1,61 +1,102 @@
-const entryFeedback = {
-	laugh: {
-		kicker: 'What gets learned',
-		title: 'The room learns that the comment is acceptable.',
-		copy: 'Laughing can tell First Nations students that their safety depends on staying silent. It also makes the next comment easier.'
+const homeScenarios = [
+	{
+		place: 'Tutorial room',
+		title: '“They get special treatment anyway.”',
+		context: 'A class comment turns equity support into resentment.',
+		lines: {
+			question: 'What do you mean by “special treatment”?',
+			name: 'Equity support exists because the starting conditions have not been equal.',
+			check: 'I saw what happened. Are you okay?',
+			help: 'Can we ask the tutor to address this properly?'
+		}
 	},
-	silent: {
-		kicker: 'What gets passed on',
-		title: 'Silence can feel neutral, but it is not always neutral.',
-		copy: 'When no one responds, the person targeted may be left to challenge it, absorb it or decide whether the room is safe.'
+	{
+		place: 'Group chat',
+		title: 'A racist meme gets laughing emojis.',
+		context: 'Everyone can see who reacts and who lets it sit there.',
+		lines: {
+			question: 'What is the joke meant to be here?',
+			name: 'I do not want racist memes in this chat. Please delete it.',
+			check: 'I saw that message. Are you okay?',
+			help: 'I am going to ask the group admin to remove this.'
+		}
 	},
-	ask: {
-		kicker: 'A useful pause',
-		title: 'A short question can slow the stereotype down.',
-		copy: '“What do you mean by that?” can make the assumption visible without asking a First Nations student to explain why it hurt.'
+	{
+		place: 'Class discussion',
+		title: '“Can you explain the Aboriginal view?”',
+		context: 'One student is put on the spot to speak for many peoples.',
+		lines: {
+			question: 'Are we asking one person to speak for everyone?',
+			name: 'Let’s not put one person on the spot to speak for everyone.',
+			check: 'Sorry that landed on you. Do you want space or support?',
+			help: 'Can we use First Nations-led resources instead of putting this on one student?'
+		}
 	},
-	name: {
-		kicker: 'A clear move',
-		title: 'You do not need a speech.',
-		copy: '“That sounds like a stereotype” or “Let’s not put that on First Nations students” can reset the room before the moment moves on.'
+	{
+		place: 'Before class',
+		title: '“Are you really Aboriginal?”',
+		context: 'A casual question turns identity into something to prove.',
+		lines: {
+			question: 'Why are we asking someone to prove their identity?',
+			name: 'It is not our place to test someone’s identity.',
+			check: 'That question was not okay. Are you alright?',
+			help: 'Can we get support from someone who can handle this respectfully?'
+		}
 	},
-	check: {
-		kicker: 'After the moment',
-		title: 'Support can still matter.',
-		copy: 'If you missed the moment, a quiet check-in can reduce isolation and show that the comment did not go unnoticed.'
+	{
+		place: 'Placement',
+		title: '“This family is non-compliant.”',
+		context: 'A professional label appears before anyone checks barriers, trust or cultural context.',
+		lines: {
+			question: 'What barriers might be affecting engagement?',
+			name: 'Can we check whether we are making a cultural assumption here?',
+			check: 'I want to think more carefully about how that was framed.',
+			help: 'Can we take this to supervision before it becomes a practice judgement?'
+		}
+	},
+	{
+		place: 'Campus event',
+		title: '“Why do we do Acknowledgement of Country every time?”',
+		context: 'A public moment of respect is treated like an annoying script.',
+		lines: {
+			question: 'What do you think it is meant to acknowledge?',
+			name: 'This is not just a script. It is about whose Country we are on.',
+			check: 'That comment was uncomfortable. Are you okay?',
+			help: 'Can we ask the event organiser to explain why this matters?'
+		}
 	}
-};
+];
 
 const chainReveals = [
 	{
 		kicker: 'Step 1',
 		title: 'A comment is made.',
-		copy: 'It may be framed as humour, opinion, curiosity or “just asking”. That does not decide its impact.'
+		copy: 'It might sound like a joke, a question or a quick opinion. That does not mean it lands lightly.'
 	},
 	{
 		kicker: 'Step 2',
-		title: 'The room lets it pass.',
-		copy: 'When no one responds, the peer norm becomes clear: this can happen here.'
+		title: 'The room moves on.',
+		copy: 'If nobody responds, the room learns that this can happen here.'
 	},
 	{
 		kicker: 'Step 3',
 		title: 'The burden moves.',
-		copy: 'The person targeted may have to absorb the harm, explain the harm, or manage the risk of speaking.'
+		copy: 'The person targeted may have to absorb it, explain it, or decide whether it is safe to speak.'
 	},
 	{
 		kicker: 'Step 4',
 		title: 'Safety changes.',
-		copy: 'A tutorial, placement group, online chat or campus event can start to feel less safe.'
+		copy: 'One comment can change how safe a class, chat, placement or event feels.'
 	},
 	{
 		kicker: 'Step 5',
-		title: 'Participation changes.',
-		copy: 'People may speak less, avoid spaces, hide parts of identity, or mentally prepare for the next racist conversation.'
+		title: 'People adjust.',
+		copy: 'Someone may speak less, avoid the space, or brace for the next comment.'
 	},
 	{
 		kicker: 'Step 6',
 		title: 'Wellbeing is affected.',
-		copy: 'Racism can affect social and emotional wellbeing by weakening belonging, safety, connection and control.'
+		copy: 'Racism is not only about one sentence. It changes how people feel in the places where they study and work.'
 	}
 ];
 
@@ -121,18 +162,18 @@ const everydayMoments = [
 const learnFeedback = {
 	public: {
 		kicker: 'Better first step',
-		title: 'Start with resources already created for public learning.',
-		copy: 'If you later ask someone, ask with consent and accept “no”. Respect includes learning without taking access.'
+		title: 'Start with resources made for public learning.',
+		copy: 'If you later ask someone, ask with consent and accept “no”.'
 	},
 	front: {
 		kicker: 'Risk',
 		title: 'This puts one person on display.',
-		copy: 'It asks them to manage the room’s learning and to speak for many peoples, histories and experiences.'
+		copy: 'It asks them to manage the room and speak for many peoples, histories and experiences.'
 	},
 	private: {
 		kicker: 'Still pressure',
-		title: 'Private can still become cultural load.',
-		copy: 'A relationship and consent matter. Public First Nations-led resources should usually come first.'
+		title: 'Private can still be pressure.',
+		copy: 'A relationship and consent matter. Public First Nations-led resources usually come first.'
 	}
 };
 
@@ -365,6 +406,10 @@ const scenarios = [
 
 let currentScenario = 0;
 let savedLines = [];
+let selectedHomeScenario = null;
+let selectedHomeAction = null;
+let currentHomeLine = '';
+let homeSavedLines = [];
 
 function updateReveal(element, item) {
 	if (!element || !item) return;
@@ -375,18 +420,215 @@ function updateReveal(element, item) {
 	`;
 }
 
-function initEntryChoices() {
-	const buttons = document.querySelectorAll('#entry-choices button');
-	const feedback = document.getElementById('entry-feedback');
-	if (!buttons.length || !feedback) return;
+async function copyTextToClipboard(text) {
+	if (navigator.clipboard && window.isSecureContext) {
+		await navigator.clipboard.writeText(text);
+		return;
+	}
+	const textarea = document.createElement('textarea');
+	textarea.value = text;
+	textarea.setAttribute('readonly', '');
+	textarea.style.position = 'fixed';
+	textarea.style.left = '-9999px';
+	document.body.appendChild(textarea);
+	textarea.select();
+	const copied = document.execCommand('copy');
+	document.body.removeChild(textarea);
+	if (!copied) throw new Error('Copy command failed');
+}
 
-	buttons.forEach((button) => {
-		button.addEventListener('click', () => {
-			buttons.forEach((item) => item.classList.remove('active'));
-			button.classList.add('active');
-			updateReveal(feedback, entryFeedback[button.dataset.feedback]);
-		});
+function showManualCopy(anchorButton, text) {
+	const parent = anchorButton.closest('.share-card, .line-card, .line-bank article') || anchorButton.parentElement;
+	if (!parent) return;
+	parent.querySelector('.manual-copy-box')?.remove();
+	const textarea = document.createElement('textarea');
+	textarea.className = 'manual-copy-box';
+	textarea.value = text;
+	textarea.setAttribute('readonly', '');
+	parent.appendChild(textarea);
+	textarea.focus();
+	textarea.select();
+}
+
+function initHomeMomentFlow() {
+	const scenarioCards = document.getElementById('scenario-cards');
+	const place = document.getElementById('home-moment-place');
+	const title = document.getElementById('home-moment-title');
+	const context = document.getElementById('home-moment-context');
+	const actionButtons = document.querySelectorAll('#home-action-choices button');
+	const result = document.getElementById('home-result');
+	const saveButton = document.getElementById('save-home-line');
+	const savedLinesList = document.getElementById('home-saved-lines');
+	const copyButton = document.getElementById('copy-home-lines');
+	const restartButton = document.getElementById('restart-home-flow');
+	if (!scenarioCards || !result || !savedLinesList) return;
+
+	const actionCopy = {
+		silent: {
+			room: 'The room may learn that this can happen here.',
+			burden: 'The person targeted is left to carry it or challenge it alone.'
+		},
+		question: {
+			room: 'The room has to slow down instead of laughing or moving on.',
+			burden: 'You take some of the pressure off the person targeted.'
+		},
+		name: {
+			room: 'The room hears a clear boundary.',
+			burden: 'The harm is not left for one person to explain.'
+		},
+		check: {
+			room: 'The room may not change yet, but the person knows someone noticed.',
+			burden: 'Support does not erase the moment, but it can reduce isolation.'
+		},
+		help: {
+			room: 'The issue is not left as a private problem.',
+			burden: 'Responsibility moves to someone with a role to respond.'
+		}
+	};
+
+		scenarioCards.innerHTML = homeScenarios.map((scenario, index) => `
+			<button type="button" class="scenario-card" data-scenario="${index}" aria-pressed="false">
+				<span>${scenario.place}</span>
+				<strong>${scenario.title}</strong>
+				<small>${scenario.context}</small>
+			</button>
+	`).join('');
+
+	function renderSavedHomeLines() {
+		if (!homeSavedLines.length) {
+			savedLinesList.innerHTML = '<li>Choose a moment and keep one line for later.</li>';
+			return;
+		}
+		savedLinesList.innerHTML = homeSavedLines.slice(0, 3).map((line) => `<li>${line}</li>`).join('');
+	}
+
+	function setResultIntro() {
+		result.innerHTML = `
+			<p class="feedback-label">Step 2</p>
+			<h3>Now choose what you would do.</h3>
+			<div class="result-lines">
+				<div><span>What the room may learn</span><p>Pick one move above.</p></div>
+				<div><span>Who carries the burden</span><p>Pick one move above.</p></div>
+				<div><span>A better line to try</span><p>Pick one move above.</p></div>
+			</div>
+			<button id="save-home-line" type="button" class="save-line-button" disabled>Save this line</button>
+		`;
+	}
+
+	function renderResult() {
+		if (!selectedHomeScenario || !selectedHomeAction) return;
+		const scenario = selectedHomeScenario;
+		const action = selectedHomeAction;
+		const fallbackLine = scenario.lines.name;
+		currentHomeLine = action === 'silent' ? fallbackLine : scenario.lines[action] || fallbackLine;
+		result.innerHTML = `
+			<p class="feedback-label">Step 2</p>
+			<h3>${action === 'silent' ? 'Silence still teaches something.' : 'This gives the room a different cue.'}</h3>
+			<div class="result-lines">
+				<div><span>What the room may learn</span><p>${actionCopy[action].room}</p></div>
+				<div><span>Who carries the burden</span><p>${actionCopy[action].burden}</p></div>
+				<div><span>A better line to try</span><p>${currentHomeLine}</p></div>
+			</div>
+			<button id="save-home-line" type="button" class="save-line-button">Save this line</button>
+		`;
+		result.querySelector('#save-home-line').addEventListener('click', saveHomeLine);
+	}
+
+	function selectScenario(index) {
+		selectedHomeScenario = homeScenarios[index];
+		selectedHomeAction = null;
+		currentHomeLine = '';
+		place.textContent = selectedHomeScenario.place;
+		title.textContent = selectedHomeScenario.title;
+		context.textContent = selectedHomeScenario.context;
+			scenarioCards.querySelectorAll('.scenario-card').forEach((button, buttonIndex) => {
+				const isSelected = buttonIndex === index;
+				button.classList.toggle('active', isSelected);
+				button.setAttribute('aria-pressed', String(isSelected));
+			});
+			actionButtons.forEach((button) => {
+				button.disabled = false;
+				button.classList.remove('active');
+				button.setAttribute('aria-pressed', 'false');
+			});
+			setResultIntro();
+		}
+
+	function selectAction(action) {
+		if (!selectedHomeScenario) return;
+			selectedHomeAction = action;
+			actionButtons.forEach((button) => {
+				const isSelected = button.dataset.action === action;
+				button.classList.toggle('active', isSelected);
+				button.setAttribute('aria-pressed', String(isSelected));
+			});
+			renderResult();
+		}
+
+	function saveHomeLine() {
+		if (!currentHomeLine) return;
+		homeSavedLines = [currentHomeLine, ...homeSavedLines.filter((line) => line !== currentHomeLine)].slice(0, 3);
+		renderSavedHomeLines();
+		result.querySelector('#save-home-line').textContent = 'Saved';
+		document.getElementById('my-line')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
+
+	async function copyHomeLines() {
+		const text = homeSavedLines.length
+			? homeSavedLines.map((line, index) => `${index + 1}. ${line}`).join('\n')
+			: 'Choose a moment and keep one line for later.';
+		try {
+			await copyTextToClipboard(text);
+			const original = copyButton.textContent;
+			copyButton.textContent = 'Copied';
+			setTimeout(() => { copyButton.textContent = original; }, 1100);
+		} catch {
+			const original = copyButton.textContent;
+			showManualCopy(copyButton, text);
+			copyButton.textContent = 'Text selected';
+			setTimeout(() => { copyButton.textContent = original; }, 1400);
+		}
+	}
+
+	function restartHomeFlow() {
+		selectedHomeScenario = null;
+		selectedHomeAction = null;
+		currentHomeLine = '';
+		homeSavedLines = [];
+		renderSavedHomeLines();
+		place.textContent = 'Choose a moment first';
+		title.textContent = 'What happened?';
+		context.textContent = 'Pick a card above. Then choose what you would do in the next few seconds.';
+			scenarioCards.querySelectorAll('.scenario-card').forEach((button) => {
+				button.classList.remove('active');
+				button.setAttribute('aria-pressed', 'false');
+			});
+			actionButtons.forEach((button) => {
+				button.disabled = true;
+				button.classList.remove('active');
+				button.setAttribute('aria-pressed', 'false');
+			});
+		result.innerHTML = `
+			<p class="feedback-label">Step 2</p>
+			<h3>Choose a moment and a move.</h3>
+			<div class="result-lines">
+				<div><span>What the room may learn</span><p>Waiting for your choice.</p></div>
+				<div><span>Who carries the burden</span><p>Waiting for your choice.</p></div>
+				<div><span>A better line to try</span><p>Waiting for your choice.</p></div>
+			</div>
+			<button id="save-home-line" type="button" class="save-line-button" disabled>Save this line</button>
+		`;
+	}
+
+	scenarioCards.querySelectorAll('.scenario-card').forEach((button) => {
+		button.addEventListener('click', () => selectScenario(Number(button.dataset.scenario)));
 	});
+	actionButtons.forEach((button) => {
+		button.addEventListener('click', () => selectAction(button.dataset.action));
+	});
+	copyButton?.addEventListener('click', copyHomeLines);
+	restartButton?.addEventListener('click', restartHomeFlow);
+	renderSavedHomeLines();
 }
 
 function initChain() {
@@ -557,14 +799,15 @@ function initPractice() {
 			? savedLines.map((line, index) => `${index + 1}. ${line}`).join('\n')
 			: 'Choose a moment and save a line first.';
 		try {
-			await navigator.clipboard.writeText(text);
+			await copyTextToClipboard(text);
 			const original = copyLinesButton.textContent;
 			copyLinesButton.textContent = 'Copied';
 			setTimeout(() => { copyLinesButton.textContent = original; }, 1200);
 		} catch {
 			const original = copyLinesButton.textContent;
-			copyLinesButton.textContent = 'Copy failed';
-			setTimeout(() => { copyLinesButton.textContent = original; }, 1200);
+			showManualCopy(copyLinesButton, text);
+			copyLinesButton.textContent = 'Text selected';
+			setTimeout(() => { copyLinesButton.textContent = original; }, 1400);
 		}
 	}
 
@@ -591,20 +834,21 @@ function initLineCopyButtons() {
 	document.querySelectorAll('.line-bank button').forEach((button) => {
 		button.addEventListener('click', async () => {
 			try {
-				await navigator.clipboard.writeText(button.textContent);
+				await copyTextToClipboard(button.textContent);
 				const original = button.textContent;
 				button.textContent = 'Copied';
 				setTimeout(() => { button.textContent = original; }, 900);
 			} catch {
 				const original = button.textContent;
-				button.textContent = 'Copy failed';
-				setTimeout(() => { button.textContent = original; }, 900);
+				showManualCopy(button, button.textContent);
+				button.textContent = 'Text selected';
+				setTimeout(() => { button.textContent = original; }, 1200);
 			}
 		});
 	});
 }
 
-initEntryChoices();
+initHomeMomentFlow();
 initChain();
 initMomentCards();
 initLearnChoices();
