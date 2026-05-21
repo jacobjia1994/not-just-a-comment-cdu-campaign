@@ -451,13 +451,16 @@ button:disabled {
 .practice-card,
 .support-choice,
 .support-directory article,
+.need-grid article,
 .evidence-grid article,
 .benchmark-grid article,
 .line-bank article,
 .big-reveal,
 .moment-card,
 .reveal-box,
-.resource-principles article {
+.resource-principles article,
+.freeze-grid article,
+.care-note {
 	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: 8px;
@@ -471,11 +474,14 @@ button:disabled {
 .practice-card,
 .support-choice,
 .support-directory article,
+.need-grid article,
 .evidence-grid article,
 .benchmark-grid article,
 .line-bank article,
 .big-reveal,
-.resource-principles article {
+.resource-principles article,
+.freeze-grid article,
+.care-note {
 	padding: 22px;
 	min-width: 0;
 }
@@ -592,6 +598,11 @@ button:disabled {
 	position: relative;
 }
 
+.share-card-wrap {
+	max-width: 560px;
+	width: 100%;
+}
+
 .share-card {
 	background:
 		linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 250, 241, 0.96)),
@@ -634,7 +645,7 @@ button:disabled {
 .share-card ol,
 .line-card ol {
 	margin-bottom: 18px;
-	padding-left: 1.25rem;
+	padding-left: 0;
 }
 
 .line-card li {
@@ -650,9 +661,17 @@ button:disabled {
 	font-size: 22px;
 	font-weight: 850;
 	line-height: 1.32;
-	list-style-position: inside;
+	list-style: none;
 	margin-top: 10px;
 	padding: 14px;
+}
+
+.share-card li::before {
+	content: "“";
+}
+
+.share-card li::after {
+	content: "”";
 }
 
 .share-card-footer {
@@ -662,6 +681,18 @@ button:disabled {
 	margin-bottom: 4px;
 }
 
+.share-card-signature {
+	border-top: 1px solid var(--line);
+	color: var(--muted);
+	display: grid;
+	font-size: 12px;
+	font-weight: 800;
+	gap: 2px;
+	margin-top: 18px;
+	padding-top: 14px;
+	text-transform: uppercase;
+}
+
 .screenshot-note {
 	color: var(--muted) !important;
 	font-size: 13px;
@@ -669,9 +700,11 @@ button:disabled {
 }
 
 .chain-section,
+.freeze-section,
 .learn-section,
 .modes-section,
 .directory-section,
+.care-section,
 .references-section {
 	background: var(--mist);
 }
@@ -887,7 +920,8 @@ button:disabled {
 
 .line-bank,
 .support-directory,
-.benchmark-grid {
+.benchmark-grid,
+.freeze-grid {
 	display: grid;
 	gap: 16px;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -905,10 +939,35 @@ button:disabled {
 }
 
 .support-choice-grid,
+.need-grid,
 .evidence-grid {
 	display: grid;
 	gap: 16px;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.need-grid {
+	margin-bottom: 8px;
+}
+
+.need-grid h3,
+.freeze-grid h3 {
+	font-size: 20px;
+}
+
+.freeze-grid button {
+	background: var(--paper);
+	border: 1px solid var(--line);
+	color: var(--deep);
+	justify-content: flex-start;
+	text-align: left;
+	width: 100%;
+}
+
+.freeze-grid button:hover,
+.freeze-grid button:focus-visible {
+	background: var(--deep);
+	color: var(--paper);
 }
 
 .support-choice.urgent {
@@ -1022,7 +1081,8 @@ button:disabled {
 	.resource-principles,
 	.line-bank,
 	.support-directory,
-	.benchmark-grid {
+	.benchmark-grid,
+	.freeze-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
@@ -1104,9 +1164,11 @@ button:disabled {
 	.resource-principles,
 	.line-bank,
 	.support-choice-grid,
+	.need-grid,
 	.support-directory,
 	.evidence-grid,
 	.benchmark-grid,
+	.freeze-grid,
 	.impact-row {
 		grid-template-columns: 1fr;
 	}

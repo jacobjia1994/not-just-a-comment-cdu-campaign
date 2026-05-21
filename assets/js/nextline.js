@@ -582,7 +582,7 @@ async function copyTextToClipboard(text) {
 }
 
 function showManualCopy(anchorButton, text) {
-	const parent = anchorButton.closest('.share-card, .line-card, .line-bank article') || anchorButton.parentElement;
+	const parent = anchorButton.closest('.share-card, .line-card, .line-bank article, .freeze-grid article') || anchorButton.parentElement;
 	if (!parent) return;
 	parent.querySelector('.manual-copy-box')?.remove();
 	const textarea = document.createElement('textarea');
@@ -650,13 +650,28 @@ function initHomeMomentFlow() {
 		});
 	}
 
+	function getHomeFeedback(option) {
+		const label = option.label.toLowerCase();
+		if (label.includes('ask the tutor') || label.includes('ask the group admin') || label.includes('ask the organiser') || label.includes('take it to supervision')) {
+			return 'You do not have to handle it alone.';
+		}
+		if (label.startsWith('ask:')) return 'A question can slow the moment down.';
+		if (label.startsWith('say:') || label.includes('reply:')) return 'A short line can set a boundary.';
+		if (label.includes('check in') || label.includes('message the sender')) return 'It still matters after the moment.';
+		if (label.includes('say nothing') || label.includes('ignore') || label.includes('wait for') || label.includes('accept the label') || label.includes('laugh politely')) {
+			return 'This is what silence can do.';
+		}
+		if (label.includes('change the subject')) return 'This can lower the heat, but the burden may stay.';
+		return option.strength === 'strong' ? 'This helps.' : 'This can leave the burden there.';
+	}
+
 	function renderResult() {
 		if (!selectedHomeScenario || selectedHomeAction === null) return;
 		const option = selectedHomeScenario.options[selectedHomeAction];
 		currentHomeLine = option.line;
 		result.innerHTML = `
 			<p class="feedback-label">Step 2</p>
-			<h3>${option.strength === 'strong' ? 'Stronger move.' : 'Riskier move.'}</h3>
+			<h3>${getHomeFeedback(option)}</h3>
 			<div class="result-lines">
 				<div><span>What everyone hears</span><p>${option.room}</p></div>
 				<div><span>Who gets left with it</span><p>${option.burden}</p></div>
@@ -971,9 +986,29 @@ function initLineCopyButtons() {
 	});
 }
 
+function initFreezeCopyButtons() {
+	document.querySelectorAll('.freeze-copy').forEach((button) => {
+		button.addEventListener('click', async () => {
+			const text = button.textContent.trim();
+			try {
+				await copyTextToClipboard(text);
+				const original = button.textContent;
+				button.textContent = 'Copied';
+				setTimeout(() => { button.textContent = original; }, 900);
+			} catch {
+				const original = button.textContent;
+				showManualCopy(button, text);
+				button.textContent = 'Text selected';
+				setTimeout(() => { button.textContent = original; }, 1200);
+			}
+		});
+	});
+}
+
 initHomeMomentFlow();
 initChain();
 initMomentCards();
 initLearnChoices();
 initPractice();
 initLineCopyButtons();
+initFreezeCopyButtons();
