@@ -9,7 +9,7 @@ const homeScenarios = [
 				strength: 'risk',
 				room: 'Nobody may mean to agree. But from the outside, silence can look like permission.',
 				burden: 'A First Nations student may be left deciding whether to absorb it, challenge it or let it sit.',
-				line: 'That is not special treatment. It is support for barriers that are already there.'
+				line: 'That is support, not special treatment.'
 			},
 			{
 				label: 'Ask what they mean',
@@ -23,7 +23,7 @@ const homeScenarios = [
 				strength: 'strong',
 				room: 'The myth is named without turning it into a long argument.',
 				burden: 'They do not have to be the one who turns pain into a lesson for everyone else.',
-				line: 'That is not special treatment. It is support for barriers that are already there.'
+				line: 'That is support, not special treatment.'
 			},
 			{
 				label: 'Ask the tutor to pause',
@@ -93,7 +93,7 @@ const homeScenarios = [
 				strength: 'strong',
 				room: 'Learning is redirected to places made for public learning.',
 				burden: 'The class does not take free teaching from one student.',
-				line: 'Let’s start with public First Nations-led resources instead of asking one classmate.'
+				line: 'Let’s start with public resources instead of putting this on one classmate.'
 			},
 			{
 				label: 'Check in after class',
@@ -163,14 +163,14 @@ const homeScenarios = [
 				strength: 'strong',
 				room: 'The practice risk is named without turning the conversation into a personal attack.',
 				burden: 'Responsibility stays with the service system, not just the family.',
-				line: 'Can we slow down and check the assumption here?'
+				line: 'Can we slow down? I think there is an assumption there.'
 			},
 			{
 				label: 'Take it to supervision',
 				strength: 'strong',
-				room: 'The issue is treated as practice judgement, not hallway discomfort.',
+				room: 'The concern is treated as something to supervise, not hallway discomfort.',
 				burden: 'You are not leaving the concern unmanaged.',
-				line: 'Can we take this to supervision before it becomes a practice judgement?'
+				line: 'Can we take this to supervision before we label the family?'
 			}
 		]
 	},
@@ -257,7 +257,7 @@ const everydayMoments = [
 		sounds: 'Equity support, scholarships or identified services are framed as unfair advantage.',
 		does: 'It turns repair for historical and ongoing exclusion into resentment. It can make First Nations students feel watched, doubted or undeserving.',
 		move: 'Ask what barrier the support is responding to. Equity is not a shortcut; it is a response to unequal conditions.',
-		line: 'That is not special treatment. It is support for barriers that are already there.'
+		line: 'That is support, not special treatment.'
 	},
 	{
 		title: '“I don’t see race.”',
@@ -355,7 +355,7 @@ const scenarios = [
 		place: 'Group assignment chat',
 		comment: '“They get special treatment anyway.”',
 		context: 'Equity support is framed as unfair advantage. The myth can shame students for using support or being present.',
-		keeper: 'That is not special treatment. It is support for barriers that are already there.',
+		keeper: 'That is support, not special treatment.',
 		options: [
 			{
 				text: 'That is racist.',
@@ -364,7 +364,7 @@ const scenarios = [
 				impact: { belonging: 2, safety: -2, burden: 4 }
 			},
 			{
-				text: 'That is not special treatment. It is support for barriers that are already there.',
+				text: 'That is support, not special treatment.',
 				best: true,
 				title: 'You shifted the frame.',
 				copy: 'This challenges the dominant myth without making a First Nations student defend support programs.',
@@ -495,7 +495,7 @@ const scenarios = [
 		place: 'Placement discussion',
 		comment: '“This family is non-compliant.”',
 		context: 'A label is used before checking cultural, historical, service or trust barriers.',
-		keeper: 'Can we slow down and check the assumption here?',
+		keeper: 'Can we slow down? I think there is an assumption there.',
 		options: [
 			{
 				text: 'Accept the wording.',
@@ -504,7 +504,7 @@ const scenarios = [
 				impact: { belonging: -6, safety: -7, burden: 8 }
 			},
 			{
-				text: 'Can we slow down and check the assumption here?',
+				text: 'Can we slow down? I think there is an assumption there.',
 				best: true,
 				title: 'You slowed the judgement.',
 				copy: 'This is professional, non-accusatory and relevant to culturally safe practice.',
@@ -616,7 +616,7 @@ function initHomeMomentFlow() {
 
 	function renderSavedHomeLines() {
 		if (!homeSavedLines.length) {
-			savedLinesList.innerHTML = '<li>If I freeze, I want one line ready.</li>';
+			savedLinesList.innerHTML = '<li>Pick a moment. Keep one line.</li>';
 			return;
 		}
 		savedLinesList.innerHTML = homeSavedLines.slice(0, 3).map((line) => `<li>${line}</li>`).join('');
@@ -720,7 +720,7 @@ function initHomeMomentFlow() {
 	async function copyHomeLines() {
 		const text = homeSavedLines.length
 			? homeSavedLines.map((line, index) => `${index + 1}. ${line}`).join('\n')
-			: 'If I freeze, I want one line ready.';
+			: 'Pick a moment. Keep one line.';
 		try {
 			await copyTextToClipboard(text);
 			const original = copyButton.textContent;

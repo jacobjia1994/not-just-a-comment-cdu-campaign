@@ -361,6 +361,14 @@ button:disabled {
 	font-size: 18px;
 }
 
+.practice-note-inline {
+	color: var(--muted) !important;
+	font-size: 14px !important;
+	font-weight: 800;
+	letter-spacing: 0.01em;
+	margin-top: 8px;
+}
+
 .moment-workflow,
 .learn-layout,
 .practice-layout,
