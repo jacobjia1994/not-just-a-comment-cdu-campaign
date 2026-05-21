@@ -6,202 +6,114 @@
 -->
 <html lang="en">
 	<head>
-		<title>Not Just a Comment | CDU Student Resource</title>
+		<title>The Next Line | CDU Student Practice</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="A CDU student game about everyday anti-Indigenous racism, belonging and social and emotional wellbeing." />
+		<meta name="description" content="An interactive CDU student practice tool for responding to everyday anti-Indigenous racism." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/campaign.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload campaign-page interactive-home">
+	<body class="is-preload campaign-page nextline-home">
 		<nav class="site-nav" aria-label="Main navigation">
-			<a class="brand" href="index.html">Not Just a Comment</a>
+			<a class="brand" href="index.html">The Next Line</a>
 			<div class="nav-links">
-				<a class="active" href="index.html">Home</a>
-				<a href="problem.html">The problem</a>
-				<a href="moments.html">Moments</a>
-				<a href="act.html">What to do</a>
-				<a href="watch.html">Watch</a>
+				<a class="active" href="index.html">Play</a>
+				<a href="act.html">Lines</a>
 				<a href="support.html">Support</a>
 				<a href="evidence.html">Evidence</a>
 			</div>
 		</nav>
 
 		<main>
-			<header class="interactive-hero">
-				<div class="interactive-hero-inner">
-					<p class="eyebrow">When the room goes quiet</p>
-					<h1>You heard it. You froze.</h1>
-					<p class="lead">A joke. A group-chat meme. A "special treatment" comment. You knew something was wrong, but the next sentence did not come. Practise one now.</p>
+			<header class="nextline-hero">
+				<div class="nextline-hero-inner">
+					<p class="eyebrow">CDU student practice</p>
+					<h1>Someone said it. Everyone paused.</h1>
+					<p class="lead">A joke in class. A meme in the group chat. A comment about "special treatment". The moment is small until everyone lets it pass.</p>
+					<div class="hero-question">
+						<span>What is your next line?</span>
+					</div>
 					<div class="hero-actions">
-						<a class="buttonish" href="#pain-entry">Find your situation</a>
-						<a class="buttonish alt" href="support.html">Need support?</a>
+						<a class="buttonish" href="#practice">Start with a moment</a>
+						<a class="buttonish alt" href="support.html">I need support</a>
 					</div>
 				</div>
 				<p class="image-credit">Image: GDW.45, <a href="https://commons.wikimedia.org/wiki/File:Wet_Season_Storm_at_Sunset_from_Dripstone_Cliffs_-_Casuarina_Beach.jpg">Casuarina Beach</a>, CC BY-SA 3.0.</p>
 			</header>
 
-			<section id="pain-entry" class="pain-entry-section" aria-label="Choose your situation">
-				<div class="pain-entry-layout">
-					<div class="pain-entry-copy">
-						<p class="eyebrow">Start with what happened</p>
-						<h2>Which one feels closest?</h2>
-						<p>Do not start with a lecture. Start with the moment that made your stomach drop, made you stay quiet, or made you wonder whether speaking would make things worse.</p>
-						<div id="pain-options" class="pain-options" aria-label="Pain point options"></div>
-					</div>
-					<article class="pain-result" aria-live="polite">
-						<p id="pain-kicker" class="feedback-label">Start here</p>
-						<h3 id="pain-title"></h3>
-						<p id="pain-copy"></p>
-						<div class="response-strip">
-							<div>
-								<span>Say this first</span>
-								<p id="pain-line"></p>
-							</div>
-							<div>
-								<span>Then do this</span>
-								<p id="pain-next"></p>
-							</div>
-						</div>
-						<div class="challenge-actions">
-							<a id="pain-primary-link" class="buttonish dark" href="#response-game">Practise this</a>
-							<a id="pain-secondary-link" class="buttonish ghost" href="act.html">Build another line</a>
-						</div>
-					</article>
-				</div>
-			</section>
-
-			<section id="response-game" class="interactive-stage" aria-label="Bystander response game">
-				<div class="stage-shell">
-					<div class="stage-intro">
-						<p class="eyebrow">Start with the pressure point</p>
-						<h2>What do you say before everyone moves on?</h2>
-						<p>Keep <strong>Belonging</strong> and <strong>Safety</strong> high. Keep the <strong>Burden</strong> on the person targeted low. After each round, keep one sentence you could actually say.</p>
+			<section id="practice" class="practice-section" aria-label="Interactive anti-racism practice">
+				<div class="practice-layout">
+					<div class="practice-intro">
+						<p class="eyebrow">Choose the pressure point</p>
+						<h2>Pick the moment that feels closest.</h2>
+						<p>You do not need a perfect speech. Choose a campus moment, try a response and keep one line you could actually say next time.</p>
+						<div id="scenario-list" class="scenario-list" aria-label="Campus moments"></div>
 					</div>
 
-					<div class="challenge-card game-card" aria-live="polite">
-						<div class="game-hud">
-							<div class="challenge-topline">
-								<span id="challenge-count">Round 1 of 5</span>
-								<div class="progress-track" aria-hidden="true">
-									<div id="challenge-progress" class="progress-fill"></div>
-								</div>
-							</div>
-							<div class="stat-board" aria-label="Game indicators">
-								<div class="stat-card">
-									<div class="stat-label">Belonging</div>
-									<div id="belonging-value" class="stat-value">60</div>
-									<div class="meter-track"><div id="belonging-bar" class="meter-fill belonging-fill"></div></div>
-								</div>
-								<div class="stat-card">
-									<div class="stat-label">Safety</div>
-									<div id="safety-value" class="stat-value">60</div>
-									<div class="meter-track"><div id="safety-bar" class="meter-fill safety-fill"></div></div>
-								</div>
-								<div class="stat-card">
-									<div class="stat-label">Burden</div>
-									<div id="burden-value" class="stat-value">35</div>
-									<div class="meter-track"><div id="burden-bar" class="meter-fill burden-fill"></div></div>
-								</div>
-							</div>
+					<article class="practice-card" aria-live="polite">
+						<div class="practice-topline">
+							<span id="scenario-count">Moment 1 of 8</span>
+							<div class="practice-meter" aria-hidden="true"><div id="scenario-progress"></div></div>
 						</div>
 
-						<div id="round-panel">
-							<div class="comment-panel scene-panel">
-								<p id="scene-label" class="comment-kicker">Tutorial room</p>
-								<p id="challenge-comment" class="comment-text"></p>
-								<p id="scene-stakes" class="scene-stakes"></p>
-							</div>
-
-							<div class="challenge-prompt">
-								<h3>What do you do next?</h3>
-								<div id="challenge-options" class="choice-grid"></div>
-							</div>
-
-							<div id="feedback-panel" class="feedback-panel" hidden>
-								<p id="feedback-label" class="feedback-label"></p>
-								<h3 id="feedback-title"></h3>
-								<p id="feedback-copy"></p>
-								<div id="impact-summary" class="impact-grid"></div>
-								<div class="copy-line">
-									<span id="line-to-keep"></span>
-									<button id="copy-line" type="button">Copy</button>
-								</div>
-								<div class="challenge-actions">
-									<button id="next-moment" type="button">Next round</button>
-									<button id="restart-challenge" type="button" class="ghost-button">Start over</button>
-								</div>
-							</div>
+						<div class="scene-box">
+							<p id="scene-place" class="comment-kicker">Tutorial room</p>
+							<h3 id="scene-comment"></h3>
+							<p id="scene-context"></p>
 						</div>
 
-						<div id="result-panel" class="result-panel" hidden>
-							<p class="feedback-label">Game result</p>
-							<h3 id="result-title"></h3>
-							<p id="result-copy"></p>
-							<div id="final-stats" class="impact-grid"></div>
-							<div class="result-lines">
-								<h4>Your five lines</h4>
-								<ol id="saved-lines"></ol>
+						<div class="choice-area">
+							<h4>Your move</h4>
+							<div id="response-options" class="choice-grid"></div>
+						</div>
+
+						<div id="response-feedback" class="response-feedback" hidden>
+							<p id="feedback-kicker" class="feedback-label">Try it</p>
+							<h4 id="feedback-title"></h4>
+							<p id="feedback-copy"></p>
+							<div id="impact-row" class="impact-row"></div>
+							<div class="keep-line">
+								<span>Keep this line</span>
+								<strong id="keeper-line"></strong>
 							</div>
 							<div class="challenge-actions">
-								<button id="play-again" type="button">Play again</button>
-								<button id="copy-all-lines" type="button" class="ghost-button">Copy lines</button>
-								<a class="buttonish ghost" href="support.html">Support options</a>
+								<button id="save-line" type="button">Save line</button>
+								<button id="next-scenario" type="button" class="ghost-button">Next moment</button>
 							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="poster-strip section alt">
-				<div class="section-header">
-					<p class="eyebrow">Start with five moments</p>
-					<h2>Short enough to remember. Connected to a bigger pattern.</h2>
-				</div>
-				<div class="poster-grid">
-					<article>
-						<p>"It was only a joke."</p>
-						<h3>If identity is the punchline, pause it.</h3>
-					</article>
-					<article>
-						<p>"They get special treatment."</p>
-						<h3>Equity is not a favour.</h3>
-					</article>
-					<article>
-						<p>"I do not see race."</p>
-						<h3>Racism does.</h3>
-					</article>
-					<article>
-						<p>"Can you explain the Aboriginal view?"</p>
-						<h3>One student is not your reading list.</h3>
-					</article>
-					<article>
-						<p>"No one reported it."</p>
-						<h3>Silence is not proof.</h3>
 					</article>
 				</div>
 			</section>
 
-			<section class="section action-band">
-				<div class="action-layout">
+			<section id="card" class="card-section">
+				<div class="card-layout">
 					<div>
-						<p class="eyebrow">After the game</p>
-						<h2>Next time, have one sentence ready.</h2>
-						<p>Check in privately. Do not ask the person harmed to reassure you. Do not force a complaint. If you need options, use the support page.</p>
+						<p class="eyebrow">Take something with you</p>
+						<h2>Your next-line card</h2>
+						<p>These are not slogans. They are short sentences for the awkward five seconds before the room moves on.</p>
 					</div>
-					<div class="inline-actions">
-						<a class="buttonish dark" href="problem.html">See the pattern</a>
-						<a class="buttonish dark" href="act.html">See more lines</a>
-						<a class="buttonish ghost" href="support.html">Support options</a>
-						<a class="buttonish ghost" href="evidence.html">Why it matters</a>
-					</div>
+					<article class="line-card">
+						<h3>Next time, I can say:</h3>
+						<ol id="saved-lines">
+							<li>Choose a moment above and save a line.</li>
+						</ol>
+						<div class="card-rules">
+							<span>Keep it short.</span>
+							<span>Shift the burden away from the person harmed.</span>
+							<span>Check in privately after.</span>
+						</div>
+						<div class="challenge-actions">
+							<button id="copy-lines" type="button">Copy my lines</button>
+							<a class="buttonish ghost" href="act.html">See all lines</a>
+						</div>
+					</article>
 				</div>
 			</section>
 		</main>
 
 		<footer class="site-footer">
-			<p class="disclaimer">Educational resource. For official support and reporting options, use the links on the Support page.</p>
+			<p class="disclaimer">Educational resource. For immediate danger, call 000. For crisis support, Aboriginal and Torres Strait Islander peoples can call 13YARN on 13 92 76.</p>
 			<p>Site template adapted from <a href="https://html5up.net/story">Story by HTML5 UP</a>, used under the <a href="https://html5up.net/license">Creative Commons Attribution 3.0 license</a>.</p>
 		</footer>
 
@@ -212,401 +124,6 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script>
-			const painPoints = [
-				{
-					label: 'I heard a joke and froze',
-					title: 'The room laughed. You went quiet.',
-					copy: 'This is the bystander moment most people recognise: the comment was quick, everyone moved on, and the person targeted was left carrying it.',
-					line: 'Can we not make people the punchline?',
-					next: 'Keep it short. Then check in privately with anyone affected.',
-					primary: 'Practise this',
-					href: '#response-game',
-					round: 0
-				},
-				{
-					label: 'A group chat meme felt wrong',
-					title: 'The chat made silence look like agreement.',
-					copy: 'Online racism can feel harder to interrupt because everyone can see who speaks and who stays quiet.',
-					line: 'I do not want racist memes in this chat. Please delete it.',
-					next: 'Name the boundary in the chat. Screenshot only if it is safe and useful.',
-					primary: 'Open chat scenario',
-					href: 'moments.html'
-				},
-				{
-					label: 'Someone was put on the spot',
-					title: 'One student was asked to carry the room.',
-					copy: 'Curiosity can still become cultural labour when one person is asked to represent, teach or defend diverse peoples and histories.',
-					line: 'Let us not put one person on the spot. We can use First Nations-led resources.',
-					next: 'Move the learning burden back to the group.',
-					primary: 'Practise this',
-					href: '#response-game',
-					round: 3
-				},
-				{
-					label: 'Placement language felt off',
-					title: 'A practice judgement sounded like a stereotype.',
-					copy: 'In placement or professional discussion, casual assumptions can become decisions about families, risk, engagement or trust.',
-					line: 'Can we check whether we are making a cultural assumption here?',
-					next: 'Take it to supervision before the label becomes practice.',
-					primary: 'Build practice response',
-					href: 'act.html'
-				},
-				{
-					label: 'I was targeted and do not know what to do',
-					title: 'You should not have to carry this alone.',
-					copy: 'Support does not have to mean making a formal complaint straight away. You can choose what happens next.',
-					line: 'I want support, but I do not want this shared without my consent.',
-					next: 'Find a trusted person or service. Keep control over reporting where possible.',
-					primary: 'Support options',
-					href: 'support.html'
-				}
-			];
-
-			const gameMoments = [
-				{
-					scene: 'Tutorial room',
-					comment: '"It was only a joke."',
-					stakes: 'The group is invited to laugh, stay quiet or move on.',
-					keeper: 'Can we not make people the punchline?',
-					options: [
-						{
-							text: 'Can we not make people the punchline?',
-							best: true,
-							title: 'You paused the pattern.',
-							copy: 'You named the harm without asking the person targeted to explain why it hurt.',
-							impact: { belonging: 12, safety: 10, burden: -10 }
-						},
-						{
-							text: 'Ignore it so the room does not get awkward.',
-							title: 'The room learns from silence.',
-							copy: 'Avoiding awkwardness can leave the discomfort with the person harmed.',
-							impact: { belonging: -8, safety: -7, burden: 9 }
-						},
-						{
-							text: 'Ask the Aboriginal student what they think.',
-							title: 'The burden moves to the person targeted.',
-							copy: 'That can put one student on display and make them manage the room.',
-							impact: { belonging: -10, safety: -8, burden: 14 }
-						}
-					]
-				},
-				{
-					scene: 'Group assignment chat',
-					comment: '"They get special treatment."',
-					stakes: 'Equity support is framed as unfair advantage.',
-					keeper: 'Support programs are about equity, not unfair advantage.',
-					options: [
-						{
-							text: 'Support programs are about equity, not unfair advantage.',
-							best: true,
-							title: 'You shifted the frame.',
-							copy: 'You challenged the myth without making one student defend their place at university.',
-							impact: { belonging: 11, safety: 9, burden: -8 }
-						},
-						{
-							text: 'Maybe, but we should not talk about it.',
-							title: 'The myth stays in the room.',
-							copy: 'A quiet redirect may avoid conflict, but the unfairness claim still sits there.',
-							impact: { belonging: -5, safety: -4, burden: 6 }
-						},
-						{
-							text: 'Ask who in the class receives support.',
-							title: 'That can expose people.',
-							copy: 'Keep the focus on equity and systems, not on individual students.',
-							impact: { belonging: -9, safety: -8, burden: 13 }
-						}
-					]
-				},
-				{
-					scene: 'Campus conversation',
-					comment: '"I do not see race."',
-					stakes: 'Colour-blind language is presented as fairness.',
-					keeper: 'Fairness includes noticing when racism affects people differently.',
-					options: [
-						{
-							text: 'Fairness includes noticing when racism affects people differently.',
-							best: true,
-							title: 'You named the pattern.',
-							copy: 'You kept the focus on impact without starting with a personal accusation.',
-							impact: { belonging: 10, safety: 9, burden: -7 }
-						},
-						{
-							text: 'That sounds positive, so let it go.',
-							title: 'Good intentions can hide harm.',
-							copy: 'Colour-blind language can make racism harder to name.',
-							impact: { belonging: -6, safety: -5, burden: 7 }
-						},
-						{
-							text: 'Tell them they are racist.',
-							title: 'The room may shut down.',
-							copy: 'Naming the pattern often works better than opening with a personal label.',
-							impact: { belonging: -3, safety: -6, burden: 5 }
-						}
-					]
-				},
-				{
-					scene: 'Placement discussion',
-					comment: '"Can you explain the Aboriginal view?"',
-					stakes: 'One student is asked to represent diverse peoples and communities.',
-					keeper: 'Let us not put one person on the spot. We can use First Nations-led resources and do the reading.',
-					options: [
-						{
-							text: 'Let us not put one person on the spot. We can use First Nations-led resources and do the reading.',
-							best: true,
-							title: 'You reduced cultural labour.',
-							copy: 'You protected the student from being treated as a cultural help desk.',
-							impact: { belonging: 12, safety: 9, burden: -12 }
-						},
-						{
-							text: 'Wait for the student to decide whether to answer.',
-							title: 'Pressure can still sit there.',
-							copy: 'Silence after the question can still make one student carry the topic.',
-							impact: { belonging: -5, safety: -5, burden: 9 }
-						},
-						{
-							text: 'Say it is their responsibility to educate the group.',
-							title: 'That repeats the burden.',
-							copy: 'Participation should not depend on unpaid education work.',
-							impact: { belonging: -12, safety: -10, burden: 16 }
-						}
-					]
-				},
-				{
-					scene: 'After class',
-					comment: '"No one reported it, so it must be fine."',
-					stakes: 'Silence is treated as proof that harm did not occur.',
-					keeper: 'People do not always report racism, even when it causes harm.',
-					options: [
-						{
-							text: 'People do not always report racism, even when it causes harm.',
-							best: true,
-							title: 'You made room for risk and distrust.',
-							copy: 'You recognised that reporting can feel unsafe, exhausting or unlikely to help.',
-							impact: { belonging: 10, safety: 11, burden: -8 }
-						},
-						{
-							text: 'Tell the person harmed they must report it.',
-							title: 'Control matters.',
-							copy: 'Offer options and support. A forced report can become another burden.',
-							impact: { belonging: -6, safety: -8, burden: 12 }
-						},
-						{
-							text: 'Assume the problem is solved if there is no complaint.',
-							title: 'No report is not proof.',
-							copy: 'Low reporting can mean the process feels unsafe or unlikely to help.',
-							impact: { belonging: -9, safety: -9, burden: 12 }
-						}
-					]
-				}
-			];
-
-			let currentRound = 0;
-			let stats = { belonging: 60, safety: 60, burden: 35 };
-			let savedLines = [];
-
-			const countEl = document.getElementById('challenge-count');
-			const progressEl = document.getElementById('challenge-progress');
-			const sceneEl = document.getElementById('scene-label');
-			const commentEl = document.getElementById('challenge-comment');
-			const stakesEl = document.getElementById('scene-stakes');
-			const optionsEl = document.getElementById('challenge-options');
-			const feedbackPanel = document.getElementById('feedback-panel');
-			const feedbackLabel = document.getElementById('feedback-label');
-			const feedbackTitle = document.getElementById('feedback-title');
-			const feedbackCopy = document.getElementById('feedback-copy');
-			const impactSummary = document.getElementById('impact-summary');
-			const lineToKeep = document.getElementById('line-to-keep');
-			const nextButton = document.getElementById('next-moment');
-			const restartButton = document.getElementById('restart-challenge');
-			const copyButton = document.getElementById('copy-line');
-			const painOptions = document.getElementById('pain-options');
-			const painKicker = document.getElementById('pain-kicker');
-			const painTitle = document.getElementById('pain-title');
-			const painCopy = document.getElementById('pain-copy');
-			const painLine = document.getElementById('pain-line');
-			const painNext = document.getElementById('pain-next');
-			const painPrimaryLink = document.getElementById('pain-primary-link');
-			const roundPanel = document.getElementById('round-panel');
-			const resultPanel = document.getElementById('result-panel');
-			const resultTitle = document.getElementById('result-title');
-			const resultCopy = document.getElementById('result-copy');
-			const finalStats = document.getElementById('final-stats');
-			const savedLinesList = document.getElementById('saved-lines');
-			const playAgainButton = document.getElementById('play-again');
-			const copyAllButton = document.getElementById('copy-all-lines');
-
-			function clamp(value) {
-				return Math.max(0, Math.min(100, value));
-			}
-
-			function updateStats(impact = null) {
-				if (impact) {
-					stats = {
-						belonging: clamp(stats.belonging + impact.belonging),
-						safety: clamp(stats.safety + impact.safety),
-						burden: clamp(stats.burden + impact.burden)
-					};
-				}
-				['belonging', 'safety', 'burden'].forEach((key) => {
-					document.getElementById(`${key}-value`).textContent = stats[key];
-					document.getElementById(`${key}-bar`).style.width = `${stats[key]}%`;
-				});
-			}
-
-			function renderRound(index) {
-				const round = gameMoments[index];
-				currentRound = index;
-				countEl.textContent = `Round ${index + 1} of ${gameMoments.length}`;
-				progressEl.style.width = `${((index + 1) / gameMoments.length) * 100}%`;
-				sceneEl.textContent = round.scene;
-				commentEl.textContent = round.comment;
-				stakesEl.textContent = round.stakes;
-				feedbackPanel.hidden = true;
-				resultPanel.hidden = true;
-				roundPanel.hidden = false;
-				optionsEl.innerHTML = '';
-				round.options.forEach((option) => {
-					const button = document.createElement('button');
-					button.type = 'button';
-					button.className = 'choice-button';
-					button.textContent = option.text;
-					button.addEventListener('click', () => chooseOption(option, round.keeper));
-					optionsEl.appendChild(button);
-				});
-				nextButton.textContent = index === gameMoments.length - 1 ? 'See result' : 'Next round';
-			}
-
-			function renderPain(index) {
-				const pain = painPoints[index];
-				painKicker.textContent = `Situation ${index + 1} of ${painPoints.length}`;
-				painTitle.textContent = pain.title;
-				painCopy.textContent = pain.copy;
-				painLine.textContent = pain.line;
-				painNext.textContent = pain.next;
-				painPrimaryLink.textContent = pain.primary;
-				painPrimaryLink.setAttribute('href', pain.href);
-				painPrimaryLink.dataset.round = Number.isInteger(pain.round) ? String(pain.round) : '';
-				document.querySelectorAll('.pain-options button').forEach((button, buttonIndex) => {
-					button.classList.toggle('active', buttonIndex === index);
-				});
-			}
-
-			function chooseOption(option, keeper) {
-				document.querySelectorAll('.choice-button').forEach((button) => {
-					button.disabled = true;
-					if (button.textContent === option.text) {
-						button.classList.add(option.best ? 'is-best' : 'is-risky');
-					}
-				});
-				updateStats(option.impact);
-				if (!savedLines.includes(keeper)) savedLines.push(keeper);
-				feedbackLabel.textContent = option.best ? 'Strong move' : 'Risky move';
-				feedbackTitle.textContent = option.title;
-				feedbackCopy.textContent = option.copy;
-				lineToKeep.textContent = keeper;
-				impactSummary.innerHTML = createImpactPills(option.impact);
-				feedbackPanel.hidden = false;
-			}
-
-			function createImpactPills(impact) {
-				const labels = [
-					['belonging', 'Belonging'],
-					['safety', 'Safety'],
-					['burden', 'Burden']
-				];
-				return labels.map(([key, label]) => {
-					const value = impact[key];
-					const sign = value > 0 ? '+' : '';
-					const tone = key === 'burden'
-						? (value <= 0 ? 'good' : 'risk')
-						: (value >= 0 ? 'good' : 'risk');
-					return `<div class="impact-pill ${tone}"><span>${label}</span><strong>${sign}${value}</strong></div>`;
-				}).join('');
-			}
-
-			function showResult() {
-				roundPanel.hidden = true;
-				resultPanel.hidden = false;
-				const strong = stats.belonging >= 78 && stats.safety >= 78 && stats.burden <= 30;
-				const mixed = stats.belonging >= 60 && stats.safety >= 60 && stats.burden <= 55;
-				resultTitle.textContent = strong
-					? 'You interrupted the pattern.'
-					: mixed
-						? 'You kept some space open.'
-						: 'You have lines to practise.';
-				resultCopy.textContent = strong
-					? 'Your choices raised belonging and safety while lowering the burden on the person targeted.'
-					: mixed
-						? 'Some choices helped. Some still left the person targeted carrying too much of the moment.'
-						: 'The safest next step is not a perfect speech. It is one line that reduces harm and does not shift the burden.';
-				finalStats.innerHTML = `
-					<div class="impact-pill good"><span>Belonging</span><strong>${stats.belonging}</strong></div>
-					<div class="impact-pill good"><span>Safety</span><strong>${stats.safety}</strong></div>
-					<div class="impact-pill ${stats.burden <= 45 ? 'good' : 'risk'}"><span>Burden</span><strong>${stats.burden}</strong></div>
-				`;
-				savedLinesList.innerHTML = savedLines.map((line) => `<li>${line}</li>`).join('');
-			}
-
-			function restartGame() {
-				stats = { belonging: 60, safety: 60, burden: 35 };
-				savedLines = [];
-				updateStats();
-				renderRound(0);
-			}
-
-			nextButton.addEventListener('click', () => {
-				if (currentRound === gameMoments.length - 1) {
-					showResult();
-					return;
-				}
-				renderRound(currentRound + 1);
-			});
-
-			restartButton.addEventListener('click', restartGame);
-			playAgainButton.addEventListener('click', restartGame);
-
-			copyButton.addEventListener('click', async () => {
-				await copyText(lineToKeep.textContent, copyButton, 'Copied');
-			});
-
-			copyAllButton.addEventListener('click', async () => {
-				await copyText(savedLines.map((line, index) => `${index + 1}. ${line}`).join('\n'), copyAllButton, 'Copied');
-			});
-
-			painPoints.forEach((pain, index) => {
-				const button = document.createElement('button');
-				button.type = 'button';
-				button.textContent = pain.label;
-				button.addEventListener('click', () => renderPain(index));
-				painOptions.appendChild(button);
-			});
-
-			painPrimaryLink.addEventListener('click', (event) => {
-				const round = Number.parseInt(painPrimaryLink.dataset.round, 10);
-				if (Number.isInteger(round)) {
-					event.preventDefault();
-					renderRound(round);
-					document.getElementById('response-game').scrollIntoView({ behavior: 'smooth' });
-				}
-			});
-
-			async function copyText(text, button, successLabel) {
-				try {
-					await navigator.clipboard.writeText(text);
-					const original = button.textContent;
-					button.textContent = successLabel;
-					setTimeout(() => { button.textContent = original; }, 1200);
-				} catch {
-					const original = button.textContent;
-					button.textContent = 'Copy failed';
-					setTimeout(() => { button.textContent = original; }, 1200);
-				}
-			}
-
-			updateStats();
-			renderPain(0);
-			renderRound(0);
-		</script>
+		<script src="assets/js/nextline.js"></script>
 	</body>
 </html>

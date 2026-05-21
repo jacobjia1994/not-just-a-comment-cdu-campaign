@@ -1,304 +1,141 @@
 <!DOCTYPE HTML>
+<!--
+	Adapted from Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html lang="en">
 	<head>
-		<title>What To Do | Not Just a Comment</title>
+		<title>Lines | The Next Line</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="An interactive bystander response builder for anti-Indigenous racism in university settings." />
+		<meta name="description" content="Short lines CDU students can use when everyday anti-Indigenous racism shows up." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/campaign.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload campaign-page">
 		<nav class="site-nav" aria-label="Main navigation">
-			<a class="brand" href="index.html">Not Just a Comment</a>
+			<a class="brand" href="index.html">The Next Line</a>
 			<div class="nav-links">
-				<a href="index.html">Home</a>
-				<a href="problem.html">The problem</a>
-				<a href="moments.html">Moments</a>
-				<a class="active" href="act.html">What to do</a>
-				<a href="watch.html">Watch</a>
+				<a href="index.html">Play</a>
+				<a class="active" href="act.html">Lines</a>
 				<a href="support.html">Support</a>
 				<a href="evidence.html">Evidence</a>
 			</div>
 		</nav>
+
 		<main>
-			<header class="page-hero">
-				<div class="hero-inner">
-					<p class="eyebrow">Build a response</p>
-					<h1>You do not need the perfect sentence.</h1>
-					<p class="lead">Choose the kind of moment and the level of safety. The page gives you one line and one follow-up step.</p>
+			<header class="page-hero compact-hero">
+				<div class="page-hero-inner">
+					<p class="eyebrow">Keep one sentence ready</p>
+					<h1>Lines you can actually use.</h1>
+					<p class="lead">Short, plain responses for tutorials, group chats, campus conversations and placement discussions.</p>
 				</div>
 			</header>
 
-			<section class="section alt">
-				<div class="builder-shell">
-					<div class="builder-controls">
-						<p class="eyebrow">Step 1</p>
-						<h2>What happened?</h2>
-						<div id="response-goals" class="button-palette" aria-label="Response goals"></div>
-						<p class="eyebrow second-step">Step 2</p>
-						<h2>How safe is it to speak now?</h2>
-						<div id="response-risk" class="button-palette compact" aria-label="Safety level">
-							<button type="button" data-risk="direct" class="active">Safe enough now</button>
-							<button type="button" data-risk="redirect">Keep it low-key</button>
-							<button type="button" data-risk="delay">Follow up later</button>
-						</div>
-					</div>
-					<article class="builder-output" aria-live="polite">
-						<p id="builder-label" class="feedback-label">Response</p>
-						<h3 id="builder-line"></h3>
-						<div class="response-strip">
-							<div>
-								<span>Use when</span>
-								<p id="builder-when"></p>
-							</div>
-							<div>
-								<span>Follow through</span>
-								<p id="builder-follow"></p>
-							</div>
-							<div>
-								<span>Avoid</span>
-								<p id="builder-avoid"></p>
-							</div>
-						</div>
-						<button id="copy-response" type="button">Copy response</button>
+			<section class="section lines-section">
+				<div class="section-header">
+					<p class="eyebrow">Say less, shift more</p>
+					<h2>Choose the line that matches the risk.</h2>
+				</div>
+				<div class="line-bank">
+					<article>
+						<h3>Interrupt the moment</h3>
+						<button type="button">Can we pause that?</button>
+						<button type="button">Can we not make identity the punchline?</button>
+						<button type="button">That does not sit right with me.</button>
+						<button type="button">I do not want racist comments in this conversation.</button>
+					</article>
+					<article>
+						<h3>Challenge the myth</h3>
+						<button type="button">Equity is not special treatment.</button>
+						<button type="button">Where did you hear that?</button>
+						<button type="button">Can we check the evidence before repeating that?</button>
+						<button type="button">Treating everyone the same does not fix unequal barriers.</button>
+					</article>
+					<article>
+						<h3>Shift the burden</h3>
+						<button type="button">Let us not ask one person to speak for everyone.</button>
+						<button type="button">We can use First Nations-led resources.</button>
+						<button type="button">It is not their job to teach the room.</button>
+						<button type="button">Let us do the reading instead of putting someone on the spot.</button>
+					</article>
+					<article>
+						<h3>Check in after</h3>
+						<button type="button">I saw what happened. Are you okay?</button>
+						<button type="button">Do you want me to stay with you?</button>
+						<button type="button">Do you want support, or do you just want this noted?</button>
+						<button type="button">I will not share this without your consent unless there is an immediate safety risk.</button>
+					</article>
+					<article>
+						<h3>Placement and practice</h3>
+						<button type="button">Can we check whether we are making a cultural assumption here?</button>
+						<button type="button">What barriers might be affecting engagement?</button>
+						<button type="button">How can we discuss risk without using stereotypes?</button>
+						<button type="button">Can we take this to supervision before it becomes a practice judgement?</button>
+					</article>
+					<article>
+						<h3>When direct action feels unsafe</h3>
+						<button type="button">I am going to step away from this conversation.</button>
+						<button type="button">I am going to ask someone else to help respond.</button>
+						<button type="button">I can write down what happened if you want a record.</button>
+						<button type="button">We can look at support options together.</button>
 					</article>
 				</div>
 			</section>
 
-			<section class="section">
-				<div class="section-header">
-					<p class="eyebrow">Phrase bank</p>
-					<h2>Open only the lines you need.</h2>
-					<p class="lead">These are short because people rarely use long speeches under pressure.</p>
-				</div>
-				<div class="accordion-grid">
-					<details>
-						<summary>Pause the moment</summary>
-						<p>"Can we pause for a second?"</p>
-						<p>"I do not think that joke lands well."</p>
-						<p>"That sounded like a stereotype."</p>
-					</details>
-					<details>
-						<summary>Shift the frame</summary>
-						<p>"Support programs are about equity."</p>
-						<p>"Fairness includes noticing racism."</p>
-						<p>"No report does not mean no harm."</p>
-					</details>
-					<details>
-						<summary>Reduce the burden</summary>
-						<p>"Let us not put one person on the spot."</p>
-						<p>"We can do the reading instead of asking one student to explain."</p>
-						<p>"I can help find a First Nations-led resource."</p>
-					</details>
-					<details>
-						<summary>Check in</summary>
-						<p>"I noticed what happened. Are you okay?"</p>
-						<p>"Would you like me to stay with you?"</p>
-						<p>"Do you want help finding support, or would you prefer space?"</p>
-					</details>
-					<details>
-						<summary>Identity policing</summary>
-						<p>"Identity is not something we judge by appearance."</p>
-						<p>"That is not an appropriate question to ask someone."</p>
-						<p>"Let us not make someone prove who they are."</p>
-					</details>
-					<details>
-						<summary>History denial</summary>
-						<p>"History still shapes current systems and trust."</p>
-						<p>"This is not just in the past."</p>
-						<p>"We need the context before making claims about fairness."</p>
-					</details>
-					<details>
-						<summary>Online spaces</summary>
-						<p>"I do not want racist memes in this chat."</p>
-						<p>"Please delete that. It is not okay here."</p>
-						<p>"This chat is still part of our learning space."</p>
-					</details>
-					<details>
-						<summary>Placement and practice</summary>
-						<p>"Can we check whether we are making a cultural assumption?"</p>
-						<p>"Let us take this to supervision before labelling the family."</p>
-						<p>"What would culturally safe practice require here?"</p>
-					</details>
-				</div>
-			</section>
-
-			<section class="section mist">
-				<div class="section-header">
-					<p class="eyebrow">Action types</p>
-					<h2>Choose the safest form of action.</h2>
-				</div>
-				<div class="flip-grid">
-					<button type="button" class="flip-card">
-						<span>Direct</span>
-						<strong>Name it now</strong>
-						<em>Use when it is safe enough to speak in the moment.</em>
-					</button>
-					<button type="button" class="flip-card">
-						<span>Redirect</span>
-						<strong>Move the room</strong>
-						<em>Use when a calm boundary and return to task is safer.</em>
-					</button>
-					<button type="button" class="flip-card">
-						<span>Delegate</span>
-						<strong>Bring in support</strong>
-						<em>Use when power, risk or repeated behaviour needs staff help.</em>
-					</button>
-					<button type="button" class="flip-card">
-						<span>Delay</span>
-						<strong>Check in later</strong>
-						<em>Use when public action may increase risk.</em>
-					</button>
+			<section class="section note-band">
+				<div class="note-layout">
+					<div>
+						<p class="eyebrow">Use with care</p>
+						<h2>The aim is not to win the room.</h2>
+					</div>
+					<div class="principle-grid">
+						<article>
+							<span>1</span>
+							<p>Reduce harm in the moment.</p>
+						</article>
+						<article>
+							<span>2</span>
+							<p>Do not make the person targeted explain or reassure.</p>
+						</article>
+						<article>
+							<span>3</span>
+							<p>Offer support without forcing a complaint.</p>
+						</article>
+					</div>
 				</div>
 			</section>
 		</main>
+
 		<footer class="site-footer">
-			<p class="disclaimer">Educational resource. For official support and reporting options, use the links on the Support page.</p>
-			<p>Site template adapted from <a href="https://html5up.net/story">Story by HTML5 UP</a>.</p>
+			<p class="disclaimer">Educational resource. For immediate danger, call 000. For crisis support, Aboriginal and Torres Strait Islander peoples can call 13YARN on 13 92 76.</p>
+			<p>Site template adapted from <a href="https://html5up.net/story">Story by HTML5 UP</a>, used under the <a href="https://html5up.net/license">Creative Commons Attribution 3.0 license</a>.</p>
 		</footer>
+
 		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script>
-			const responseOptions = [
-				{
-					id: 'joke',
-					label: 'A joke or stereotype',
-					when: 'A comment turns identity into a punchline or repeats a stereotype.',
-					avoid: 'Do not ask the person targeted to explain why it hurt.',
-					lines: {
-						direct: 'Can we not make people the punchline?',
-						redirect: 'That sounded like a stereotype. Let us get back to the task.',
-						delay: 'I noticed that comment earlier. Are you okay, and do you want support?'
-					},
-					follow: {
-						direct: 'Keep it short. Then check in privately.',
-						redirect: 'Move the group away from the joke and make the boundary visible.',
-						delay: 'Offer options without forcing a complaint.'
+			document.querySelectorAll('.line-bank button').forEach((button) => {
+				button.addEventListener('click', async () => {
+					try {
+						await navigator.clipboard.writeText(button.textContent);
+						const original = button.textContent;
+						button.textContent = 'Copied';
+						setTimeout(() => { button.textContent = original; }, 900);
+					} catch {
+						const original = button.textContent;
+						button.textContent = 'Copy failed';
+						setTimeout(() => { button.textContent = original; }, 900);
 					}
-				},
-				{
-					id: 'equity',
-					label: 'Special treatment talk',
-					when: 'Equity support is framed as unfair advantage.',
-					avoid: 'Do not make one student defend support programs or their place at university.',
-					lines: {
-						direct: 'Support programs are about equity, not unfair advantage.',
-						redirect: 'We need the context before calling support unfair.',
-						delay: 'That comment about support programs stayed with me. It is worth challenging.'
-					},
-					follow: {
-						direct: 'Keep the focus on systems and unequal conditions.',
-						redirect: 'Return to the work without letting the myth sit unchallenged.',
-						delay: 'Share a First Nations-led or university equity resource later.'
-					}
-				},
-				{
-					id: 'burden',
-					label: 'One student is put on the spot',
-					when: 'Someone is asked to represent, explain or educate the room.',
-					avoid: 'Do not turn curiosity into unpaid cultural labour.',
-					lines: {
-						direct: 'Let us not put one person on the spot. We can do the reading.',
-						redirect: 'Can we use a First Nations-led resource for this?',
-						delay: 'I noticed you were put on the spot. Did that feel okay, or would support help?'
-					},
-					follow: {
-						direct: 'Suggest a resource and move responsibility back to the group.',
-						redirect: 'Take the pressure off the individual student.',
-						delay: 'Respect their answer. Do not ask them to reassure you.'
-					}
-				},
-				{
-					id: 'identity',
-					label: 'Identity is questioned',
-					when: 'Someone comments on appearance, ancestry, authenticity or whether a person is Aboriginal enough.',
-					avoid: 'Do not let identity become a public inspection.',
-					lines: {
-						direct: 'Identity is not something we judge by appearance.',
-						redirect: 'That question is not appropriate. Let us move on.',
-						delay: 'I am sorry that question was asked. Do you want me to help address it?'
-					},
-					follow: {
-						direct: 'Close the test. Do not invite more questions.',
-						redirect: 'Protect the person from having to prove who they are.',
-						delay: 'Offer support while leaving control with the person affected.'
-					}
-				},
-				{
-					id: 'practice',
-					label: 'Placement or practice assumption',
-					when: 'A client, family or community is described through deficit or cultural assumptions.',
-					avoid: 'Do not let a stereotype become professional judgement.',
-					lines: {
-						direct: 'Can we check whether we are making a cultural assumption here?',
-						redirect: 'This sounds like something to take to supervision before we label the family.',
-						delay: 'I want to revisit that debrief. I think we may have missed the cultural safety issue.'
-					},
-					follow: {
-						direct: 'Ask what evidence is present and what context is missing.',
-						redirect: 'Move the issue into supervision or a safer professional space.',
-						delay: 'Document the concern and seek advice if needed.'
-					}
-				}
-			];
-
-			let activeGoal = 0;
-			let activeRisk = 'direct';
-			const goals = document.getElementById('response-goals');
-			const riskButtons = document.querySelectorAll('#response-risk button');
-			const builderLabel = document.getElementById('builder-label');
-			const builderLine = document.getElementById('builder-line');
-			const builderWhen = document.getElementById('builder-when');
-			const builderFollow = document.getElementById('builder-follow');
-			const builderAvoid = document.getElementById('builder-avoid');
-
-			function renderResponse() {
-				const response = responseOptions[activeGoal];
-				builderLabel.textContent = response.label;
-				builderLine.textContent = response.lines[activeRisk];
-				builderWhen.textContent = response.when;
-				builderFollow.textContent = response.follow[activeRisk];
-				builderAvoid.textContent = response.avoid;
-				document.querySelectorAll('#response-goals button').forEach((button, index) => {
-					button.classList.toggle('active', index === activeGoal);
-				});
-				riskButtons.forEach((button) => {
-					button.classList.toggle('active', button.dataset.risk === activeRisk);
-				});
-			}
-
-			responseOptions.forEach((response, index) => {
-				const button = document.createElement('button');
-				button.type = 'button';
-				button.textContent = response.label;
-				button.addEventListener('click', () => {
-					activeGoal = index;
-					renderResponse();
-				});
-				goals.appendChild(button);
-			});
-
-			riskButtons.forEach((button) => {
-				button.addEventListener('click', () => {
-					activeRisk = button.dataset.risk;
-					renderResponse();
 				});
 			});
-
-			document.getElementById('copy-response').addEventListener('click', async () => {
-				try {
-					await navigator.clipboard.writeText(builderLine.textContent);
-					document.getElementById('copy-response').textContent = 'Copied';
-					setTimeout(() => { document.getElementById('copy-response').textContent = 'Copy response'; }, 1200);
-				} catch {
-					document.getElementById('copy-response').textContent = 'Copy failed';
-					setTimeout(() => { document.getElementById('copy-response').textContent = 'Copy response'; }, 1200);
-				}
-			});
-
-			renderResponse();
 		</script>
 	</body>
 </html>
