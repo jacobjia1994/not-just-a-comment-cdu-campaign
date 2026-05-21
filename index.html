@@ -37,7 +37,7 @@
 						<a class="buttonish alt" href="act.html">Give me one line to say</a>
 					</div>
 				</div>
-				<p class="image-credit">Image: GDW.45, Casuarina Beach, CC BY-SA 3.0.</p>
+				<p class="image-credit">Image: GDW.45, <a href="https://commons.wikimedia.org/wiki/File:Wet_Season_Storm_at_Sunset_from_Dripstone_Cliffs_-_Casuarina_Beach.jpg">Casuarina Beach</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>.</p>
 			</section>
 
 			<section id="moments" class="section" aria-label="Choose a campus moment">
@@ -45,7 +45,7 @@
 					<div class="section-copy">
 						<p class="eyebrow">Choose the moment</p>
 						<h2>Pick the one you have seen, heard or can imagine happening.</h2>
-						<p>No score. No confession. Just choose the moment, try a move, and keep one sentence for later.</p>
+						<p>No quiz. Just a quick practice run.</p>
 					</div>
 					<div id="scenario-cards" class="scenario-cards" aria-label="Campus scenarios"></div>
 				</div>
@@ -59,13 +59,9 @@
 
 					<article class="choice-panel action-panel">
 						<p class="scene-label">Step 1</p>
-						<h3>What would you do?</h3>
-						<div id="home-action-choices" class="action-chip-grid">
-							<button type="button" data-action="silent" aria-pressed="false" disabled>Say nothing</button>
-							<button type="button" data-action="question" aria-pressed="false" disabled>Ask a short question</button>
-							<button type="button" data-action="name" aria-pressed="false" disabled>Name it briefly</button>
-							<button type="button" data-action="check" aria-pressed="false" disabled>Check in later</button>
-							<button type="button" data-action="help" aria-pressed="false" disabled>Ask someone to help</button>
+						<h3>What happens in the next five seconds?</h3>
+						<div id="home-action-choices" class="action-chip-grid" aria-live="polite">
+							<p class="action-placeholder">Pick a moment first.</p>
 						</div>
 					</article>
 
@@ -73,9 +69,9 @@
 						<p class="feedback-label">Step 2</p>
 						<h3>Choose a moment and a move.</h3>
 						<div class="result-lines">
-							<div><span>What the room may learn</span><p>Waiting for your choice.</p></div>
-							<div><span>Who carries the burden</span><p>Waiting for your choice.</p></div>
-							<div><span>A better line to try</span><p>Waiting for your choice.</p></div>
+							<div><span>What everyone hears</span><p>Pick a moment first.</p></div>
+							<div><span>Who gets left with it</span><p>Choose one move.</p></div>
+							<div><span>Try this line</span><p>Then keep the line if it feels usable.</p></div>
 						</div>
 						<button id="save-home-line" type="button" class="save-line-button" disabled>Save this line</button>
 					</article>
@@ -90,15 +86,17 @@
 						<p>Next time, I can say:</p>
 					</div>
 					<article class="share-card">
+						<p class="share-card-kicker">Don’t Let It Pass at CDU</p>
 						<h3>Next time, I can say:</h3>
 						<ol id="home-saved-lines">
 							<li>Choose a moment and keep one line for later.</li>
 						</ol>
+						<p class="share-card-footer">One line can stop the room moving on like nothing happened.</p>
 						<div class="share-card-actions">
 							<button id="copy-home-lines" type="button">Copy my lines</button>
 							<button id="restart-home-flow" type="button" class="ghost-button">Start again</button>
 						</div>
-						<p class="screenshot-note">No data is collected. This card only lives in your browser.</p>
+						<p class="screenshot-note">No data is collected. This card stays on this page until you refresh.</p>
 					</article>
 				</div>
 			</section>
@@ -150,7 +148,7 @@
 						</div>
 						<div id="learn-feedback" class="reveal-box" aria-live="polite">
 							<p class="feedback-label">Choose a first step</p>
-							<h4>Respect includes not taking access.</h4>
+							<h4>Respect includes not making one person do the teaching.</h4>
 							<p>Click an option to reveal why consent, relationship and public resources matter.</p>
 						</div>
 					</article>
@@ -176,7 +174,7 @@
 		<footer class="site-footer">
 			<div class="site-footer-inner">
 				<p class="disclaimer">Educational resource. For immediate danger, call 000. For crisis support, Aboriginal and Torres Strait Islander peoples can call 13YARN on 13 92 76.</p>
-				<p>Custom static campaign site for SWK525 Assessment 3. No data is collected.</p>
+				<p>Student-created educational resource. Not an official CDU service page. No data is collected.</p>
 			</div>
 		</footer>
 

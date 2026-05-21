@@ -3,67 +3,211 @@ const homeScenarios = [
 		place: 'Tutorial room',
 		title: '“They get special treatment anyway.”',
 		context: 'A class comment turns equity support into resentment.',
-		lines: {
-			question: 'What do you mean by “special treatment”?',
-			name: 'Equity support exists because the starting conditions have not been equal.',
-			check: 'I saw what happened. Are you okay?',
-			help: 'Can we ask the tutor to address this properly?'
-		}
+		options: [
+			{
+				label: 'Say nothing',
+				strength: 'risk',
+				room: 'Silence can sound like agreement.',
+				burden: 'A First Nations student may be left to absorb it or challenge it alone.',
+				line: 'Equity support exists because the starting conditions have not been equal.'
+			},
+			{
+				label: 'Ask: “What do you mean by special treatment?”',
+				strength: 'strong',
+				room: 'The group has to slow down and explain the assumption.',
+				burden: 'You take some pressure off the person being talked about.',
+				line: 'What do you mean by “special treatment”?'
+			},
+			{
+				label: 'Say: “Equity support exists because the starting conditions have not been equal.”',
+				strength: 'strong',
+				room: 'The myth is answered directly without turning it into a fight.',
+				burden: 'The person targeted does not have to defend support programs.',
+				line: 'Equity support exists because the starting conditions have not been equal.'
+			},
+			{
+				label: 'Ask the tutor to pause the conversation',
+				strength: 'strong',
+				room: 'The comment becomes something the learning space must address.',
+				burden: 'Responsibility moves to someone with a role in the room.',
+				line: 'Can we pause and ask the tutor to address this properly?'
+			}
+		]
 	},
 	{
 		place: 'Group chat',
 		title: 'A racist meme gets laughing emojis.',
 		context: 'Everyone can see who reacts and who lets it sit there.',
-		lines: {
-			question: 'What is the joke meant to be here?',
-			name: 'I do not want racist memes in this chat. Please delete it.',
-			check: 'I saw that message. Are you okay?',
-			help: 'I am going to ask the group admin to remove this.'
-		}
+		options: [
+			{
+				label: 'Ignore it',
+				strength: 'risk',
+				room: 'The chat may learn that racist posts can sit there.',
+				burden: 'Anyone targeted has to decide whether to speak up or leave it.',
+				line: 'I do not want racist memes in this chat. Please delete it.'
+			},
+			{
+				label: 'Reply: “I do not want racist memes in this chat. Please delete it.”',
+				strength: 'strong',
+				room: 'Everyone sees a clear boundary.',
+				burden: 'The harm is not left for one person to explain.',
+				line: 'I do not want racist memes in this chat. Please delete it.'
+			},
+			{
+				label: 'Message the sender privately',
+				strength: 'risk',
+				room: 'The public chat may still look like nothing happened.',
+				burden: 'Private follow-up can help, but the group norm may stay unchanged.',
+				line: 'That meme is racist. Please delete it from the chat.'
+			},
+			{
+				label: 'Ask the group admin to remove it',
+				strength: 'strong',
+				room: 'The chat gets a visible limit.',
+				burden: 'The person harmed does not have to manage the group alone.',
+				line: 'Can the group admin remove this? I do not think racist memes belong here.'
+			}
+		]
 	},
 	{
 		place: 'Class discussion',
 		title: '“Can you explain the Aboriginal view?”',
 		context: 'One student is put on the spot to speak for many peoples.',
-		lines: {
-			question: 'Are we asking one person to speak for everyone?',
-			name: 'Let’s not put one person on the spot to speak for everyone.',
-			check: 'Sorry that landed on you. Do you want space or support?',
-			help: 'Can we use First Nations-led resources instead of putting this on one student?'
-		}
+		options: [
+			{
+				label: 'Wait for them to answer',
+				strength: 'risk',
+				room: 'The room may learn that one person can be put on the spot.',
+				burden: 'One student is left to represent many peoples and experiences.',
+				line: 'Let’s not put one person on the spot to speak for everyone.'
+			},
+			{
+				label: 'Say: “Let’s not put one person on the spot to speak for everyone.”',
+				strength: 'strong',
+				room: 'The pressure is named without making it a lecture.',
+				burden: 'The person asked does not have to refuse or educate the class.',
+				line: 'Let’s not put one person on the spot to speak for everyone.'
+			},
+			{
+				label: 'Ask the class to use First Nations-led public resources',
+				strength: 'strong',
+				room: 'Learning is redirected to appropriate sources.',
+				burden: 'The class does not take free teaching from one student.',
+				line: 'Can we use First Nations-led public resources instead of putting this on one person?'
+			},
+			{
+				label: 'Check in after class',
+				strength: 'strong',
+				room: 'The room may not change yet, but the person knows someone noticed.',
+				burden: 'Support can reduce isolation, especially if speaking up was not safe.',
+				line: 'Sorry that landed on you. Do you want space or support?'
+			}
+		]
 	},
 	{
 		place: 'Before class',
 		title: '“Are you really Aboriginal?”',
 		context: 'A casual question turns identity into something to prove.',
-		lines: {
-			question: 'Why are we asking someone to prove their identity?',
-			name: 'It is not our place to test someone’s identity.',
-			check: 'That question was not okay. Are you alright?',
-			help: 'Can we get support from someone who can handle this respectfully?'
-		}
+		options: [
+			{
+				label: 'Say nothing',
+				strength: 'risk',
+				room: 'The question can sound acceptable.',
+				burden: 'The person asked may feel they have to prove who they are.',
+				line: 'It is not our place to test someone’s identity.'
+			},
+			{
+				label: 'Say: “It is not our place to test someone’s identity.”',
+				strength: 'strong',
+				room: 'The boundary is short and clear.',
+				burden: 'The person targeted does not have to justify their identity.',
+				line: 'It is not our place to test someone’s identity.'
+			},
+			{
+				label: 'Change the subject',
+				strength: 'risk',
+				room: 'The pressure may be interrupted, but the harm is not named.',
+				burden: 'The person may still be left wondering whether anyone understood.',
+				line: 'Let’s not ask people to prove their identity.'
+			},
+			{
+				label: 'Check in privately',
+				strength: 'strong',
+				room: 'The public moment may pass, but support still reaches the person.',
+				burden: 'They do not have to carry the discomfort alone.',
+				line: 'That question was not okay. Are you alright?'
+			}
+		]
 	},
 	{
 		place: 'Placement',
 		title: '“This family is non-compliant.”',
 		context: 'A professional label appears before anyone checks barriers, trust or cultural context.',
-		lines: {
-			question: 'What barriers might be affecting engagement?',
-			name: 'Can we check whether we are making a cultural assumption here?',
-			check: 'I want to think more carefully about how that was framed.',
-			help: 'Can we take this to supervision before it becomes a practice judgement?'
-		}
+		options: [
+			{
+				label: 'Accept the label',
+				strength: 'risk',
+				room: 'The label may become the frame for practice.',
+				burden: 'The family can be treated as the problem before barriers are checked.',
+				line: 'What barriers might be affecting engagement?'
+			},
+			{
+				label: 'Ask: “What barriers might be affecting engagement?”',
+				strength: 'strong',
+				room: 'The conversation moves from blame to assessment.',
+				burden: 'The family is not reduced to a label.',
+				line: 'What barriers might be affecting engagement?'
+			},
+			{
+				label: 'Say: “Can we check whether we are making a cultural assumption here?”',
+				strength: 'strong',
+				room: 'The practice risk is named without attacking the worker.',
+				burden: 'Responsibility stays with the service system, not just the family.',
+				line: 'Can we check whether we are making a cultural assumption here?'
+			},
+			{
+				label: 'Take it to supervision',
+				strength: 'strong',
+				room: 'The issue is treated as practice judgement, not gossip.',
+				burden: 'You are not leaving the concern unmanaged.',
+				line: 'Can we take this to supervision before it becomes a practice judgement?'
+			}
+		]
 	},
 	{
 		place: 'Campus event',
 		title: '“Why do we do Acknowledgement of Country every time?”',
 		context: 'A public moment of respect is treated like an annoying script.',
-		lines: {
-			question: 'What do you think it is meant to acknowledge?',
-			name: 'This is not just a script. It is about whose Country we are on.',
-			check: 'That comment was uncomfortable. Are you okay?',
-			help: 'Can we ask the event organiser to explain why this matters?'
-		}
+		options: [
+			{
+				label: 'Laugh politely',
+				strength: 'risk',
+				room: 'Polite laughter can make disrespect easier next time.',
+				burden: 'People who value the acknowledgement may feel the room is not with them.',
+				line: 'This is not just a script. It is about whose Country we are on.'
+			},
+			{
+				label: 'Ask: “What do you think it is meant to acknowledge?”',
+				strength: 'strong',
+				room: 'The comment has to slow down and face its assumption.',
+				burden: 'You do not leave the discomfort with First Nations people in the room.',
+				line: 'What do you think it is meant to acknowledge?'
+			},
+			{
+				label: 'Say: “This is not just a script. It is about whose Country we are on.”',
+				strength: 'strong',
+				room: 'The purpose is named without a long lecture.',
+				burden: 'The room hears that respect is not optional background noise.',
+				line: 'This is not just a script. It is about whose Country we are on.'
+			},
+			{
+				label: 'Ask the organiser to explain the purpose',
+				strength: 'strong',
+				room: 'The organiser can set a clearer norm for the event.',
+				burden: 'The explanation does not have to come from a First Nations attendee.',
+				line: 'Can we ask the organiser to explain why this matters?'
+			}
+		]
 	}
 ];
 
@@ -455,36 +599,12 @@ function initHomeMomentFlow() {
 	const place = document.getElementById('home-moment-place');
 	const title = document.getElementById('home-moment-title');
 	const context = document.getElementById('home-moment-context');
-	const actionButtons = document.querySelectorAll('#home-action-choices button');
+	const actionChoices = document.getElementById('home-action-choices');
 	const result = document.getElementById('home-result');
-	const saveButton = document.getElementById('save-home-line');
 	const savedLinesList = document.getElementById('home-saved-lines');
 	const copyButton = document.getElementById('copy-home-lines');
 	const restartButton = document.getElementById('restart-home-flow');
-	if (!scenarioCards || !result || !savedLinesList) return;
-
-	const actionCopy = {
-		silent: {
-			room: 'The room may learn that this can happen here.',
-			burden: 'The person targeted is left to carry it or challenge it alone.'
-		},
-		question: {
-			room: 'The room has to slow down instead of laughing or moving on.',
-			burden: 'You take some of the pressure off the person targeted.'
-		},
-		name: {
-			room: 'The room hears a clear boundary.',
-			burden: 'The harm is not left for one person to explain.'
-		},
-		check: {
-			room: 'The room may not change yet, but the person knows someone noticed.',
-			burden: 'Support does not erase the moment, but it can reduce isolation.'
-		},
-		help: {
-			room: 'The issue is not left as a private problem.',
-			burden: 'Responsibility moves to someone with a role to respond.'
-		}
-	};
+	if (!scenarioCards || !actionChoices || !result || !savedLinesList) return;
 
 		scenarioCards.innerHTML = homeScenarios.map((scenario, index) => `
 			<button type="button" class="scenario-card" data-scenario="${index}" aria-pressed="false">
@@ -505,29 +625,42 @@ function initHomeMomentFlow() {
 	function setResultIntro() {
 		result.innerHTML = `
 			<p class="feedback-label">Step 2</p>
-			<h3>Now choose what you would do.</h3>
+			<h3>Choose one move.</h3>
 			<div class="result-lines">
-				<div><span>What the room may learn</span><p>Pick one move above.</p></div>
-				<div><span>Who carries the burden</span><p>Pick one move above.</p></div>
-				<div><span>A better line to try</span><p>Pick one move above.</p></div>
+				<div><span>What everyone hears</span><p>Pick a moment first.</p></div>
+				<div><span>Who gets left with it</span><p>Choose one move.</p></div>
+				<div><span>Try this line</span><p>Then keep the line if it feels usable.</p></div>
 			</div>
 			<button id="save-home-line" type="button" class="save-line-button" disabled>Save this line</button>
 		`;
 	}
 
+	function renderActionChoices() {
+		if (!selectedHomeScenario) {
+			actionChoices.innerHTML = '<p class="action-placeholder">Pick a moment first.</p>';
+			return;
+		}
+		actionChoices.innerHTML = selectedHomeScenario.options.map((option, index) => `
+			<button type="button" data-action="${index}" class="${option.strength === 'strong' ? 'strong-option' : 'risk-option'}" aria-pressed="false">
+				${option.label}
+			</button>
+		`).join('');
+		actionChoices.querySelectorAll('button').forEach((button) => {
+			button.addEventListener('click', () => selectAction(Number(button.dataset.action)));
+		});
+	}
+
 	function renderResult() {
-		if (!selectedHomeScenario || !selectedHomeAction) return;
-		const scenario = selectedHomeScenario;
-		const action = selectedHomeAction;
-		const fallbackLine = scenario.lines.name;
-		currentHomeLine = action === 'silent' ? fallbackLine : scenario.lines[action] || fallbackLine;
+		if (!selectedHomeScenario || selectedHomeAction === null) return;
+		const option = selectedHomeScenario.options[selectedHomeAction];
+		currentHomeLine = option.line;
 		result.innerHTML = `
 			<p class="feedback-label">Step 2</p>
-			<h3>${action === 'silent' ? 'Silence still teaches something.' : 'This gives the room a different cue.'}</h3>
+			<h3>${option.strength === 'strong' ? 'Stronger move.' : 'Riskier move.'}</h3>
 			<div class="result-lines">
-				<div><span>What the room may learn</span><p>${actionCopy[action].room}</p></div>
-				<div><span>Who carries the burden</span><p>${actionCopy[action].burden}</p></div>
-				<div><span>A better line to try</span><p>${currentHomeLine}</p></div>
+				<div><span>What everyone hears</span><p>${option.room}</p></div>
+				<div><span>Who gets left with it</span><p>${option.burden}</p></div>
+				<div><span>Try this line</span><p>${currentHomeLine}</p></div>
 			</div>
 			<button id="save-home-line" type="button" class="save-line-button">Save this line</button>
 		`;
@@ -546,19 +679,15 @@ function initHomeMomentFlow() {
 				button.classList.toggle('active', isSelected);
 				button.setAttribute('aria-pressed', String(isSelected));
 			});
-			actionButtons.forEach((button) => {
-				button.disabled = false;
-				button.classList.remove('active');
-				button.setAttribute('aria-pressed', 'false');
-			});
+			renderActionChoices();
 			setResultIntro();
 		}
 
 	function selectAction(action) {
 		if (!selectedHomeScenario) return;
 			selectedHomeAction = action;
-			actionButtons.forEach((button) => {
-				const isSelected = button.dataset.action === action;
+			actionChoices.querySelectorAll('button').forEach((button) => {
+				const isSelected = Number(button.dataset.action) === action;
 				button.classList.toggle('active', isSelected);
 				button.setAttribute('aria-pressed', String(isSelected));
 			});
@@ -603,18 +732,14 @@ function initHomeMomentFlow() {
 				button.classList.remove('active');
 				button.setAttribute('aria-pressed', 'false');
 			});
-			actionButtons.forEach((button) => {
-				button.disabled = true;
-				button.classList.remove('active');
-				button.setAttribute('aria-pressed', 'false');
-			});
+			renderActionChoices();
 		result.innerHTML = `
 			<p class="feedback-label">Step 2</p>
 			<h3>Choose a moment and a move.</h3>
 			<div class="result-lines">
-				<div><span>What the room may learn</span><p>Waiting for your choice.</p></div>
-				<div><span>Who carries the burden</span><p>Waiting for your choice.</p></div>
-				<div><span>A better line to try</span><p>Waiting for your choice.</p></div>
+				<div><span>What everyone hears</span><p>Pick a moment first.</p></div>
+				<div><span>Who gets left with it</span><p>Choose one move.</p></div>
+				<div><span>Try this line</span><p>Then keep the line if it feels usable.</p></div>
 			</div>
 			<button id="save-home-line" type="button" class="save-line-button" disabled>Save this line</button>
 		`;
@@ -623,12 +748,10 @@ function initHomeMomentFlow() {
 	scenarioCards.querySelectorAll('.scenario-card').forEach((button) => {
 		button.addEventListener('click', () => selectScenario(Number(button.dataset.scenario)));
 	});
-	actionButtons.forEach((button) => {
-		button.addEventListener('click', () => selectAction(button.dataset.action));
-	});
 	copyButton?.addEventListener('click', copyHomeLines);
 	restartButton?.addEventListener('click', restartHomeFlow);
 	renderSavedHomeLines();
+	renderActionChoices();
 }
 
 function initChain() {

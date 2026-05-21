@@ -338,6 +338,7 @@ button:disabled {
 .section {
 	padding-bottom: 76px;
 	padding-top: 76px;
+	scroll-margin-top: 110px;
 }
 
 .section + .section {
@@ -503,6 +504,27 @@ button:disabled {
 	width: 100%;
 }
 
+.action-chip-grid button {
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.action-placeholder {
+	background: var(--mist);
+	border-radius: 8px;
+	color: var(--muted);
+	margin: 0;
+	padding: 14px;
+}
+
+.action-chip-grid button.strong-option {
+	border-left: 4px solid var(--eucalypt);
+}
+
+.action-chip-grid button.risk-option {
+	border-left: 4px solid var(--clay);
+}
+
 .action-chip-grid button.active,
 .choice-grid button.active,
 .scenario-list button.active,
@@ -570,9 +592,43 @@ button:disabled {
 	position: relative;
 }
 
+.share-card {
+	background:
+		linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 250, 241, 0.96)),
+		var(--paper);
+	border: 0;
+	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+	padding: 28px;
+}
+
+.share-card::before {
+	background: linear-gradient(90deg, var(--clay), var(--gold), var(--sea));
+	border-radius: 999px;
+	content: "";
+	display: block;
+	height: 5px;
+	margin-bottom: 18px;
+	width: 100%;
+}
+
+.share-card-kicker {
+	color: var(--sea) !important;
+	font-size: 13px;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	margin-bottom: 12px;
+	text-transform: uppercase;
+}
+
 .share-card h3,
 .line-card h3 {
 	color: var(--deep);
+}
+
+.share-card h3 {
+	font-size: 30px;
+	line-height: 1.08;
+	margin-bottom: 18px;
 }
 
 .share-card ol,
@@ -581,11 +637,29 @@ button:disabled {
 	padding-left: 1.25rem;
 }
 
-.share-card li,
 .line-card li {
 	font-size: 19px;
 	font-weight: 750;
 	line-height: 1.38;
+}
+
+.share-card li {
+	background: rgba(47, 105, 116, 0.09);
+	border-left: 4px solid var(--sea);
+	border-radius: 8px;
+	font-size: 22px;
+	font-weight: 850;
+	line-height: 1.32;
+	list-style-position: inside;
+	margin-top: 10px;
+	padding: 14px;
+}
+
+.share-card-footer {
+	color: var(--deep) !important;
+	font-size: 15px;
+	font-weight: 850;
+	margin-bottom: 4px;
 }
 
 .screenshot-note {
@@ -1039,6 +1113,18 @@ button:disabled {
 
 	.scenario-card {
 		min-height: 0;
+	}
+
+	.share-card {
+		padding: 22px;
+	}
+
+	.share-card h3 {
+		font-size: 26px;
+	}
+
+	.share-card li {
+		font-size: 19px;
 	}
 
 	.final-cta {
